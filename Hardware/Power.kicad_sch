@@ -1,0 +1,14 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "ecc6ecc1-2608-43c2-9957-e921b365fd3e")
+	(paper "B")
+	(title_block
+		(title "Digichiver")
+		(date "2026-07-24")
+		(rev "0")
+		(company "J. Thweatt")
+	)
+	(lib_symbols)
+)

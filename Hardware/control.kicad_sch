@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "e72c1983-dcbb-490c-99e7-5f466ad6330d")
+	(uuid "18bb16fe-d5a2-4a97-86d6-7acee2a37176")
 	(paper "B")
 	(title_block
 		(title "Digichiver")
@@ -11,996 +11,6 @@
 		(company "J. Thweatt")
 	)
 	(lib_symbols
-		(symbol "Logic_LevelTranslator:SN74LVC245APW"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at -10.16 17.78 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SN74LVC245APW"
-				(at 10.16 17.78 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm"
-				(at 22.86 -16.51 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.ti.com/lit/ds/scas218x/scas218x.pdf"
-				(at -1.27 -6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "8-Bit Single-Supply Bus Transceiver With 5V tolerant input voltage and 3-State Outputs 24mA, TSSOP-20"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "Noninverting Bidirectional"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "TSSOP*4.4x6.5mm*P0.65mm*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SN74LVC245APW_0_1"
-				(rectangle
-					(start -10.16 15.24)
-					(end 10.16 -15.24)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "SN74LVC245APW_1_1"
-				(pin input line
-					(at -12.7 10.16 0)
-					(length 2.54)
-					(name "DIR"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -12.7 5.08 0)
-					(length 2.54)
-					(name "A1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -12.7 2.54 0)
-					(length 2.54)
-					(name "A2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -12.7 0 0)
-					(length 2.54)
-					(name "A3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -12.7 -2.54 0)
-					(length 2.54)
-					(name "A4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -12.7 -5.08 0)
-					(length 2.54)
-					(name "A5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -12.7 -7.62 0)
-					(length 2.54)
-					(name "A6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -12.7 -10.16 0)
-					(length 2.54)
-					(name "A7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -12.7 -12.7 0)
-					(length 2.54)
-					(name "A8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -17.78 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 12.7 -12.7 180)
-					(length 2.54)
-					(name "B8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 12.7 -10.16 180)
-					(length 2.54)
-					(name "B7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 12.7 -7.62 180)
-					(length 2.54)
-					(name "B6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 12.7 -5.08 180)
-					(length 2.54)
-					(name "B5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 12.7 -2.54 180)
-					(length 2.54)
-					(name "B4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 12.7 0 180)
-					(length 2.54)
-					(name "B3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 12.7 2.54 180)
-					(length 2.54)
-					(name "B2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 12.7 5.08 180)
-					(length 2.54)
-					(name "B1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 10.16 180)
-					(length 2.54)
-					(name "~{OE}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 17.78 270)
-					(length 2.54)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Logic_LevelTranslator:SN74LVC8T245"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U4"
-				(at 12.7 -5.842 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "SN74LVC8T245"
-				(at 12.7 -7.874 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 20.32 -24.13 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc8t245.pdf"
-				(at 0 -35.56 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "8-Bit Dual-Supply Bus Transceiver With Configurable Voltage Translation and 3-State Outputs"
-				(at 17.018 -40.894 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "Dual Supply Level-Shifter CMOS-TTL-Translation"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SSOP*5.3x8.2mm* SSOP*3.9x8.7mm* TSSOP*4.4x7.8mm* TVSOP*4.4x5.0mm* Texas*VQFN*RHL*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SN74LVC8T245_0_1"
-				(rectangle
-					(start -3.81 25.4)
-					(end 16.51 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "SN74LVC8T245_1_1"
-				(pin power_in line
-					(at 2.54 27.94 270)
-					(length 2.54)
-					(name "V_{CCA}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -6.35 21.59 0)
-					(length 2.54)
-					(name "DIR"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -6.35 16.51 0)
-					(length 2.54)
-					(name "A1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -6.35 13.97 0)
-					(length 2.54)
-					(name "A2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -6.35 11.43 0)
-					(length 2.54)
-					(name "A3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -6.35 8.89 0)
-					(length 2.54)
-					(name "A4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -6.35 6.35 0)
-					(length 2.54)
-					(name "A5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -6.35 3.81 0)
-					(length 2.54)
-					(name "A6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -6.35 1.27 0)
-					(length 2.54)
-					(name "A7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -6.35 -1.27 0)
-					(length 2.54)
-					(name "A8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 3.81 -6.35 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 6.35 -6.35 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 8.89 -6.35 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 19.05 -1.27 180)
-					(length 2.54)
-					(name "B8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 19.05 1.27 180)
-					(length 2.54)
-					(name "B7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 19.05 3.81 180)
-					(length 2.54)
-					(name "B6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 19.05 6.35 180)
-					(length 2.54)
-					(name "B5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 19.05 8.89 180)
-					(length 2.54)
-					(name "B4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 19.05 11.43 180)
-					(length 2.54)
-					(name "B3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 19.05 13.97 180)
-					(length 2.54)
-					(name "B2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 19.05 16.51 180)
-					(length 2.54)
-					(name "B1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 19.05 21.59 180)
-					(length 2.54)
-					(name "~{OE}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 7.62 27.94 270)
-					(length 2.54)
-					(name "V_{CCB}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 10.16 27.94 270)
-					(length 2.54)
-					(name "V_{CCB}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "24"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "MCU_RaspberryPi:RP2354B"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2594,304 +1604,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Logic_LevelTranslator:SN74LVC8T245")
-		(at 304.8 172.72 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1f746d09-8ab6-4043-aa1e-47440c287c2a")
-		(property "Reference" "U4"
-			(at 317.5 178.562 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SN74LVC8T245"
-			(at 317.5 180.594 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 325.12 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc8t245.pdf"
-			(at 304.8 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "8-Bit Dual-Supply Bus Transceiver With Configurable Voltage Translation and 3-State Outputs"
-			(at 321.818 213.614 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "10"
-			(uuid "5d7c0db8-7e90-42f5-a8fe-694ef89dd8e4")
-		)
-		(pin "12"
-			(uuid "26b8d2f3-ca20-4153-9355-b14d7abadb08")
-		)
-		(pin "3"
-			(uuid "03f4c8d0-506b-42c7-91b0-d58be3128c2a")
-		)
-		(pin "4"
-			(uuid "0ebc9bef-d16a-41af-b787-088458e1f934")
-		)
-		(pin "2"
-			(uuid "76d04956-d164-4621-80e4-7d9ce9ff91a1")
-		)
-		(pin "7"
-			(uuid "9e48a166-90fc-46a9-8a1b-88ef7c9f4c4b")
-		)
-		(pin "8"
-			(uuid "77a7e7eb-25cf-4d6c-947b-2af890a4b926")
-		)
-		(pin "14"
-			(uuid "6d11cfc4-db96-4581-b4c1-ca8d32f83a9b")
-		)
-		(pin "17"
-			(uuid "ae5bc206-35fa-45a2-af4b-b68743c37484")
-		)
-		(pin "13"
-			(uuid "ed4b1ffa-2657-4dc7-aad2-182156b91e9e")
-		)
-		(pin "24"
-			(uuid "565c0259-48b9-436d-aa33-5c1885ffb8f2")
-		)
-		(pin "1"
-			(uuid "151b1f72-648f-4048-9fbe-bcb25d7dfeaf")
-		)
-		(pin "5"
-			(uuid "65097a19-7616-47af-80a1-5c6c866b468e")
-		)
-		(pin "11"
-			(uuid "e4add77c-41d4-4421-8e2a-016b96d6011d")
-		)
-		(pin "15"
-			(uuid "0f08f89a-71e9-41f7-b522-7c2d86592730")
-		)
-		(pin "9"
-			(uuid "be1bb880-60ed-45e3-b229-0517858215f4")
-		)
-		(pin "6"
-			(uuid "e6e73fff-2237-4576-828b-21cc71211393")
-		)
-		(pin "16"
-			(uuid "eb3e8708-582c-4bb2-be85-2f4a55e60815")
-		)
-		(pin "19"
-			(uuid "6e5507ab-f785-491b-9d71-935bc971be89")
-		)
-		(pin "20"
-			(uuid "d692dcd5-f159-409a-bcee-bdc7ebe0d5c5")
-		)
-		(pin "21"
-			(uuid "1e258cc7-5170-47f7-ac5d-fc4186242c7a")
-		)
-		(pin "22"
-			(uuid "28315438-7440-4406-8e39-ecc18b8a1108")
-		)
-		(pin "18"
-			(uuid "b51d01ea-8aab-4445-98b0-526c64988f93")
-		)
-		(pin "23"
-			(uuid "5c99cb51-c442-499b-9b96-f1a2cf6f85b5")
-		)
-		(instances
-			(project "digichiver"
-				(path "/3bd0f4fe-7696-494b-9a4e-660a5be003ec"
-					(reference "U4")
-					(unit 1)
-				)
-			)
-			(project "control"
-				(path "/e72c1983-dcbb-490c-99e7-5f466ad6330d"
-					(reference "U4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Logic_LevelTranslator:SN74LVC245APW")
-		(at 311.15 82.55 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3da767ef-3d17-4e83-8cc8-4ffd70fa5b37")
-		(property "Reference" "U2"
-			(at 313.2933 62.23 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SN74LVC245APW"
-			(at 313.2933 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm"
-			(at 334.01 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/scas218x/scas218x.pdf"
-			(at 309.88 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "8-Bit Single-Supply Bus Transceiver With 5V tolerant input voltage and 3-State Outputs 24mA, TSSOP-20"
-			(at 311.15 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "6"
-			(uuid "b9efa49a-6166-4a78-a95a-8957f0d40b13")
-		)
-		(pin "12"
-			(uuid "b487d7f2-4527-443e-87e6-5c8468419eb9")
-		)
-		(pin "16"
-			(uuid "9a87993c-eecf-47c5-b597-a38f2e206c19")
-		)
-		(pin "13"
-			(uuid "5da96b25-f924-42b6-8bc7-019f90281db4")
-		)
-		(pin "7"
-			(uuid "01b8c3e0-152f-4d55-b946-7b2bbd377f49")
-		)
-		(pin "10"
-			(uuid "4dee35ab-3c26-4476-8dce-a0347e143802")
-		)
-		(pin "8"
-			(uuid "ebc64af6-714a-4286-8286-7d12ca462f9b")
-		)
-		(pin "4"
-			(uuid "11393198-34d1-4725-a309-e68b6732befe")
-		)
-		(pin "11"
-			(uuid "7c9232e7-f9e2-40a8-9156-5fbe473b96cd")
-		)
-		(pin "14"
-			(uuid "52d9b339-89aa-49bf-bb55-55fb42c711cf")
-		)
-		(pin "2"
-			(uuid "51da261d-3082-44ac-be0b-c4a67055c990")
-		)
-		(pin "3"
-			(uuid "8921d756-5d0a-4e5d-8b75-d523c20517a1")
-		)
-		(pin "15"
-			(uuid "70fc4b53-2313-4e89-915f-9a41ee172e34")
-		)
-		(pin "1"
-			(uuid "7b681fe4-b34e-45a3-b8ea-5fcc0f0f5d54")
-		)
-		(pin "5"
-			(uuid "d95cb406-e8ea-4282-91a7-40c0e735bbcf")
-		)
-		(pin "9"
-			(uuid "a487b020-f9c8-483b-8978-04b62b9cf9ed")
-		)
-		(pin "17"
-			(uuid "6d98d4eb-b7eb-4149-91b8-9c638cd42400")
-		)
-		(pin "18"
-			(uuid "28693aec-3899-4a3b-a435-dec55535844a")
-		)
-		(pin "19"
-			(uuid "2d954ac4-47de-4e02-b1f7-3ce816363734")
-		)
-		(pin "20"
-			(uuid "6158b3cc-6ed9-414f-af4c-0ff501c751f6")
-		)
-		(instances
-			(project "digichiver"
-				(path "/3bd0f4fe-7696-494b-9a4e-660a5be003ec"
-					(reference "U2")
-					(unit 1)
-				)
-			)
-			(project "control"
-				(path "/e72c1983-dcbb-490c-99e7-5f466ad6330d"
-					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "MCU_RaspberryPi:RP2354B")
-		(at 210.82 129.54 0)
+		(at 215.9 125.73 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2900,9 +1614,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "d5709d3d-c768-4670-a0d2-5ba3df3e6713")
+		(uuid "a22a1bc2-bb45-4a55-9358-e533d1ac06cc")
 		(property "Reference" "U1"
-			(at 212.9633 186.69 0)
+			(at 218.0433 182.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2913,7 +1627,7 @@
 			)
 		)
 		(property "Value" "RP2354B"
-			(at 212.9633 189.23 0)
+			(at 218.0433 185.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2924,7 +1638,7 @@
 			)
 		)
 		(property "Footprint" "Package_DFN_QFN:QFN-80-1EP_10x10mm_P0.4mm_EP3.4x3.4mm"
-			(at 210.82 129.54 0)
+			(at 215.9 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2935,7 +1649,7 @@
 			)
 		)
 		(property "Datasheet" "https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf"
-			(at 210.82 129.54 0)
+			(at 215.9 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2946,7 +1660,7 @@
 			)
 		)
 		(property "Description" "A microcontroller by Raspberry Pi, dual CPU architecture (ARM Cortex-M33 / RISC-V Hazard3), 150MHz, 2MB flash, 520KB SRAM, 12 PIO state machines, VQFN-80"
-			(at 210.82 129.54 0)
+			(at 215.9 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2957,7 +1671,7 @@
 			)
 		)
 		(property private "KLC_S4.2_DVDD" "Not a standalone power converter; internal on-chip voltage regulator for digital core supply; DVDD is the digital core power supply, should be placed next to voltage regulator output."
-			(at 210.82 132.08 0)
+			(at 215.9 128.27 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -2968,7 +1682,7 @@
 			)
 		)
 		(property private "KLC_S4.2_VREG_LX" "Should be placed next to DVDD."
-			(at 210.82 132.08 0)
+			(at 215.9 128.27 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -2978,410 +1692,256 @@
 				)
 			)
 		)
-		(pin "34"
-			(uuid "7d618008-45d7-40cc-aee9-999d1e058864")
-		)
-		(pin "35"
-			(uuid "2a503928-556a-4edc-8a4a-7b7ebb73a30a")
-		)
-		(pin "36"
-			(uuid "58374e70-ad4f-477c-aca0-7923376a6c5b")
-		)
-		(pin "37"
-			(uuid "1094efc6-e53e-4ed7-b9b8-5c73a7f40aa3")
-		)
-		(pin "33"
-			(uuid "1df49d9e-8efd-48f9-9fa9-59621dd71b7a")
-		)
-		(pin "46"
-			(uuid "5e93b01f-9dca-4d1f-aa25-9e57bdef495e")
-		)
-		(pin "49"
-			(uuid "11ae988a-5284-4687-af3f-2442af373622")
-		)
-		(pin "10"
-			(uuid "4603cd5d-ab6f-49dc-81b0-7069e4f06d7a")
-		)
-		(pin "38"
-			(uuid "20e30e2e-b321-4536-8553-fb885b5b6d25")
-		)
-		(pin "39"
-			(uuid "e6251129-2abd-47a4-8337-dda8b7e4dd03")
-		)
-		(pin "40"
-			(uuid "e98410b2-0f0e-4c49-a328-733dbd3022ea")
-		)
-		(pin "42"
-			(uuid "042758cb-0e4b-480b-bd35-f8e809e70ecd")
-		)
-		(pin "43"
-			(uuid "7ce0ec28-4986-4681-971d-97d18e86b4c6")
-		)
-		(pin "44"
-			(uuid "2fd12981-4f83-440e-a70a-85b12aad5a88")
-		)
-		(pin "45"
-			(uuid "4d9e1e1a-68d1-4cff-9674-65f3bea138c8")
-		)
-		(pin "47"
-			(uuid "f02774e8-28f8-44bd-8b40-6e74aa7784ec")
-		)
-		(pin "48"
-			(uuid "05b77969-4ccc-482a-9c8c-91229b401060")
-		)
-		(pin "50"
-			(uuid "f8801198-3a6f-432a-b793-2c0b4f112559")
-		)
-		(pin "51"
-			(uuid "f4e8a8e2-aa1a-479b-81a7-068c1e9610a8")
-		)
-		(pin "52"
-			(uuid "b46d2f11-3ce5-4ac0-be7d-615b3c7a90df")
-		)
-		(pin "53"
-			(uuid "d1e44672-245f-4ada-acb8-9395158da077")
-		)
-		(pin "69"
-			(uuid "3b9763d5-5e40-466b-bc8f-eca6ca753dd7")
-		)
-		(pin "61"
-			(uuid "996febd6-bd57-4d47-a7bb-add5d128f0e1")
-		)
-		(pin "57"
-			(uuid "022b47c0-5005-4aa1-ae32-0790e9c8ddf6")
-		)
-		(pin "54"
-			(uuid "e0e1a39e-424d-46b6-9643-d4e9e80a6b98")
-		)
-		(pin "58"
-			(uuid "149298b9-8dc6-4bd2-8128-dfb2cb5c69b0")
-		)
-		(pin "60"
-			(uuid "4e55a731-e897-4787-aad8-78c47e6f91bd")
-		)
-		(pin "56"
-			(uuid "d3adbf70-2ebe-4a7c-91e2-14ddad0e195d")
-		)
-		(pin "62"
-			(uuid "01c17228-4acf-4e48-8ae2-3a860075fefd")
-		)
-		(pin "68"
-			(uuid "3e5bc029-e897-4b28-b9d3-ca4824b5b98f")
-		)
-		(pin "55"
-			(uuid "db9c62fa-c0c7-45ad-979b-e13ad5348e35")
-		)
-		(pin "76"
-			(uuid "3781ea9e-8681-441d-b1b7-aee0752113f7")
-		)
-		(pin "1"
-			(uuid "6af89e1d-6524-4acb-8aa7-4ecfa9de9502")
-		)
-		(pin "8"
-			(uuid "ab9caa90-35b2-4907-8f96-b72830b3a406")
-		)
-		(pin "7"
-			(uuid "a2411130-0af8-410a-9ecc-2e95fda82f77")
-		)
-		(pin "11"
-			(uuid "921a3947-1216-49a8-bd66-9c0a39c7e676")
-		)
-		(pin "6"
-			(uuid "f71ee41a-eb53-4fdf-b599-2d71a96cbabe")
-		)
-		(pin "9"
-			(uuid "48026157-b934-419d-9b58-a2882ad41cde")
-		)
-		(pin "3"
-			(uuid "2c3adc71-db22-489b-a9b0-bbb6cd54515c")
-		)
-		(pin "12"
-			(uuid "dec14eb3-bde8-4443-90d8-470123f8e2f7")
-		)
-		(pin "13"
-			(uuid "1e7d6257-a9d2-4fbd-beaf-e2a8d0aa12e6")
-		)
-		(pin "4"
-			(uuid "c3067616-3a3d-4dc3-b477-733654e3925d")
-		)
-		(pin "2"
-			(uuid "83c5be27-b851-4e87-9759-853be546e11a")
-		)
-		(pin "5"
-			(uuid "121f3b4a-6aca-4fcf-ab72-a0bf083718fd")
-		)
-		(pin "15"
-			(uuid "793ef2c7-cfe4-4156-bf9a-ca1eda3d73aa")
-		)
-		(pin "17"
-			(uuid "ca84d12f-9208-47c4-98e6-ad2ecff0513d")
-		)
-		(pin "21"
-			(uuid "5364f151-dbdd-41a3-8e5f-f957dfd1f7ea")
-		)
-		(pin "18"
-			(uuid "2e9e5100-fd2d-4861-a7e0-e5e219fc8563")
-		)
-		(pin "14"
-			(uuid "5f05a202-68f0-4448-8b8e-861155356349")
-		)
-		(pin "16"
-			(uuid "4348e632-a84a-491a-b6e6-61199d68e19e")
-		)
-		(pin "19"
-			(uuid "3e360bb1-2916-4075-82f4-beedf19af3e3")
-		)
-		(pin "20"
-			(uuid "7f662eae-3c37-4d87-b8d2-e7f4d92bdbd4")
-		)
-		(pin "22"
-			(uuid "e3ee1627-eecc-4fe7-a163-288361bac456")
-		)
-		(pin "23"
-			(uuid "9eaeace4-2fab-4849-b9a2-8a243293c41e")
-		)
-		(pin "24"
-			(uuid "de3290a8-50ac-43f9-b1a4-7434db4a1cf2")
-		)
-		(pin "25"
-			(uuid "bad82f92-8375-414e-be33-efa30d75c7e9")
-		)
-		(pin "26"
-			(uuid "254ad688-b0f6-48bc-acfa-06976252e930")
-		)
-		(pin "29"
-			(uuid "b08a1677-2f5b-43c1-a08c-d4b6a6839606")
-		)
-		(pin "27"
-			(uuid "45900fa4-4411-4dee-905b-8f84b83de96f")
-		)
-		(pin "28"
-			(uuid "6b3fac71-b80b-4e30-beea-d0aff11c6dca")
-		)
-		(pin "30"
-			(uuid "00e00c08-aa64-4e06-939c-9e08b57f893a")
-		)
-		(pin "31"
-			(uuid "cf704c41-1ca8-44c0-873a-db77527e2c2a")
-		)
-		(pin "32"
-			(uuid "c49a6047-a37e-4577-9cd5-7d873c75cf81")
-		)
-		(pin "77"
-			(uuid "99bb417d-6ce7-4cb5-b679-11ff47f787c9")
-		)
-		(pin "64"
-			(uuid "60d302c7-4405-44f3-a041-e878cde34d24")
-		)
-		(pin "73"
-			(uuid "c6e3079b-d7e9-4d41-8212-c28454228572")
-		)
-		(pin "74"
-			(uuid "e47804ff-2669-4187-9f93-78d05f4f1ab1")
-		)
-		(pin "81"
-			(uuid "df4ff92d-d67e-4109-ba8b-6a0102d33b7d")
-		)
-		(pin "63"
-			(uuid "a25a8c6e-9dd1-4503-ba1f-e6891f5655ce")
-		)
-		(pin "80"
-			(uuid "89f7a1c7-67f7-40c7-8690-b269f6376fa4")
-		)
-		(pin "79"
-			(uuid "aba17ecc-3658-4004-a73e-5cdbdf10c0d6")
-		)
-		(pin "78"
-			(uuid "c9bf0c8a-4257-43c6-ad36-e9b8d53dd40a")
-		)
-		(pin "75"
-			(uuid "ffa2de3e-8d73-4060-b217-14c4d932c344")
-		)
 		(pin "65"
-			(uuid "cfa35a95-d9c9-44b3-99b3-26c4385d494e")
-		)
-		(pin "72"
-			(uuid "d679e5c7-d27e-4a60-b33d-8108d4c6c892")
+			(uuid "c6c1d52e-1895-4117-896e-f6743348a9c6")
 		)
 		(pin "70"
-			(uuid "0de75edd-72bc-4e78-915c-6388c7e84422")
-		)
-		(pin "59"
-			(uuid "532cfd2c-676e-48b8-84e8-876a8e7ae5ae")
-		)
-		(pin "41"
-			(uuid "1ca6dec2-cbbf-44e5-851e-85ed786edf62")
+			(uuid "76712cb2-dd6e-42e8-8f26-0287edd5fde3")
 		)
 		(pin "66"
-			(uuid "7b147b71-2cea-47a7-87d2-a53587b2c81c")
+			(uuid "b29668e0-3bf8-41b2-9980-99dd14832ac3")
 		)
-		(pin "71"
-			(uuid "4725d307-b55a-4167-aaeb-0fc51738e5a5")
+		(pin "41"
+			(uuid "d4334174-c144-4dc3-8ee0-ef5e77f2f62d")
+		)
+		(pin "59"
+			(uuid "eb642a08-1432-47d7-8390-5b79898fe4ec")
+		)
+		(pin "64"
+			(uuid "1f03d4f1-79bf-4859-a9f5-895658f133b5")
+		)
+		(pin "63"
+			(uuid "270fe78a-8ec2-48ad-8205-fb8f63d8dc56")
 		)
 		(pin "67"
-			(uuid "0469fae5-c7ad-44a2-bc76-943687e8f271")
+			(uuid "e95dec80-8e83-4488-982d-a37c60ea1f29")
 		)
-		(instances
-			(project "digichiver"
-				(path "/3bd0f4fe-7696-494b-9a4e-660a5be003ec"
-					(reference "U1")
-					(unit 1)
-				)
-			)
-			(project "control"
-				(path "/e72c1983-dcbb-490c-99e7-5f466ad6330d"
-					(reference "U1")
-					(unit 1)
-				)
-			)
+		(pin "71"
+			(uuid "c53e83b1-b169-4519-8e90-e6ed2bc3ce45")
 		)
-	)
-	(symbol
-		(lib_id "Logic_LevelTranslator:SN74LVC245APW")
-		(at 311.15 123.19 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fed814a7-da21-421d-a4a9-6166d09aa813")
-		(property "Reference" "U3"
-			(at 313.2933 102.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
+		(pin "78"
+			(uuid "61184e75-15bb-49e3-a95d-fc0ba88d97c3")
 		)
-		(property "Value" "SN74LVC245APW"
-			(at 313.2933 105.41 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
+		(pin "72"
+			(uuid "451d7146-bdba-45cc-b811-c189dfa98f44")
 		)
-		(property "Footprint" "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm"
-			(at 334.01 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+		(pin "77"
+			(uuid "6a8027b6-6745-4bc8-bbac-d0c0cade9cd7")
 		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/scas218x/scas218x.pdf"
-			(at 309.88 129.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+		(pin "79"
+			(uuid "e8c6fcfa-0414-4d7c-b049-8722dc5d11dd")
 		)
-		(property "Description" "8-Bit Single-Supply Bus Transceiver With 5V tolerant input voltage and 3-State Outputs 24mA, TSSOP-20"
-			(at 311.15 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+		(pin "80"
+			(uuid "2e454554-b1c3-469d-bbef-e1a65256c1ce")
 		)
-		(pin "6"
-			(uuid "8e1b0a4b-5d9b-4b07-9fed-64b7aab09e43")
+		(pin "81"
+			(uuid "931b7c5e-dd38-4aeb-9a3d-74dd24d3f844")
 		)
-		(pin "12"
-			(uuid "397d010a-0b97-4874-95cd-1e3d7e1be31b")
+		(pin "74"
+			(uuid "e9b9907b-4cf6-46cd-8cf6-f45d2be2c6fe")
 		)
-		(pin "16"
-			(uuid "6e693a87-22ad-42ca-98f8-e894133763fa")
+		(pin "73"
+			(uuid "e0daf710-b5f2-4d5a-b200-6c8555f20c10")
 		)
-		(pin "13"
-			(uuid "8da255c5-28d6-43a0-9d35-dde64e77b956")
+		(pin "75"
+			(uuid "fec839af-3236-4400-82b1-58ef9e151135")
 		)
-		(pin "7"
-			(uuid "e707473f-b124-4a1b-8e93-4467b4ed1817")
+		(pin "43"
+			(uuid "b9cc6fd6-759b-4c72-9c25-35044c2201e3")
+		)
+		(pin "53"
+			(uuid "ddd9a510-ef41-4f12-a920-e2eb61cce588")
+		)
+		(pin "68"
+			(uuid "65ffa198-1057-437e-9f21-845e6f97b451")
+		)
+		(pin "38"
+			(uuid "52ec4fb2-90f0-4cd2-85f0-e40fbcb65b1d")
+		)
+		(pin "51"
+			(uuid "b21476ea-5f2e-44ef-9a93-d07c142a310c")
+		)
+		(pin "48"
+			(uuid "c58037ae-6cca-4df8-b5a1-431348d71b95")
+		)
+		(pin "54"
+			(uuid "84f18849-a7ec-4663-8f63-178b6b07a915")
+		)
+		(pin "40"
+			(uuid "ea63c7ac-6147-4d0a-bab2-dda5dd5cb929")
+		)
+		(pin "52"
+			(uuid "ff9d8a06-1327-4df0-a1c0-b3c7d2c0ec55")
+		)
+		(pin "42"
+			(uuid "08a910f1-6927-479a-a50f-5d8c49c05a11")
+		)
+		(pin "57"
+			(uuid "fee6e049-8254-4130-811c-9ee1b1d3b1bb")
+		)
+		(pin "61"
+			(uuid "c6b7eec7-5030-4914-9089-b8244f5c90ca")
+		)
+		(pin "58"
+			(uuid "aa78533e-76b6-4575-904f-2ad6af3b9cfc")
+		)
+		(pin "62"
+			(uuid "10003312-f47a-4783-a49b-d2195f7f47ad")
+		)
+		(pin "46"
+			(uuid "7db9bfb6-fa12-4356-8ee8-e7b663c50d47")
+		)
+		(pin "39"
+			(uuid "a7cd9708-fa7b-424b-8b7d-9bafa4358866")
 		)
 		(pin "10"
-			(uuid "484aec64-23a6-49b8-baf4-9af244e8125d")
+			(uuid "4092d17c-02c3-4dcc-9086-879b95235c17")
 		)
-		(pin "8"
-			(uuid "ddf51771-b630-4d03-93f9-0cba5fed6230")
+		(pin "49"
+			(uuid "b64e521e-692f-46d7-b3e8-61febfa268d9")
 		)
-		(pin "4"
-			(uuid "1d70f1db-3395-45c9-8d3b-3f71ce87c19c")
+		(pin "55"
+			(uuid "d074d74f-fa8d-47ce-9dfb-982945fbd22a")
 		)
-		(pin "11"
-			(uuid "a0618286-cb33-43a8-9b56-fcec76c8dc17")
+		(pin "44"
+			(uuid "96801bfa-7913-436c-bbe4-6a688ab13486")
 		)
-		(pin "14"
-			(uuid "830ce6e2-4ef4-414d-99bc-e914c9da7e91")
+		(pin "45"
+			(uuid "019068c3-4ed7-464f-8fe2-e064813422a8")
 		)
-		(pin "2"
-			(uuid "81c2726a-b2c5-44a9-9e83-e19b220d15e5")
+		(pin "56"
+			(uuid "ebf9b794-7419-4444-bf64-93b5ea3379a3")
 		)
-		(pin "3"
-			(uuid "625b6f08-c7b3-4bd5-9e89-8491d54a3a0f")
+		(pin "47"
+			(uuid "39193a8c-3908-4096-9147-26fb1ef74107")
 		)
-		(pin "15"
-			(uuid "6c5f1dae-6c2b-4ffa-b83f-254ef681f4b2")
+		(pin "50"
+			(uuid "430d24c2-1409-4f7e-9f53-1e8bec57580c")
 		)
-		(pin "1"
-			(uuid "d8d99b55-0546-4e78-8d60-41e55cddcdea")
-		)
-		(pin "5"
-			(uuid "21002bb2-de3d-4c8d-9d26-3299b9857737")
+		(pin "60"
+			(uuid "787b60cc-90b0-47fb-8e2d-aaed41c952c0")
 		)
 		(pin "9"
-			(uuid "5944555a-be7d-449a-9415-5370f6e6eaa9")
+			(uuid "f61fccb4-7a0d-43da-bef2-7568f6ef975c")
 		)
-		(pin "17"
-			(uuid "4ee6cdff-c849-4638-a734-c5acd70d9251")
+		(pin "13"
+			(uuid "984eca53-fd99-4e4e-9a9a-3545b29b149b")
 		)
-		(pin "18"
-			(uuid "8774c237-578d-4161-baab-520846bbc93f")
+		(pin "14"
+			(uuid "0ccfa055-bee1-4b95-81e5-e2bbc2b368c6")
 		)
-		(pin "19"
-			(uuid "4d1a7f10-db6c-4ff3-a2fb-09dbfc15cad1")
+		(pin "24"
+			(uuid "bc2a3145-747c-4b67-a729-41386d2f9fe8")
+		)
+		(pin "1"
+			(uuid "60c633be-2f7b-4ce8-ab87-2e6d702892ba")
+		)
+		(pin "26"
+			(uuid "6ea6ea80-778f-4aff-8dde-516ab1f9dff8")
+		)
+		(pin "2"
+			(uuid "885ec14a-4105-4b7c-b275-6a86b2683b29")
 		)
 		(pin "20"
-			(uuid "1286e170-eb35-44d5-9e29-98d185891d05")
+			(uuid "58e6c7d6-2fd5-4832-8c13-d7705cf83815")
+		)
+		(pin "7"
+			(uuid "a0ff29cb-e07c-4fb1-ad69-bee0812a67f7")
+		)
+		(pin "17"
+			(uuid "e902bc5d-4a98-45e6-93e4-ca5bd61bdd2f")
+		)
+		(pin "22"
+			(uuid "4e62bbac-d255-41eb-8bbd-2181f89bd199")
+		)
+		(pin "27"
+			(uuid "43f3bd5d-b301-4089-a1de-69678b8ddc8a")
+		)
+		(pin "69"
+			(uuid "d07d6aef-a613-437d-ae1d-f35b25ed69be")
+		)
+		(pin "76"
+			(uuid "77dbf1a8-9f4f-4099-8ac8-05980055e7ab")
+		)
+		(pin "11"
+			(uuid "71915c41-5c31-4020-8961-93fd5913f48a")
+		)
+		(pin "6"
+			(uuid "68688edc-1fbf-4e45-88b0-95f1fa008867")
+		)
+		(pin "18"
+			(uuid "e8233813-199f-40c9-8acc-d925baeffd23")
+		)
+		(pin "4"
+			(uuid "7720194f-ffa1-49fa-93df-3d1f5bd044bf")
+		)
+		(pin "19"
+			(uuid "cb3e7b5d-8e40-49a8-9aba-157064de2a60")
+		)
+		(pin "15"
+			(uuid "c69f97fc-a214-4df0-b910-de086710962a")
+		)
+		(pin "23"
+			(uuid "ee4e3370-94b2-441a-b332-e0c193700ac8")
+		)
+		(pin "5"
+			(uuid "c25d32ba-f585-471d-ab6e-ab0e0c5a6ced")
+		)
+		(pin "3"
+			(uuid "07b70103-4dfb-4553-ba7c-477c8c65bb22")
+		)
+		(pin "8"
+			(uuid "d7878b08-8c8c-4e77-ae00-5bb3cefe0ced")
+		)
+		(pin "12"
+			(uuid "6c640bca-2c8c-407f-b580-2ccf52bccfa5")
+		)
+		(pin "16"
+			(uuid "188e6d9d-7ab1-4032-bc84-31c53ed338ab")
+		)
+		(pin "21"
+			(uuid "1c8e5e26-3429-4fd4-b63f-b5be59121aee")
+		)
+		(pin "25"
+			(uuid "b94f40cd-3a57-4d39-a390-f4acffd32ece")
+		)
+		(pin "28"
+			(uuid "6ed58e37-62e9-4c61-80cf-27ce1322a688")
+		)
+		(pin "32"
+			(uuid "953160dd-cdbf-409a-9e9d-456e0e970e4c")
+		)
+		(pin "33"
+			(uuid "ec4cdfdc-ecf8-4fb1-b2d6-58555108083f")
+		)
+		(pin "29"
+			(uuid "0010693e-3036-4fb6-a57d-69db2f07f0e0")
+		)
+		(pin "30"
+			(uuid "1a52431d-483f-4344-8198-56c88a60c58c")
+		)
+		(pin "31"
+			(uuid "65a8e8fd-7626-4d65-a626-cfdfb1c693a5")
+		)
+		(pin "34"
+			(uuid "d3cb389b-255b-43a7-ac85-b9ae954ad3fd")
+		)
+		(pin "36"
+			(uuid "469ba47c-08a9-4a23-a044-905fe1fa7aeb")
+		)
+		(pin "35"
+			(uuid "0f864fa7-9c3a-4207-9532-95054821dd95")
+		)
+		(pin "37"
+			(uuid "fb3e1428-63cb-46e6-a4f0-0bdd6b1f2203")
 		)
 		(instances
-			(project "digichiver"
-				(path "/3bd0f4fe-7696-494b-9a4e-660a5be003ec"
-					(reference "U3")
-					(unit 1)
-				)
-			)
-			(project "control"
-				(path "/e72c1983-dcbb-490c-99e7-5f466ad6330d"
-					(reference "U3")
+			(project "Digichiver"
+				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
+					(reference "U1")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(sheet_instances
-		(path "/"
-			(page "3")
-		)
-	)
-	(embedded_fonts no)
 )

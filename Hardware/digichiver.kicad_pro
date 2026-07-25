@@ -256,7 +256,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "digichiver.kicad_pro",
+    "filename": "Digichiver.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -294,6 +294,7 @@
       "netlist": "",
       "plot": "",
       "specctra_dsn": "",
+      "step": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -357,6 +358,18 @@
         },
         {
           "group_by": true,
+          "label": "Exclude from Simulation",
+          "name": "${EXCLUDE_FROM_SIM}",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Exclude from Position Files",
+          "name": "${EXCLUDE_FROM_POS_FILES}",
+          "show": true
+        },
+        {
+          "group_by": true,
           "label": "Footprint",
           "name": "Footprint",
           "show": true
@@ -411,36 +424,30 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "digichiver.kicad_sch",
-        "name": "block_diagram",
-        "uuid": "b0fe0561-8981-4cdd-a490-825d582c8ee2"
-      },
-      {
-        "filename": "block_diagram.kicad_sch",
-        "name": "power",
-        "uuid": "c7da9daa-b8c4-41f7-8c20-f782efa1e79a"
-      },
-      {
-        "filename": "control.kicad_sch",
-        "name": "control",
-        "uuid": "3bd0f4fe-7696-494b-9a4e-660a5be003ec"
+        "filename": "Digichiver.kicad_sch",
+        "name": "BlockDiagram",
+        "uuid": "51de4045-d2a2-42d9-b145-319acd726bb6"
       }
     ],
-    "used_designators": "U1-4",
+    "used_designators": "U1-4,X1",
     "variants": []
   },
   "sheets": [
     [
-      "b0fe0561-8981-4cdd-a490-825d582c8ee2",
-      "block_diagram"
+      "51de4045-d2a2-42d9-b145-319acd726bb6",
+      "BlockDiagram"
     ],
     [
-      "c7da9daa-b8c4-41f7-8c20-f782efa1e79a",
-      "power"
+      "7bd3bb5c-26f1-47ae-a373-5b3a637c22c5",
+      "Control"
     ],
     [
-      "3bd0f4fe-7696-494b-9a4e-660a5be003ec",
-      "control"
+      "3f31dd03-db19-4d71-92cd-90eb39c94774",
+      "Power"
+    ],
+    [
+      "ca4885d7-9004-4a4f-ae69-fc7e29c6fa33",
+      "Digitalker"
     ]
   ],
   "text_variables": {},
