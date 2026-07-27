@@ -50,7 +50,7 @@
 			)
 		)
 		(instances
-			(project "Digichiver"
+			(project "digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6"
 					(page "3")
 				)
@@ -96,7 +96,7 @@
 			)
 		)
 		(instances
-			(project "Digichiver"
+			(project "digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6"
 					(page "2")
 				)
@@ -142,7 +142,7 @@
 			)
 		)
 		(instances
-			(project "Digichiver"
+			(project "digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6"
 					(page "4")
 				)

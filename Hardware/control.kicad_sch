@@ -1936,7 +1936,7 @@
 			(uuid "fb3e1428-63cb-46e6-a4f0-0bdd6b1f2203")
 		)
 		(instances
-			(project "Digichiver"
+			(project "digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "U1")
 					(unit 1)

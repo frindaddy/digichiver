@@ -256,7 +256,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Digichiver.kicad_pro",
+    "filename": "digichiver.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -429,7 +429,7 @@
         "uuid": "51de4045-d2a2-42d9-b145-319acd726bb6"
       }
     ],
-    "used_designators": "U1-4,X1",
+    "used_designators": "U1-4,X1,#PWR1-4,C1-3,R1-2",
     "variants": []
   },
   "sheets": [
