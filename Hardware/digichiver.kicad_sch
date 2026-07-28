@@ -12,7 +12,7 @@
 	)
 	(lib_symbols)
 	(sheet
-		(at 194.31 107.95)
+		(at 127 152.4)
 		(size 19.05 16.51)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -28,7 +28,7 @@
 		)
 		(uuid "3f31dd03-db19-4d71-92cd-90eb39c94774")
 		(property "Sheetname" "Power"
-			(at 194.31 107.2384 0)
+			(at 127 151.6884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -39,7 +39,7 @@
 			)
 		)
 		(property "Sheetfile" "Power.kicad_sch"
-			(at 194.31 125.0446 0)
+			(at 127 169.4946 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -58,7 +58,7 @@
 		)
 	)
 	(sheet
-		(at 240.03 87.63)
+		(at 201.93 101.6)
 		(size 27.94 21.59)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -74,7 +74,7 @@
 		)
 		(uuid "7bd3bb5c-26f1-47ae-a373-5b3a637c22c5")
 		(property "Sheetname" "Control"
-			(at 240.03 86.9184 0)
+			(at 201.93 100.8884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -85,7 +85,7 @@
 			)
 		)
 		(property "Sheetfile" "Control.kicad_sch"
-			(at 240.03 109.8046 0)
+			(at 201.93 123.7746 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -104,8 +104,8 @@
 		)
 	)
 	(sheet
-		(at 140.97 148.59)
-		(size 33.02 27.94)
+		(at 279.4 124.46)
+		(size 38.1 25.4)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -120,7 +120,7 @@
 		)
 		(uuid "ca4885d7-9004-4a4f-ae69-fc7e29c6fa33")
 		(property "Sheetname" "Digitalker"
-			(at 140.97 147.8784 0)
+			(at 279.4 123.7484 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -131,7 +131,7 @@
 			)
 		)
 		(property "Sheetfile" "Digitalker.kicad_sch"
-			(at 140.97 177.1146 0)
+			(at 279.4 150.4446 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -139,6 +139,96 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "ROM_ADDR[0..13]" output
+			(at 317.5 127 0)
+			(uuid "345a318b-8c88-4978-a5d7-6f6d817bd2b8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "RDATA[0..7]" input
+			(at 279.4 142.24 180)
+			(uuid "4ae18abe-a52e-4787-8656-590dc602ff84")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SW[1..8]" input
+			(at 279.4 137.16 180)
+			(uuid "df253783-fae6-4dae-b565-78e224eb60b6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{DIGITALKER_WR}" input
+			(at 279.4 129.54 180)
+			(uuid "e9244a1e-4681-44d8-b43a-3b5dd57eba15")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "INTR" output
+			(at 317.5 147.32 0)
+			(uuid "e144d59a-559b-4f77-8903-90fc7dbae37c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "DIGITALKER_CMS" input
+			(at 279.4 127 180)
+			(uuid "cbaf7772-152f-4518-b59b-39eb9f8aa17b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{DIGITALKER_CS}" input
+			(at 279.4 132.08 180)
+			(uuid "03f38967-4a76-449f-874e-df0379a20954")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DIGITALKER_CLK_4MHZ" input
+			(at 279.4 147.32 180)
+			(uuid "e438f777-8cab-44ec-a196-3ba77b80715d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{ROMEN}" output
+			(at 317.5 137.16 0)
+			(uuid "49ca128a-d08c-4a48-a710-54748f11d889")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
