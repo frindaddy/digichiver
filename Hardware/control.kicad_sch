@@ -7050,7 +7050,7 @@
 		(uuid "0a500342-d8ef-4cca-b18a-71c5eaf94c8c")
 	)
 	(hierarchical_label "INTR"
-		(shape output)
+		(shape input)
 		(at 259.08 138.43 0)
 		(effects
 			(font
@@ -7083,7 +7083,7 @@
 		(uuid "366483e2-e016-4105-acab-771c0817f3c1")
 	)
 	(hierarchical_label "~{ROMEN}"
-		(shape output)
+		(shape input)
 		(at 259.08 135.89 0)
 		(effects
 			(font
@@ -7094,7 +7094,7 @@
 		(uuid "44d67c83-ce80-49ec-be81-c31c5ae4d93e")
 	)
 	(hierarchical_label "ROM_ADDR[0..13]"
-		(shape output)
+		(shape input)
 		(at 271.78 135.89 0)
 		(effects
 			(font
