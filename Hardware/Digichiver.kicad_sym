@@ -1199,8 +1199,8 @@
 				)
 			)
 		)
-		(property "Value" "TPS62903"
-			(at -8.128 -1.524 0)
+		(property "Value" "TPSM84338"
+			(at -7.366 -1.524 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1220,7 +1220,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps62903.pdf?ts=1785251985380&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTPS62903"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpsm84338.pdf?ts=1785364453673&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTPSM84338"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1254,10 +1254,10 @@
 					(type background)
 				)
 			)
-			(pin output line
-				(at 7.62 -22.86 180)
+			(pin input line
+				(at -15.24 -7.62 0)
 				(length 2.54)
-				(name "PG"
+				(name "EN"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1272,10 +1272,10 @@
 					)
 				)
 			)
-			(pin power_out line
-				(at 7.62 -5.08 180)
+			(pin input line
+				(at 7.62 -12.7 180)
 				(length 2.54)
-				(name "SW"
+				(name "FB"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1290,10 +1290,10 @@
 					)
 				)
 			)
-			(pin input line
-				(at 7.62 -8.89 180)
+			(pin power_in line
+				(at 7.62 -22.86 180)
 				(length 2.54)
-				(name "VOS"
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1308,10 +1308,10 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at -15.24 -22.86 0)
+			(pin input line
+				(at 7.62 -5.08 180)
 				(length 2.54)
-				(name "GND"
+				(name "VOUT"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1326,10 +1326,10 @@
 					)
 				)
 			)
-			(pin input line
-				(at -15.24 -7.62 0)
+			(pin no_connect line
+				(at 7.62 -17.78 180)
 				(length 2.54)
-				(name "EN"
+				(name "SW"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1363,9 +1363,9 @@
 				)
 			)
 			(pin input line
-				(at -15.24 -17.78 0)
+				(at -15.24 -22.86 0)
 				(length 2.54)
-				(name "MODE/S-CONF"
+				(name "MODE"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1380,10 +1380,10 @@
 					)
 				)
 			)
-			(pin input line
-				(at -15.24 -12.7 0)
+			(pin bidirectional line
+				(at -15.24 -17.78 0)
 				(length 2.54)
-				(name "SS/TR"
+				(name "SS/PG"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1399,9 +1399,9 @@
 				)
 			)
 			(pin input line
-				(at 7.62 -12.7 180)
+				(at -15.24 -12.7 0)
 				(length 2.54)
-				(name "FB/VSET"
+				(name "RT/SYNC"
 					(effects
 						(font
 							(size 1.27 1.27)
