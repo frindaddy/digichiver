@@ -429,7 +429,7 @@
         "uuid": "51de4045-d2a2-42d9-b145-319acd726bb6"
       }
     ],
-    "used_designators": "U1-6,U8,SW1-2,X1-2,L1-3,#PWR1-49,#PWR60-72,C1-28,C31-35,R1-11,R14-20,Y1,J2-4",
+    "used_designators": "U1-6,U8,U11-12,X1-2,SW1-2,#PWR1-49,#PWR60-72,#PWR84-95,L1-3,C1-28,C31-35,C43-47,R1-11,R14-20,R24-27,Y1,J2-4",
     "variants": []
   },
   "sheets": [
@@ -448,6 +448,10 @@
     [
       "ca4885d7-9004-4a4f-ae69-fc7e29c6fa33",
       "Digitalker"
+    ],
+    [
+      "d8e5fb35-4d7b-4489-a789-c25f01344ad2",
+      "Audio"
     ]
   ],
   "text_variables": {},
