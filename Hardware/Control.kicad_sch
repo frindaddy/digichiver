@@ -6636,6 +6636,16 @@
 		)
 		(uuid "224e65ed-7f1e-47ac-afbc-ea06e6bd3ffa")
 	)
+	(label "SD_DET"
+		(at 148.59 228.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "23f1bc8b-52ed-441f-864a-e36b0ce326df")
+	)
 	(label "SW3"
 		(at 246.38 100.33 0)
 		(effects
