@@ -41,3 +41,15 @@ fp-info-cache
 
 # Local project settings
 *.kicad_prl
+
+# LTspice - Simulation outputs and temporary files
+*.raw
+*.log
+*.op.raw
+*.fft
+*.net
+
+# Auto-saved backup files
+*.bak
+*.asc%
+*.asy%
