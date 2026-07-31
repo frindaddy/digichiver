@@ -2416,8 +2416,8 @@
 		)
 	)
 	(sheet
-		(at 165.1 171.45)
-		(size 38.1 16.51)
+		(at 165.1 170.18)
+		(size 38.1 10.16)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2432,7 +2432,7 @@
 		)
 		(uuid "3f31dd03-db19-4d71-92cd-90eb39c94774")
 		(property "Sheetname" "Power"
-			(at 165.1 170.7384 0)
+			(at 165.1 169.4684 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2443,7 +2443,7 @@
 			)
 		)
 		(property "Sheetfile" "Power.kicad_sch"
-			(at 165.1 188.5446 0)
+			(at 165.1 180.9246 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
