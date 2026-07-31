@@ -1478,6 +1478,16 @@
 	)
 	(wire
 		(pts
+			(xy 283.21 156.21) (xy 279.4 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "127edc80-3949-4c92-958f-bc708cecd1ec")
+	)
+	(wire
+		(pts
 			(xy 132.08 111.76) (xy 135.89 111.76)
 		)
 		(stroke
@@ -1505,6 +1515,16 @@
 			(type default)
 		)
 		(uuid "39357181-47ca-461d-be5b-d3e1cee14c85")
+	)
+	(wire
+		(pts
+			(xy 203.2 158.75) (xy 241.3 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a3ea508-57af-445a-9a20-a493ec0450c1")
 	)
 	(bus
 		(pts
@@ -1545,6 +1565,16 @@
 			(type default)
 		)
 		(uuid "4c9a18bb-2bc3-4bc9-b13a-d182394d46fd")
+	)
+	(wire
+		(pts
+			(xy 203.2 161.29) (xy 241.3 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e3024b4-f4c6-41fb-b44a-eaf7f39a3aeb")
 	)
 	(wire
 		(pts
@@ -1628,6 +1658,16 @@
 	)
 	(wire
 		(pts
+			(xy 279.4 144.78) (xy 283.21 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a11a1fc-66c6-4517-87a9-aa635535d5f3")
+	)
+	(wire
+		(pts
 			(xy 123.19 125.73) (xy 165.1 125.73)
 		)
 		(stroke
@@ -1685,6 +1725,16 @@
 			(type default)
 		)
 		(uuid "be815faa-273e-4b70-8286-2d07ed8f829b")
+	)
+	(wire
+		(pts
+			(xy 283.21 144.78) (xy 283.21 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf640f12-4452-43dd-8961-65bfa3a1c647")
 	)
 	(wire
 		(pts
@@ -1765,6 +1815,16 @@
 			(type default)
 		)
 		(uuid "e7239872-45bd-4da1-9b7b-5f5319ed79c3")
+	)
+	(wire
+		(pts
+			(xy 203.2 156.21) (xy 241.3 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e82fb2ba-6d35-4463-84fd-81d7fff113cb")
 	)
 	(bus
 		(pts
@@ -1885,7 +1945,7 @@
 			(uuid "0aae36be-5ee5-4b9e-9442-9503fc31abe9")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6"
 					(reference "#PWR071")
 					(unit 1)
@@ -1964,7 +2024,7 @@
 			(uuid "26f7ad5d-a904-42fd-8b0d-d7e69aed45f9")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6"
 					(reference "R19")
 					(unit 1)
@@ -2042,7 +2102,7 @@
 			(uuid "69cc0bb2-ba78-4ec5-81d4-12d1c04ecd92")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6"
 					(reference "#PWR072")
 					(unit 1)
@@ -2119,7 +2179,7 @@
 			(uuid "ec6e6eec-f0a1-4a96-8f26-37f2f4a39435")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6"
 					(reference "#PWR034")
 					(unit 1)
@@ -2268,7 +2328,7 @@
 			(uuid "bfd91f42-5640-4de7-ab4b-62ac0b6df21d")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6"
 					(reference "J2")
 					(unit 1)
@@ -2347,7 +2407,7 @@
 			(uuid "18dc2740-7ef0-49f3-81a6-9a58172c3030")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6"
 					(reference "R20")
 					(unit 1)
@@ -2356,7 +2416,7 @@
 		)
 	)
 	(sheet
-		(at 165.1 167.64)
+		(at 165.1 171.45)
 		(size 38.1 16.51)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2372,7 +2432,7 @@
 		)
 		(uuid "3f31dd03-db19-4d71-92cd-90eb39c94774")
 		(property "Sheetname" "Power"
-			(at 165.1 166.9284 0)
+			(at 165.1 170.7384 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2383,7 +2443,7 @@
 			)
 		)
 		(property "Sheetfile" "Power.kicad_sch"
-			(at 165.1 184.7346 0)
+			(at 165.1 188.5446 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2394,7 +2454,7 @@
 			)
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6"
 					(page "3")
 				)
@@ -2403,7 +2463,7 @@
 	)
 	(sheet
 		(at 165.1 118.11)
-		(size 38.1 43.18)
+		(size 38.1 45.72)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2429,7 +2489,7 @@
 			)
 		)
 		(property "Sheetfile" "Control.kicad_sch"
-			(at 165.1 161.8746 0)
+			(at 165.1 164.4146 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2530,7 +2590,7 @@
 			)
 		)
 		(pin "SDATA" input
-			(at 203.2 152.4 0)
+			(at 203.2 156.21 0)
 			(uuid "e569112e-f72d-470c-a729-ae0a8bbbbd7a")
 			(effects
 				(font
@@ -2540,7 +2600,7 @@
 			)
 		)
 		(pin "BCLK" output
-			(at 203.2 154.94 0)
+			(at 203.2 158.75 0)
 			(uuid "aea6a3b0-7db2-4d1d-9e5f-92b0a3e7119e")
 			(effects
 				(font
@@ -2550,7 +2610,7 @@
 			)
 		)
 		(pin "FSYNC" output
-			(at 203.2 157.48 0)
+			(at 203.2 161.29 0)
 			(uuid "d6e7e64b-f560-4e59-9aa9-53b17aca2525")
 			(effects
 				(font
@@ -2580,7 +2640,7 @@
 			)
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6"
 					(page "2")
 				)
@@ -2715,8 +2775,18 @@
 				(justify left)
 			)
 		)
+		(pin "FILTERED_SPEECH" output
+			(at 279.4 144.78 0)
+			(uuid "a28bd132-40d3-4b48-aa84-be62c2d2aea0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6"
 					(page "4")
 				)
@@ -2724,8 +2794,8 @@
 		)
 	)
 	(sheet
-		(at 241.3 154.94)
-		(size 38.1 12.7)
+		(at 241.3 153.67)
+		(size 38.1 10.16)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2740,7 +2810,7 @@
 		)
 		(uuid "d8e5fb35-4d7b-4489-a789-c25f01344ad2")
 		(property "Sheetname" "Audio"
-			(at 241.3 154.2284 0)
+			(at 241.3 152.9584 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2751,7 +2821,7 @@
 			)
 		)
 		(property "Sheetfile" "Audio.kicad_sch"
-			(at 241.3 168.2246 0)
+			(at 241.3 164.4146 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2761,8 +2831,48 @@
 				(justify left top)
 			)
 		)
+		(pin "BCLK" input
+			(at 241.3 158.75 180)
+			(uuid "d2cc18c5-7135-478c-b1a8-b5a65c01df7b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FILTERED_SPEECH" input
+			(at 279.4 156.21 0)
+			(uuid "6564a4bb-ce21-40ef-bc45-f43a4c4a4b36")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "FSYNC" input
+			(at 241.3 161.29 180)
+			(uuid "ee9b8f0e-9d1a-4ef6-a473-ca22db02db2b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SDATA" output
+			(at 241.3 156.21 180)
+			(uuid "0b33c7e0-07ae-42ab-ae6e-7f397b727c53")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6"
 					(page "5")
 				)

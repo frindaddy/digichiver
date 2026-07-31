@@ -8662,7 +8662,7 @@
 		)
 		(uuid "19b1ba05-2467-4e7d-b165-71f750f5cc55")
 	)
-	(label "FILTERED_SPEECH_OUT"
+	(label "FILTERED_SPEECH"
 		(at 330.2 214.63 0)
 		(effects
 			(font
@@ -9642,7 +9642,7 @@
 		)
 		(uuid "ffdfc97f-d4bc-4e70-8980-1e0d6e00b633")
 	)
-	(hierarchical_label "FILTERED_SPEECH_OUT"
+	(hierarchical_label "FILTERED_SPEECH"
 		(shape output)
 		(at 355.6 214.63 0)
 		(effects
@@ -9821,7 +9821,7 @@
 			(uuid "c9ed8b7c-f32f-4e7a-8262-c6c9e010daba")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR011")
 					(unit 1)
@@ -9898,7 +9898,7 @@
 			(uuid "0ca8b402-83c5-483d-bf27-8380e9275e5a")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR09")
 					(unit 1)
@@ -9975,7 +9975,7 @@
 			(uuid "75e8dbd9-7026-4076-b0cd-0940a4a3aa17")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR088")
 					(unit 1)
@@ -10064,7 +10064,7 @@
 			(uuid "261050b8-aef6-4b28-8405-47ef5c994881")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "C7")
 					(unit 1)
@@ -10141,7 +10141,7 @@
 			(uuid "c0e3ed7d-fe01-4c15-9bf6-763127774d0a")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR01")
 					(unit 1)
@@ -10219,7 +10219,7 @@
 			(uuid "7a601f01-18ec-421a-99c7-9fe3ea9ae8b7")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR02")
 					(unit 1)
@@ -10296,7 +10296,7 @@
 			(uuid "820141cf-c6b1-4713-8dc5-b4adee96c422")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR032")
 					(unit 1)
@@ -10430,7 +10430,7 @@
 			(uuid "505e5770-93ba-4717-8c94-28a8b8428e80")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "U10")
 					(unit 2)
@@ -10507,7 +10507,7 @@
 			(uuid "166cc36a-74ad-4eeb-9243-10ee38fb7c78")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR07")
 					(unit 1)
@@ -10584,7 +10584,7 @@
 			(uuid "e916aff4-bd67-4d3e-a402-9b06498a12bf")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR095")
 					(unit 1)
@@ -10661,7 +10661,7 @@
 			(uuid "a9e53c63-016d-4b5a-a378-0a332b1d584d")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR092")
 					(unit 1)
@@ -10739,7 +10739,7 @@
 			(uuid "d336755b-b76b-4278-81e6-88edb7e102be")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR013")
 					(unit 1)
@@ -10816,7 +10816,7 @@
 			(uuid "fb02d101-f68b-4e88-b20a-df1444052178")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR087")
 					(unit 1)
@@ -10897,7 +10897,7 @@
 			(uuid "9f773e7e-29f6-4efa-a683-afa061f20a0d")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "R23")
 					(unit 1)
@@ -10970,7 +10970,7 @@
 			)
 		)
 		(pin "13"
-			(uuid "b8eb99c7-ee2d-47ce-8bfb-93198267a29b")
+			(uuid "b8eb99c7-ee2d-47ce-8bfb-93198267a29c")
 		)
 		(pin "1"
 			(uuid "b4333a2b-9dfa-4fff-a6ec-99e2a13aa7db")
@@ -10979,7 +10979,7 @@
 			(uuid "f5d7bfee-40c1-48ad-ac12-00ee4fc58659")
 		)
 		(pin "4"
-			(uuid "7acd4a60-6f2d-46f4-b703-0d02a29f0ffb")
+			(uuid "7acd4a60-6f2d-46f4-b703-0d02a29f0ffc")
 		)
 		(pin "2"
 			(uuid "1f4c49cb-5321-4084-9d4b-9a5bd047c8be")
@@ -10991,22 +10991,22 @@
 			(uuid "6bd833c3-6697-46b1-9c3b-ca0c85308a3c")
 		)
 		(pin "8"
-			(uuid "ed754708-92f8-4564-ac66-82fcf6998194")
+			(uuid "ed754708-92f8-4564-ac66-82fcf6998195")
 		)
 		(pin "14"
-			(uuid "83f7943d-0617-4ad1-b62a-0502e6cb476d")
+			(uuid "83f7943d-0617-4ad1-b62a-0502e6cb476e")
 		)
 		(pin "12"
-			(uuid "2bbcefbb-11b3-46be-8ab8-07044832b394")
+			(uuid "2bbcefbb-11b3-46be-8ab8-07044832b395")
 		)
 		(pin "11"
 			(uuid "ef46b1e0-93fd-4929-89a0-ef1b8fc50231")
 		)
 		(pin "9"
-			(uuid "586871be-43fe-4833-81bc-b3ca24b28425")
+			(uuid "586871be-43fe-4833-81bc-b3ca24b28426")
 		)
 		(pin "10"
-			(uuid "5d9192c0-43f0-4735-9408-8bffe5afb230")
+			(uuid "5d9192c0-43f0-4735-9408-8bffe5afb231")
 		)
 		(pin "7"
 			(uuid "75e88519-e2dc-4f41-8099-6e029a6c3d88")
@@ -11024,13 +11024,13 @@
 			(uuid "4f01f738-4f50-42a9-b87d-70a6bf9cf6eb")
 		)
 		(pin "11"
-			(uuid "cce65b15-8d9f-4fbd-90d4-189ac6012cdd")
+			(uuid "cce65b15-8d9f-4fbd-90d4-189ac6012cde")
 		)
 		(pin "4"
-			(uuid "505e5770-93ba-4717-8c94-28a8b8428e80")
+			(uuid "505e5770-93ba-4717-8c94-28a8b8428e81")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "U10")
 					(unit 1)
@@ -11108,7 +11108,7 @@
 			(uuid "ec0677e1-880a-4b62-a0f9-6b2e5aed3d46")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR019")
 					(unit 1)
@@ -11185,7 +11185,7 @@
 			(uuid "a8e1d3c5-c5bc-415c-b3ed-28e7040a8d4e")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR086")
 					(unit 1)
@@ -11263,7 +11263,7 @@
 			(uuid "582750dd-11d6-42c3-ad3f-ac3af8c3f9e9")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR020")
 					(unit 1)
@@ -11341,7 +11341,7 @@
 			(uuid "3068e9e0-d599-4842-8660-bef77554637d")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR022")
 					(unit 1)
@@ -11423,7 +11423,7 @@
 			(uuid "7ec5879a-a15b-40eb-b784-a112f64d898c")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "R2")
 					(unit 1)
@@ -11501,7 +11501,7 @@
 			(uuid "d7178746-e506-4c63-931f-b624a7de33c0")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR017")
 					(unit 1)
@@ -11578,7 +11578,7 @@
 			(uuid "31fa9b6d-0fa6-43e7-8d6f-1ac3ca66fb47")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR082")
 					(unit 1)
@@ -11655,7 +11655,7 @@
 			(uuid "da64dff5-38cc-4af0-ba47-3e6ec814a168")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR084")
 					(unit 1)
@@ -11732,7 +11732,7 @@
 			(uuid "ed2828e3-8a45-4a0b-9f5e-2668fc7181b2")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR089")
 					(unit 1)
@@ -11806,10 +11806,10 @@
 			)
 		)
 		(pin "13"
-			(uuid "b8eb99c7-ee2d-47ce-8bfb-93198267a29b")
+			(uuid "b8eb99c7-ee2d-47ce-8bfb-93198267a29d")
 		)
 		(pin "1"
-			(uuid "d5da1f12-d784-43d6-afff-8c2566991fae")
+			(uuid "d5da1f12-d784-43d6-afff-8c2566991faf")
 		)
 		(pin "6"
 			(uuid "70e8d3c3-74de-4fe3-b5db-f0c144e0c99d")
@@ -11818,31 +11818,31 @@
 			(uuid "0b2604e9-8101-488a-aab6-4a318c40566c")
 		)
 		(pin "2"
-			(uuid "d232b3d6-104e-4eee-85e2-6556a3308211")
+			(uuid "d232b3d6-104e-4eee-85e2-6556a3308212")
 		)
 		(pin "5"
 			(uuid "aaace90d-2439-4463-92c0-cf203622a0a5")
 		)
 		(pin "3"
-			(uuid "f327c38e-2346-4e9b-8532-6bc2d3ad2eda")
+			(uuid "f327c38e-2346-4e9b-8532-6bc2d3ad2edb")
 		)
 		(pin "8"
-			(uuid "ed754708-92f8-4564-ac66-82fcf6998194")
+			(uuid "ed754708-92f8-4564-ac66-82fcf6998196")
 		)
 		(pin "14"
-			(uuid "83f7943d-0617-4ad1-b62a-0502e6cb476d")
+			(uuid "83f7943d-0617-4ad1-b62a-0502e6cb476f")
 		)
 		(pin "12"
-			(uuid "2bbcefbb-11b3-46be-8ab8-07044832b394")
+			(uuid "2bbcefbb-11b3-46be-8ab8-07044832b396")
 		)
 		(pin "11"
 			(uuid "099b98b7-ccb2-4be1-afa8-5af1048f6224")
 		)
 		(pin "9"
-			(uuid "586871be-43fe-4833-81bc-b3ca24b28425")
+			(uuid "586871be-43fe-4833-81bc-b3ca24b28427")
 		)
 		(pin "10"
-			(uuid "5d9192c0-43f0-4735-9408-8bffe5afb230")
+			(uuid "5d9192c0-43f0-4735-9408-8bffe5afb232")
 		)
 		(pin "7"
 			(uuid "598e79d1-0b6e-43e2-a101-90e9be744757")
@@ -11851,22 +11851,22 @@
 			(uuid "039c64cf-e425-40d0-8670-87f790d80c58")
 		)
 		(pin "4"
-			(uuid "f266d2d2-8315-4502-a64c-5d119c1358b2")
+			(uuid "f266d2d2-8315-4502-a64c-5d119c1358b3")
 		)
 		(pin "11"
-			(uuid "c52db656-beb5-4152-a0fa-d4c69ae517eb")
+			(uuid "c52db656-beb5-4152-a0fa-d4c69ae517ec")
 		)
 		(pin "4"
-			(uuid "7f2ed634-6685-4932-827a-d09e236b9f63")
+			(uuid "7f2ed634-6685-4932-827a-d09e236b9f64")
 		)
 		(pin "11"
 			(uuid "25ea8205-01eb-46d1-8377-3e97d15afc58")
 		)
 		(pin "4"
-			(uuid "505e5770-93ba-4717-8c94-28a8b8428e80")
+			(uuid "505e5770-93ba-4717-8c94-28a8b8428e82")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "U10")
 					(unit 3)
@@ -11955,7 +11955,7 @@
 			(uuid "8aab871d-408b-4560-9cb3-3866b6f78c11")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "C3")
 					(unit 1)
@@ -12032,7 +12032,7 @@
 			(uuid "d2a6c62f-a13a-4f90-848b-b4de9160cca6")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR091")
 					(unit 1)
@@ -12109,7 +12109,7 @@
 			(uuid "d7242808-982a-4f6f-b24f-36af52f55b84")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR03")
 					(unit 1)
@@ -12198,7 +12198,7 @@
 			(uuid "ed20bd09-9724-48a0-9758-4995eb37e020")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "C8")
 					(unit 1)
@@ -12287,7 +12287,7 @@
 			(uuid "c0f9f616-2529-411a-a06a-aadca30a5f81")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "C5")
 					(unit 1)
@@ -12376,7 +12376,7 @@
 			(uuid "2cb31ae1-702e-43aa-a028-440763dd3496")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "C41")
 					(unit 1)
@@ -12465,7 +12465,7 @@
 			(uuid "95e82fc2-9af4-4120-93f8-21e0f7e06340")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "C47")
 					(unit 1)
@@ -12543,7 +12543,7 @@
 			(uuid "9aff66f6-055f-409c-82ec-b1826d3e2732")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR021")
 					(unit 1)
@@ -12632,7 +12632,7 @@
 			(uuid "ed7487a2-6461-488a-8763-2a221ccd3b53")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "C4")
 					(unit 1)
@@ -12712,7 +12712,7 @@
 			(uuid "9403c0db-b8f1-4c03-8432-ccf9a499bd81")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "R25")
 					(unit 1)
@@ -12789,7 +12789,7 @@
 			(uuid "9e88e6df-a70b-4c96-9de9-b2d3bf61226d")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR029")
 					(unit 1)
@@ -12867,7 +12867,7 @@
 			(uuid "50036c94-bb12-4df8-b056-a527b20e072d")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR018")
 					(unit 1)
@@ -13003,7 +13003,7 @@
 			(uuid "fc3a6064-9743-46af-9b04-185199430cf9")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "U2")
 					(unit 1)
@@ -13150,7 +13150,7 @@
 			(uuid "6bed1734-cfb4-4115-a29f-6714ffb8c6b4")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "U4")
 					(unit 1)
@@ -13285,7 +13285,7 @@
 			(uuid "ecc57209-abd6-4590-ac12-44ba0f31afb3")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "U3")
 					(unit 1)
@@ -13365,7 +13365,7 @@
 			(uuid "f7721f97-f2c7-4190-81af-78469cda7192")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "R24")
 					(unit 1)
@@ -13442,7 +13442,7 @@
 			(uuid "a72a0c2a-5bff-4c41-8f1a-10b6af7e378c")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR04")
 					(unit 1)
@@ -13519,7 +13519,7 @@
 			(uuid "6944ac9d-a7b8-4ef0-9f98-95c76c8622ca")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR027")
 					(unit 1)
@@ -13601,7 +13601,7 @@
 			(uuid "eae6ae3b-b71c-4b62-af03-d7b8a9765981")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "R1")
 					(unit 1)
@@ -13678,7 +13678,7 @@
 			(uuid "76c1ffd3-6a9c-4c14-a78e-9a5a254576bd")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR083")
 					(unit 1)
@@ -13767,7 +13767,7 @@
 			(uuid "a8f292c4-a400-488a-b46f-08b67a9c1437")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "C43")
 					(unit 1)
@@ -13856,7 +13856,7 @@
 			(uuid "33ab65ca-171d-4a68-be29-873bb13f344f")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "C42")
 					(unit 1)
@@ -13937,7 +13937,7 @@
 			(uuid "51ba10d5-2659-4081-a139-41a256214e49")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "R21")
 					(unit 1)
@@ -14018,7 +14018,7 @@
 			(uuid "fc718e2a-e93c-40cc-a59c-9e8d2b1aa6ef")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "R22")
 					(unit 1)
@@ -14107,7 +14107,7 @@
 			(uuid "ac44a24e-02a2-429b-af3a-c267c4ac9699")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "C6")
 					(unit 1)
@@ -14196,7 +14196,7 @@
 			(uuid "f68c9544-c73e-496d-b44a-8e21f6e1f387")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "C1")
 					(unit 1)
@@ -14274,7 +14274,7 @@
 			(uuid "2d2fbee0-c5e2-4fb6-bc4f-a96e79eec68d")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR026")
 					(unit 1)
@@ -14351,7 +14351,7 @@
 			(uuid "3c99e547-f2fe-42ab-a3f5-4eea3a1f7334")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR028")
 					(unit 1)
@@ -14428,7 +14428,7 @@
 			(uuid "5c4009ba-de4b-4d5e-a2b1-218281b9921f")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR031")
 					(unit 1)
@@ -14506,7 +14506,7 @@
 			(uuid "12c6f9d2-c5ff-4ab6-8890-0fb07bed5c1f")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR024")
 					(unit 1)
@@ -14583,7 +14583,7 @@
 			(uuid "87eaf18e-62c7-48f6-aa39-f056c1393d51")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR093")
 					(unit 1)
@@ -14730,7 +14730,7 @@
 			(uuid "14fa9db6-985a-4507-b4ec-65c1fd839ea3")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "U5")
 					(unit 1)
@@ -14819,7 +14819,7 @@
 			(uuid "d9e4cfd3-6548-4158-881d-f41c9a8d2fda")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "C45")
 					(unit 1)
@@ -15012,7 +15012,7 @@
 			(uuid "b8a6f0d4-7beb-4996-94e9-aec1bb09b360")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "X1")
 					(unit 1)
@@ -15092,7 +15092,7 @@
 			(uuid "878758ce-d172-4add-973a-91562dddae23")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "R5")
 					(unit 1)
@@ -15170,7 +15170,7 @@
 			(uuid "d14a597c-aea6-4d90-9483-f9b8b0eb8000")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR012")
 					(unit 1)
@@ -15247,7 +15247,7 @@
 			(uuid "d1cbb8d6-7428-49b5-991f-def140c6f98c")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR08")
 					(unit 1)
@@ -15327,7 +15327,7 @@
 			(uuid "4a167b3f-31eb-426a-bd77-0efa01ee92b9")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "R4")
 					(unit 1)
@@ -15416,7 +15416,7 @@
 			(uuid "1d02c8e3-bb2f-40aa-a0b1-8f644f8185e6")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "C44")
 					(unit 1)
@@ -15505,7 +15505,7 @@
 			(uuid "e899564e-d600-4568-8992-9ecde22ccf6e")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "C46")
 					(unit 1)
@@ -15583,7 +15583,7 @@
 			(uuid "6daadd5f-c72c-4ffa-903c-b501cf903500")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR016")
 					(unit 1)
@@ -15657,37 +15657,37 @@
 			)
 		)
 		(pin "13"
-			(uuid "b8eb99c7-ee2d-47ce-8bfb-93198267a29b")
+			(uuid "b8eb99c7-ee2d-47ce-8bfb-93198267a29e")
 		)
 		(pin "1"
-			(uuid "d5da1f12-d784-43d6-afff-8c2566991fae")
+			(uuid "d5da1f12-d784-43d6-afff-8c2566991fb0")
 		)
 		(pin "6"
-			(uuid "70e8d3c3-74de-4fe3-b5db-f0c144e0c99d")
+			(uuid "70e8d3c3-74de-4fe3-b5db-f0c144e0c99e")
 		)
 		(pin "4"
 			(uuid "cb30c281-bdc5-4b46-b616-46aa06e04709")
 		)
 		(pin "2"
-			(uuid "d232b3d6-104e-4eee-85e2-6556a3308211")
+			(uuid "d232b3d6-104e-4eee-85e2-6556a3308213")
 		)
 		(pin "5"
-			(uuid "aaace90d-2439-4463-92c0-cf203622a0a5")
+			(uuid "aaace90d-2439-4463-92c0-cf203622a0a6")
 		)
 		(pin "3"
-			(uuid "f327c38e-2346-4e9b-8532-6bc2d3ad2eda")
+			(uuid "f327c38e-2346-4e9b-8532-6bc2d3ad2edc")
 		)
 		(pin "8"
 			(uuid "88131480-0320-47d2-b2c3-391bdc52e2d3")
 		)
 		(pin "14"
-			(uuid "83f7943d-0617-4ad1-b62a-0502e6cb476d")
+			(uuid "83f7943d-0617-4ad1-b62a-0502e6cb4770")
 		)
 		(pin "12"
-			(uuid "2bbcefbb-11b3-46be-8ab8-07044832b394")
+			(uuid "2bbcefbb-11b3-46be-8ab8-07044832b397")
 		)
 		(pin "11"
-			(uuid "099b98b7-ccb2-4be1-afa8-5af1048f6224")
+			(uuid "099b98b7-ccb2-4be1-afa8-5af1048f6225")
 		)
 		(pin "9"
 			(uuid "12ca564b-10c8-47e4-be23-cb3e4523636d")
@@ -15696,28 +15696,28 @@
 			(uuid "90fd3cdb-f6d6-44db-aab6-f857115fb10f")
 		)
 		(pin "7"
-			(uuid "598e79d1-0b6e-43e2-a101-90e9be744757")
+			(uuid "598e79d1-0b6e-43e2-a101-90e9be744758")
 		)
 		(pin "11"
-			(uuid "039c64cf-e425-40d0-8670-87f790d80c58")
+			(uuid "039c64cf-e425-40d0-8670-87f790d80c59")
 		)
 		(pin "4"
-			(uuid "f266d2d2-8315-4502-a64c-5d119c1358b2")
+			(uuid "f266d2d2-8315-4502-a64c-5d119c1358b4")
 		)
 		(pin "11"
 			(uuid "d4fd357b-d7d1-48ac-9ff6-ae38b683cc3c")
 		)
 		(pin "4"
-			(uuid "7f2ed634-6685-4932-827a-d09e236b9f63")
+			(uuid "7f2ed634-6685-4932-827a-d09e236b9f65")
 		)
 		(pin "11"
 			(uuid "9b341f00-7a12-4254-baab-6fe23f1782e7")
 		)
 		(pin "4"
-			(uuid "505e5770-93ba-4717-8c94-28a8b8428e80")
+			(uuid "505e5770-93ba-4717-8c94-28a8b8428e83")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "U10")
 					(unit 4)
@@ -15795,7 +15795,7 @@
 			(uuid "0fc63165-daac-49c3-9f0c-213a4ad18f0d")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR05")
 					(unit 1)
@@ -15873,7 +15873,7 @@
 			(uuid "604247fc-62a7-4886-81f5-9c712a7b9fa0")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR023")
 					(unit 1)
@@ -15950,7 +15950,7 @@
 			(uuid "19a08b87-f411-48de-b048-1bd8313106a5")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR081")
 					(unit 1)
@@ -16027,7 +16027,7 @@
 			(uuid "a5879cb3-fac0-4556-bebb-2f5a71e7ee69")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR010")
 					(unit 1)
@@ -16105,7 +16105,7 @@
 			(uuid "c3bcfe22-5a11-47c9-ae1d-032cb25d246d")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR025")
 					(unit 1)
@@ -16182,7 +16182,7 @@
 			(uuid "1a93ed9c-de09-4f4e-9a67-6e9c4a92909e")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR094")
 					(unit 1)
@@ -16260,7 +16260,7 @@
 			(uuid "2bbbc811-91e6-4422-85e3-a0e3dd7b0c2c")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR014")
 					(unit 1)
@@ -16340,7 +16340,7 @@
 			(uuid "35558df4-4c7c-46e0-b1f9-5b1f6442edb3")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "R27")
 					(unit 1)
@@ -16429,7 +16429,7 @@
 			(uuid "515059d4-ddf3-4d0e-a7a5-d7bf8b2b4b5c")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "C2")
 					(unit 1)
@@ -16510,7 +16510,7 @@
 			(uuid "0fa9247f-e474-4355-b22d-6daea2b889ef")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "R26")
 					(unit 1)
@@ -16588,7 +16588,7 @@
 			(uuid "f847839e-eab1-4bc6-8a7f-7813dba4281b")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR015")
 					(unit 1)
@@ -16677,7 +16677,7 @@
 			(uuid "8c538f0b-6b3a-4171-9561-8db3c57559f4")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "C9")
 					(unit 1)
@@ -16754,7 +16754,7 @@
 			(uuid "78fc683e-f8f5-42ca-b9f9-1f46c481ee4f")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR06")
 					(unit 1)
@@ -16834,7 +16834,7 @@
 			(uuid "6a0455f7-5990-4b47-98d9-3ea41b886fbf")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "R3")
 					(unit 1)
@@ -16981,7 +16981,7 @@
 			(uuid "0f7fd8d2-de7e-4d5d-8c7c-27a67769a362")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "U6")
 					(unit 1)
@@ -17058,7 +17058,7 @@
 			(uuid "20a62029-d30f-402a-b3eb-403d0e81fdc0")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR090")
 					(unit 1)
@@ -17135,7 +17135,7 @@
 			(uuid "f2bfa592-2fad-47d6-b4b6-f64e4fd91ab8")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR085")
 					(unit 1)
@@ -17212,7 +17212,7 @@
 			(uuid "e9d53bf9-a1bb-4caa-b38e-876473e50af4")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
 					(reference "#PWR030")
 					(unit 1)

@@ -7251,7 +7251,7 @@
 			(uuid "b768a7b5-8209-4e5e-8e45-5abccf5ce31a")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C30")
 					(unit 1)
@@ -7334,7 +7334,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR039")
 					(unit 1)
@@ -7429,7 +7429,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C16")
 					(unit 1)
@@ -7512,7 +7512,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR046")
 					(unit 1)
@@ -7607,7 +7607,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C21")
 					(unit 1)
@@ -7690,7 +7690,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR053")
 					(unit 1)
@@ -7785,7 +7785,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C11")
 					(unit 1)
@@ -7880,7 +7880,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C28")
 					(unit 1)
@@ -7963,7 +7963,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR036")
 					(unit 1)
@@ -8048,7 +8048,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "R10")
 					(unit 1)
@@ -8140,7 +8140,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "X2")
 					(unit 1)
@@ -8224,7 +8224,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR051")
 					(unit 1)
@@ -8310,7 +8310,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "R7")
 					(unit 1)
@@ -8399,7 +8399,7 @@
 			(uuid "e3f2c1b2-0343-4917-a258-823eb26b4528")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "D1")
 					(unit 1)
@@ -8494,7 +8494,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C26")
 					(unit 1)
@@ -8589,7 +8589,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C24")
 					(unit 1)
@@ -8684,7 +8684,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C18")
 					(unit 1)
@@ -8767,7 +8767,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR057")
 					(unit 1)
@@ -8862,7 +8862,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C13")
 					(unit 1)
@@ -8941,7 +8941,7 @@
 			(uuid "885c61d9-398c-474c-80d3-7b429222beaa")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "R13")
 					(unit 1)
@@ -9036,7 +9036,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C10")
 					(unit 1)
@@ -9127,7 +9127,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "SW3")
 					(unit 1)
@@ -9210,7 +9210,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR045")
 					(unit 1)
@@ -9305,7 +9305,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C14")
 					(unit 1)
@@ -9389,7 +9389,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR038")
 					(unit 1)
@@ -9483,7 +9483,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "SW1")
 					(unit 1)
@@ -9578,7 +9578,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C15")
 					(unit 1)
@@ -9673,7 +9673,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C17")
 					(unit 1)
@@ -9756,7 +9756,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR056")
 					(unit 1)
@@ -9840,7 +9840,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR047")
 					(unit 1)
@@ -9935,7 +9935,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C27")
 					(unit 1)
@@ -10023,7 +10023,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "R12")
 					(unit 1)
@@ -10118,7 +10118,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C20")
 					(unit 1)
@@ -10201,7 +10201,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR043")
 					(unit 1)
@@ -10296,7 +10296,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C29")
 					(unit 1)
@@ -10381,7 +10381,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "R9")
 					(unit 1)
@@ -10475,7 +10475,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "SW2")
 					(unit 1)
@@ -10560,7 +10560,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "R11")
 					(unit 1)
@@ -10644,7 +10644,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR037")
 					(unit 1)
@@ -10739,7 +10739,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C23")
 					(unit 1)
@@ -10827,7 +10827,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "L1")
 					(unit 1)
@@ -10904,7 +10904,7 @@
 			(uuid "648bbc34-6497-4404-984c-ebe018da3cd5")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR059")
 					(unit 1)
@@ -10999,7 +10999,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C12")
 					(unit 1)
@@ -11082,7 +11082,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR054")
 					(unit 1)
@@ -11177,7 +11177,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C19")
 					(unit 1)
@@ -11262,7 +11262,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "R8")
 					(unit 1)
@@ -11608,7 +11608,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "U1")
 					(unit 1)
@@ -11692,7 +11692,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR052")
 					(unit 1)
@@ -11776,7 +11776,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR044")
 					(unit 1)
@@ -11887,7 +11887,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "J1")
 					(unit 1)
@@ -11971,7 +11971,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR040")
 					(unit 1)
@@ -12054,7 +12054,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR042")
 					(unit 1)
@@ -12137,7 +12137,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR055")
 					(unit 1)
@@ -12223,7 +12223,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "R6")
 					(unit 1)
@@ -12306,7 +12306,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR041")
 					(unit 1)
@@ -12401,7 +12401,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C25")
 					(unit 1)
@@ -12496,7 +12496,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C22")
 					(unit 1)
@@ -12579,7 +12579,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR048")
 					(unit 1)
@@ -12656,7 +12656,7 @@
 			(uuid "362af3f8-bb08-47a9-bc18-bded9bd9b14b")
 		)
 		(instances
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR058")
 					(unit 1)
@@ -12739,7 +12739,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR049")
 					(unit 1)
@@ -12823,7 +12823,7 @@
 					(unit 1)
 				)
 			)
-			(project "digichiver"
+			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR050")
 					(unit 1)
