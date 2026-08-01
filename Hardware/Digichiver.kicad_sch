@@ -1538,6 +1538,16 @@
 	)
 	(wire
 		(pts
+			(xy 203.2 167.64) (xy 241.3 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "412c97ef-041e-42cb-a0cf-138e9ad2df91")
+	)
+	(wire
+		(pts
 			(xy 121.92 123.19) (xy 123.19 123.19)
 		)
 		(stroke
@@ -1856,6 +1866,16 @@
 		)
 		(uuid "fc1c338b-8ab4-4b9e-9a5a-95269d683b53")
 	)
+	(label "~{DIGITALKER_CS}"
+		(at 205.74 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0cde1b5c-c874-40af-9ba1-526622e800e4")
+	)
 	(label "USB_D+"
 		(at 127 125.73 0)
 		(effects
@@ -1866,6 +1886,26 @@
 		)
 		(uuid "103788d4-771a-4b0d-a027-985e1b395260")
 	)
+	(label "DIGITALKER_CMS"
+		(at 205.74 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1679bf52-d05f-48f2-ab75-5a47754f8b5a")
+	)
+	(label "DIGITALKER_CLK_4MH"
+		(at 205.74 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "24655830-0be5-4a2a-bfd1-70c24b508af5")
+	)
 	(label "USB_D-"
 		(at 127 120.65 0)
 		(effects
@@ -1875,6 +1915,126 @@
 			(justify left bottom)
 		)
 		(uuid "35041319-4b37-4f3e-b8b7-1e9d00838751")
+	)
+	(label "SW[1..8]"
+		(at 205.74 124.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3bf0d6d4-ef9e-4a7c-b29d-94194d0d1ba2")
+	)
+	(label "FSYNC"
+		(at 205.74 161.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "41e403ec-5626-48ab-a53c-e225d976cb53")
+	)
+	(label "~{SPEAKER_DISABLE}"
+		(at 205.74 167.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "57761107-a102-492f-9868-de2802672c66")
+	)
+	(label "~{DIGITALKER_WR}"
+		(at 205.74 129.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5f5059bf-778b-4ace-9fb0-c156d497706b")
+	)
+	(label "~{ROMEN}"
+		(at 205.74 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "677c8d91-7fdd-482c-9e00-4661324277c0")
+	)
+	(label "SDATA"
+		(at 205.74 156.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "991203a8-8226-4414-b125-30da3b227201")
+	)
+	(label "USB_D+"
+		(at 154.94 125.73 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "991a9ecb-b5b3-4d76-bd6b-cd69d7878a68")
+	)
+	(label "RDATA[0..7]"
+		(at 205.74 138.43 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9d90be32-6434-4618-b972-fc241f8186ea")
+	)
+	(label "USB_D-"
+		(at 154.94 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a128bebe-c054-4dd5-ab63-e031f9d0ccfc")
+	)
+	(label "INTR"
+		(at 205.74 144.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a30b79d8-11da-4300-b4dd-a34d0db503ad")
+	)
+	(label "BCLK"
+		(at 205.74 158.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a7b86efa-59d2-4567-af74-2bcaaf97ac21")
+	)
+	(label "ROM_ADDR[0..13]"
+		(at 205.74 135.89 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "eb2ebdfa-c5f8-48f5-b7d1-b02497afa625")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2416,7 +2576,7 @@
 		)
 	)
 	(sheet
-		(at 165.1 170.18)
+		(at 165.1 176.53)
 		(size 38.1 10.16)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2432,7 +2592,7 @@
 		)
 		(uuid "3f31dd03-db19-4d71-92cd-90eb39c94774")
 		(property "Sheetname" "Power"
-			(at 165.1 169.4684 0)
+			(at 165.1 175.8184 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2443,7 +2603,7 @@
 			)
 		)
 		(property "Sheetfile" "Power.kicad_sch"
-			(at 165.1 180.9246 0)
+			(at 165.1 187.2746 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2463,7 +2623,7 @@
 	)
 	(sheet
 		(at 165.1 118.11)
-		(size 38.1 45.72)
+		(size 38.1 52.07)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2489,7 +2649,7 @@
 			)
 		)
 		(property "Sheetfile" "Control.kicad_sch"
-			(at 165.1 164.4146 0)
+			(at 165.1 170.7646 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2637,6 +2797,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(pin "~{SPEAKER_DISABLE}" input
+			(at 203.2 167.64 0)
+			(uuid "baee88af-a6f1-487d-be57-697578fd6261")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
@@ -2795,7 +2965,7 @@
 	)
 	(sheet
 		(at 241.3 153.67)
-		(size 38.1 10.16)
+		(size 38.1 16.51)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2821,7 +2991,7 @@
 			)
 		)
 		(property "Sheetfile" "Audio.kicad_sch"
-			(at 241.3 164.4146 0)
+			(at 241.3 170.7646 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2864,6 +3034,16 @@
 		(pin "SDATA" output
 			(at 241.3 156.21 180)
 			(uuid "0b33c7e0-07ae-42ab-ae6e-7f397b727c53")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{SPEAKER_DISABLE}" input
+			(at 241.3 167.64 180)
+			(uuid "3e92aa3e-2bc1-4c97-a978-20946e2922c8")
 			(effects
 				(font
 					(size 1.27 1.27)
