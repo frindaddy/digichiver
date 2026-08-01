@@ -17,8 +17,8 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at -16.51 17.78 0)
+			(property "Reference" "J1"
+				(at 0.635 21.59 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -27,18 +27,17 @@
 					)
 				)
 			)
-			(property "Value" "Micro_SD_Card_Det1"
-				(at 16.51 17.78 0)
+			(property "Value" "DM3AT-SF-PEJM5"
+				(at 0.635 19.05 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify right)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Connector_Card:microSD_HC_Hirose_DM3AT-SF-PEJM5"
 				(at 52.07 17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -49,7 +48,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2110151630_XKB-Connectivity-XKTF-015-N_C381082.pdf"
+			(property "Datasheet" "https://www.hirose.com/product/document?clcode=CL0609-0033-6-00&productname=DM3AT-SF-https://www.hirose.com/product/document?clcode=CL0609-0033-6-00&productname=DM3AT-SF-PEJ2M5&series=DM3&documenttype=Catalog&lang=en&documentid=D49662_en"
 				(at 0 2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -61,6 +60,17 @@
 				)
 			)
 			(property "Description" "Micro SD Card Socket with one card detection pin"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "DM3AT-SF-PEJM5"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -356,7 +366,7 @@
 				(pin passive line
 					(at -22.86 -12.7 0)
 					(length 3.81)
-					(name "DET"
+					(name "DET_A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -364,6 +374,24 @@
 						)
 					)
 					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -22.86 -15.24 0)
+					(length 3.81)
+					(name "DET_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3611,6 +3639,12 @@
 		(uuid "2723f69b-6cbe-4a19-ba74-d59f673e3195")
 	)
 	(junction
+		(at 92.71 213.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "27987bbb-5ce1-4c15-9ba0-a3815b7c58d6")
+	)
+	(junction
 		(at 138.43 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3671,16 +3705,16 @@
 		(uuid "5343219d-8c5d-4ae2-adf1-f9d3aab68d21")
 	)
 	(junction
-		(at 133.35 220.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "53a517cc-0518-4067-8493-25ebccc56ffa")
-	)
-	(junction
 		(at 214.63 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "61299abd-8c61-406f-8f05-365ddfbbecb7")
+	)
+	(junction
+		(at 133.35 220.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "69406607-d5f7-4f18-a3b8-3fe05ac18b87")
 	)
 	(junction
 		(at 123.19 114.3)
@@ -3785,6 +3819,18 @@
 		(uuid "a562f7da-a310-45bc-aff9-69203d75c73a")
 	)
 	(junction
+		(at 118.11 210.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a67e4f2d-8991-4a1b-92b8-6d71a1c23f64")
+	)
+	(junction
+		(at 110.49 231.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a9a1e052-e792-4cc7-88c5-06ef24bf7831")
+	)
+	(junction
 		(at 195.58 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3809,22 +3855,10 @@
 		(uuid "b35dea8d-e526-4832-851d-46d4497fdd34")
 	)
 	(junction
-		(at 140.97 228.6)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b60915fe-c7c5-449c-8537-68ea0e273223")
-	)
-	(junction
 		(at 124.46 100.33)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b61b218a-cb1c-4a59-83a5-baf2aa2bf9b2")
-	)
-	(junction
-		(at 125.73 215.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b6e1e4e1-e87c-4733-8229-23b65ccc2573")
 	)
 	(junction
 		(at 256.54 66.04)
@@ -3837,12 +3871,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b7ddc4f3-f2d6-4228-987e-5c3e5d316614")
-	)
-	(junction
-		(at 118.11 210.82)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bc5b1a40-8caa-4a8f-a6cf-4c76b5d310e0")
 	)
 	(junction
 		(at 138.43 76.2)
@@ -3861,6 +3889,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e1bf4791-3e10-4886-bd42-349f866416ac")
+	)
+	(junction
+		(at 125.73 215.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e303be90-8f3b-4d99-a601-55a20e3110ca")
+	)
+	(junction
+		(at 110.49 208.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e68ad794-95fa-4f40-81c6-5b9bdf60ee51")
 	)
 	(junction
 		(at 256.54 41.91)
@@ -3903,12 +3943,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fe3a4058-b10e-4443-aade-02a629472f5a")
-	)
-	(junction
-		(at 110.49 208.28)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fe80173a-0d16-4dc9-8ee7-2bfd6b8d039d")
 	)
 	(junction
 		(at 207.01 41.91)
@@ -4314,6 +4348,26 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 231.14) (xy 146.05 231.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ddc712e-65b6-4b2d-b39a-5bcb80538a2f")
+	)
+	(wire
+		(pts
+			(xy 90.17 228.6) (xy 92.71 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f2a4531-cdbf-4726-bb7a-8e413f92505c")
+	)
+	(wire
+		(pts
 			(xy 172.72 148.59) (xy 172.72 151.13)
 		)
 		(stroke
@@ -4434,7 +4488,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 218.44) (xy 92.71 232.41)
+			(xy 95.25 218.44) (xy 95.25 234.95)
 		)
 		(stroke
 			(width 0)
@@ -5364,6 +5418,16 @@
 	)
 	(wire
 		(pts
+			(xy 92.71 228.6) (xy 92.71 213.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ef6099b-ece7-4910-9f82-58b250f27d9c")
+	)
+	(wire
+		(pts
 			(xy 144.78 130.81) (xy 144.78 132.08)
 		)
 		(stroke
@@ -5444,7 +5508,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 215.9) (xy 154.94 215.9)
+			(xy 125.73 215.9) (xy 146.05 215.9)
 		)
 		(stroke
 			(width 0)
@@ -5664,16 +5728,6 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 204.47) (xy 140.97 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a12ed277-5a2d-4d5b-a73d-f5cf6d2c168c")
-	)
-	(wire
-		(pts
 			(xy 243.84 166.37) (xy 266.7 166.37)
 		)
 		(stroke
@@ -5761,6 +5815,16 @@
 			(type default)
 		)
 		(uuid "a87acbd6-6f58-4d2d-820e-40203559cfb5")
+	)
+	(wire
+		(pts
+			(xy 110.49 231.14) (xy 110.49 233.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abf01027-490f-4197-846f-fa46af618578")
 	)
 	(wire
 		(pts
@@ -5914,7 +5978,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 228.6) (xy 154.94 228.6)
+			(xy 90.17 231.14) (xy 110.49 231.14)
 		)
 		(stroke
 			(width 0)
@@ -5954,7 +6018,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 208.28) (xy 154.94 208.28)
+			(xy 110.49 208.28) (xy 146.05 208.28)
 		)
 		(stroke
 			(width 0)
@@ -6034,7 +6098,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 218.44) (xy 92.71 218.44)
+			(xy 90.17 218.44) (xy 95.25 218.44)
 		)
 		(stroke
 			(width 0)
@@ -6174,7 +6238,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 220.98) (xy 154.94 220.98)
+			(xy 133.35 220.98) (xy 146.05 220.98)
 		)
 		(stroke
 			(width 0)
@@ -6211,16 +6275,6 @@
 			(type default)
 		)
 		(uuid "d9ce0ccb-9f93-4390-aa76-dc7f3da4b1be")
-	)
-	(wire
-		(pts
-			(xy 90.17 228.6) (xy 140.97 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dcad4143-9e72-446e-b22f-0c0511113db6")
 	)
 	(wire
 		(pts
@@ -6614,7 +6668,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 210.82) (xy 154.94 210.82)
+			(xy 118.11 210.82) (xy 146.05 210.82)
 		)
 		(stroke
 			(width 0)
@@ -6723,7 +6777,7 @@
 		(uuid "1f5b7ae6-7864-42a3-8fb7-25fc71536593")
 	)
 	(label "SD_MOSI"
-		(at 95.25 210.82 0)
+		(at 97.79 210.82 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6743,7 +6797,7 @@
 		(uuid "224e65ed-7f1e-47ac-afbc-ea06e6bd3ffa")
 	)
 	(label "SD_DET"
-		(at 144.78 228.6 0)
+		(at 135.89 231.14 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6803,7 +6857,7 @@
 		(uuid "311995bd-f119-4a13-9d21-fbd0ba060421")
 	)
 	(label "~{SD_CS}"
-		(at 144.78 208.28 0)
+		(at 135.89 208.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6833,7 +6887,7 @@
 		(uuid "462a3af8-4b22-40cb-993e-2c6185e9257e")
 	)
 	(label "SD_SCK"
-		(at 144.78 215.9 0)
+		(at 135.89 215.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6863,7 +6917,7 @@
 		(uuid "553a15de-4618-4d54-a8de-a7e6cb456d44")
 	)
 	(label "SD_MISO"
-		(at 95.25 220.98 0)
+		(at 97.79 220.98 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6943,7 +6997,7 @@
 		(uuid "7c8dd765-1d4c-45e3-899c-4560096155af")
 	)
 	(label "SD_MOSI"
-		(at 144.78 210.82 0)
+		(at 135.89 210.82 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6963,7 +7017,7 @@
 		(uuid "81047f51-593f-43e7-bd4b-7f705571198e")
 	)
 	(label "SD_SCK"
-		(at 95.25 215.9 0)
+		(at 97.79 215.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7143,7 +7197,7 @@
 		(uuid "c2a7abbb-ca4e-4b6c-b103-ee6c2109e1d0")
 	)
 	(label "SD_DET"
-		(at 104.14 228.6 0)
+		(at 97.79 231.14 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7163,7 +7217,7 @@
 		(uuid "cae38f77-2853-492a-a89e-ea09c12960a6")
 	)
 	(label "SD_MISO"
-		(at 144.78 220.98 0)
+		(at 135.89 220.98 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7303,7 +7357,7 @@
 		(uuid "f9de8268-87db-4422-b64c-a7590320521a")
 	)
 	(label "~{SD_CS}"
-		(at 95.25 208.28 0)
+		(at 97.79 208.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7528,7 +7582,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 97.4852 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -7539,7 +7593,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 96.52 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -7563,6 +7617,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 101.6 195.326 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R71A104KA01D"
+			(at 96.52 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 96.52 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 96.52 193.04 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7700,7 +7787,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 173.6852 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -7711,7 +7798,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 172.72 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -7735,6 +7822,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 177.8 49.276 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R71A104KA01D"
+			(at 172.72 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 172.72 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 172.72 46.99 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7878,7 +7998,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 246.0752 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -7889,7 +8009,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 245.11 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -7913,6 +8033,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 250.19 49.276 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R71A104KA01D"
+			(at 245.11 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 245.11 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 245.11 46.99 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8056,7 +8209,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 173.6852 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -8067,7 +8220,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/CC0402JRNPO9BN150/302751"
 			(at 172.72 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -8091,6 +8244,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 177.8 157.226 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0402JRNPO9BN150"
+			(at 172.72 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 172.72 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 172.72 154.94 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8151,7 +8337,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 257.5052 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -8162,7 +8348,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 256.54 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -8186,6 +8372,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 261.62 63.246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R71A104KA01D"
+			(at 256.54 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 256.54 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 256.54 60.96 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8271,6 +8490,28 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 125.73 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 125.73 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 125.73 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -8410,7 +8651,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 105.41 153.035 0)
 			(hide yes)
 			(show_name no)
@@ -8445,6 +8686,39 @@
 		)
 		(property "Color" "RED"
 			(at 104.648 164.846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "150060RS75000"
+			(at 105.41 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 105.41 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 105.41 157.48 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8577,7 +8851,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Crystal:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm"
 			(at 163.83 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -8588,7 +8862,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://abracon.com/datasheets/ABM8-272-T3.pdf"
 			(at 163.83 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -8600,6 +8874,39 @@
 			)
 		)
 		(property "Description" ""
+			(at 163.83 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "ABM8-272-T3"
+			(at 163.83 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 163.83 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 163.83 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -8863,6 +9170,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 156.21 72.39 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 156.21 72.39 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1ae4c630-97d7-40a0-ad73-37bd75dacaad")
 		)
@@ -8879,87 +9208,6 @@
 			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "R7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 140.97 200.66 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4150be08-79e4-4cf0-be4e-d54de73247b1")
-		(property "Reference" "R32"
-			(at 142.494 199.39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "10k"
-			(at 142.494 201.93 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 139.954 200.406 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 140.97 200.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 140.97 200.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e8003839-9bf0-4607-a3c7-04b19a4f9730")
-		)
-		(pin "2"
-			(uuid "b4c22d37-64bc-4c9c-b223-d8bd13d63107")
-		)
-		(instances
-			(project "Digichiver"
-				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
-					(reference "R32")
 					(unit 1)
 				)
 			)
@@ -8996,7 +9244,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 234.6452 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -9007,7 +9255,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 233.68 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -9031,6 +9279,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 238.76 63.246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R71A104KA01D"
+			(at 233.68 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 233.68 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 233.68 60.96 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9091,7 +9372,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 211.7852 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -9102,7 +9383,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 210.82 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -9126,6 +9407,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 215.9 63.246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R71A104KA01D"
+			(at 210.82 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 210.82 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 210.82 60.96 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9186,7 +9500,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 211.7852 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -9197,7 +9511,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 210.82 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -9221,6 +9535,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 215.9 49.276 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R71A104KA01D"
+			(at 210.82 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 210.82 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 210.82 46.99 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9441,7 +9788,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 139.3952 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -9452,7 +9799,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/863/CL05A475MP5NRNC_Spec.pdf"
 			(at 138.43 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -9476,6 +9823,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 143.51 92.456 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" " CL05A475MP5NRNC"
+			(at 138.43 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 138.43 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 138.43 90.17 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9536,7 +9916,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 154.6352 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -9547,7 +9927,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/yageo/CC0402JRNPO9BN150/302751"
 			(at 153.67 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -9571,6 +9951,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 148.59 157.226 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CC0402JRNPO9BN150"
+			(at 153.67 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 153.67 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 153.67 154.94 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9708,7 +10121,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS647_Sx50"
 			(at 284.48 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -9732,6 +10145,39 @@
 		)
 		(property "Description" "Push button switch, SPST"
 			(at 284.48 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "PTS_647_SN50_SMTR2_LFS"
+			(at 284.48 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 284.48 184.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 284.48 184.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9882,7 +10328,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 174.9552 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -9893,7 +10339,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/863/CL05A475MP5NRNC_Spec.pdf"
 			(at 173.99 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -9917,6 +10363,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 179.07 79.756 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" " CL05A475MP5NRNC"
+			(at 173.99 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 173.99 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 173.99 77.47 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10061,7 +10540,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
 			(at 105.41 139.065 0)
 			(hide yes)
 			(show_name no)
@@ -10096,6 +10575,39 @@
 		)
 		(property "Color" "GREEN"
 			(at 104.648 150.876 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "150060VS75000"
+			(at 105.41 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 105.41 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 105.41 143.51 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10153,7 +10665,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS647_Sx50"
 			(at 139.7 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -10177,6 +10689,39 @@
 		)
 		(property "Description" "Push button switch, SPST"
 			(at 147.32 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "PTS_647_SN50_SMTR2_LFS"
+			(at 144.78 125.73 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 144.78 125.73 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 144.78 125.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10244,7 +10789,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 185.1152 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -10255,7 +10800,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/863/CL05A475MP5NRNC_Spec.pdf"
 			(at 184.15 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -10279,6 +10824,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 189.23 49.276 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" " CL05A475MP5NRNC"
+			(at 184.15 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 184.15 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 184.15 46.99 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10339,7 +10917,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 162.2552 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -10350,7 +10928,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 161.29 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -10382,6 +10960,39 @@
 				)
 			)
 		)
+		(property "MPN" "GRM155R71A104KA01D"
+			(at 161.29 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 161.29 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 161.29 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "277a5545-a3d7-4564-8db0-925113209b99")
 		)
@@ -10405,7 +11016,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 92.71 232.41 0)
+		(at 95.25 234.95 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10415,7 +11026,7 @@
 		(dnp no)
 		(uuid "7963b4aa-6da1-4be1-ac7d-0cf808cac378")
 		(property "Reference" "#PWR056"
-			(at 92.71 238.76 0)
+			(at 95.25 241.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10426,7 +11037,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 92.71 236.474 0)
+			(at 95.25 239.014 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10436,7 +11047,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 92.71 232.41 0)
+			(at 95.25 234.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10447,7 +11058,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 232.41 0)
+			(at 95.25 234.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10458,7 +11069,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 92.71 232.41 0)
+			(at 95.25 234.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10601,7 +11212,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 246.0752 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -10612,7 +11223,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 245.11 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -10636,6 +11247,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 250.19 63.246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R71A104KA01D"
+			(at 245.11 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 245.11 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 245.11 60.96 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10732,6 +11376,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 269.24 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 269.24 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "29c2514a-f9e5-41f7-a1cf-a1e84bf0ffe3")
 		)
@@ -10784,7 +11450,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 234.6452 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -10795,7 +11461,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 233.68 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -10819,6 +11485,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 238.76 49.276 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R71A104KA01D"
+			(at 233.68 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 233.68 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 233.68 46.99 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10962,7 +11661,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 275.2852 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -10973,7 +11672,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 274.32 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -10997,6 +11696,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 279.4 180.086 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R71A104KA01D"
+			(at 274.32 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 274.32 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 274.32 177.8 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11092,6 +11824,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 133.35 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 133.35 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "362934a3-5e12-4f74-9598-7aba4c0dcb7a")
 		)
@@ -11162,6 +11916,28 @@
 		)
 		(property "Description" "Resistor, US symbol"
 			(at 181.61 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 181.61 110.49 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 181.61 110.49 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11380,7 +12156,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS647_Sx50"
 			(at 118.11 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -11404,6 +12180,39 @@
 		)
 		(property "Description" "Push button switch, SPST"
 			(at 125.73 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "PTS_647_SN50_SMTR2_LFS"
+			(at 123.19 107.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 123.19 107.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 123.19 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11495,6 +12304,28 @@
 		)
 		(property "Description" "Resistor, US symbol"
 			(at 167.64 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 167.64 118.11 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 167.64 118.11 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11640,7 +12471,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 268.9352 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -11651,7 +12482,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 267.97 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -11675,6 +12506,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 273.05 49.276 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R71A104KA01D"
+			(at 267.97 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 267.97 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 267.97 46.99 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11738,7 +12602,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
 			(at 160.02 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -11761,6 +12625,39 @@
 			)
 		)
 		(property "Description" "AOTA-B201610S3R3-101-T"
+			(at 160.02 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "AOTA-B201610S3R3-101-T "
+			(at 160.02 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 160.02 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 160.02 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -11900,7 +12797,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 150.8252 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -11911,7 +12808,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/863/CL05A475MP5NRNC_Spec.pdf"
 			(at 149.86 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -11943,6 +12840,39 @@
 				)
 			)
 		)
+		(property "MPN" " CL05A475MP5NRNC"
+			(at 149.86 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 149.86 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 149.86 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "155136a2-be90-49fb-ab91-65ac6cbd4a06")
 		)
@@ -11959,6 +12889,109 @@
 			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "C12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 110.49 237.49 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9743f7ee-944d-45e0-8cc1-7fc8507ef763")
+		(property "Reference" "R32"
+			(at 112.014 236.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 112.014 238.76 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.474 237.236 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 237.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 110.49 237.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 110.49 237.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 110.49 237.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a3597129-e20e-4a87-8897-1109f882cee6")
+		)
+		(pin "2"
+			(uuid "1a924b3c-8ba7-4525-91b3-1fbb32559819")
+		)
+		(instances
+			(project "Digichiver"
+				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
+					(reference "R32")
 					(unit 1)
 				)
 			)
@@ -12111,6 +13144,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 116.84 157.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 116.84 157.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2d321932-0f57-4702-8706-e14e0c998470")
 		)
@@ -12157,7 +13212,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 223.2152 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -12168,7 +13223,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 222.25 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -12192,6 +13247,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 227.33 49.276 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R71A104KA01D"
+			(at 222.25 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 222.25 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 222.25 46.99 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12276,6 +13364,28 @@
 		)
 		(property "Description" "Resistor, US symbol"
 			(at 181.61 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 181.61 107.95 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 181.61 107.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12387,6 +13497,17 @@
 			(at 213.36 135.89 0)
 			(hide yes)
 			(show_name yes)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RP2354B"
+			(at 215.9 133.35 0)
+			(hide yes)
+			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
@@ -12803,6 +13924,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 123.19 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 123.19 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "466847be-6a38-4558-8ab6-9067abb06af1")
 		)
@@ -12873,6 +14016,28 @@
 		)
 		(property "Description" "Resistor, US symbol"
 			(at 116.84 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 116.84 143.51 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 116.84 143.51 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12953,6 +14118,28 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 118.11 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 118.11 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 118.11 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -13085,7 +14272,7 @@
 				)
 			)
 		)
-		(property "Value" "TF-15x15"
+		(property "Value" "DM3AT-SF-PEJM5"
 			(at 66.675 196.85 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13095,7 +14282,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_Card:microSD_HC_Hirose_DM3AT-SF-PEJM5"
 			(at 15.24 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -13106,7 +14293,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C111196.pdf?spm=wm.sxq.inf.ggs&lcsc_vid=FlNaVFdREQVYUQIAQlZeXgFRRFlZAV1fRFhWVF1UT1cxVlNeQlRaUVNQRFldUjsOAxUeFF5JWBYZEEoBGA4JCwFIFA4DSA%3D%3D"
+		(property "Datasheet" "https://www.hirose.com/product/document?clcode=CL0609-0033-6-00&productname=DM3AT-SF-https://www.hirose.com/product/document?clcode=CL0609-0033-6-00&productname=DM3AT-SF-PEJ2M5&series=DM3&documenttype=Catalog&lang=en&documentid=D49662_en"
 			(at 67.31 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -13118,6 +14305,39 @@
 			)
 		)
 		(property "Description" "Micro SD Card Socket with one card detection pin"
+			(at 67.31 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "DM3AT-SF-PEJM5"
+			(at 67.31 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 67.31 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
 			(at 67.31 215.9 0)
 			(hide yes)
 			(show_name no)
@@ -13157,6 +14377,9 @@
 		)
 		(pin "3"
 			(uuid "c62ab1dd-4dfc-4bbc-8686-d1d02ab5b14c")
+		)
+		(pin "10"
+			(uuid "385a91ea-25b0-410a-9d61-b9abb74eb1cb")
 		)
 		(instances
 			(project "control"
@@ -13565,6 +14788,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 179.07 148.59 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 179.07 148.59 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e94602d8-77e4-40bb-9333-5bd926921582")
 		)
@@ -13700,7 +14945,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 223.2152 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -13711,7 +14956,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 222.25 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -13735,6 +14980,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 227.33 63.246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R71A104KA01D"
+			(at 222.25 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 222.25 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 222.25 60.96 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13795,7 +15073,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 257.5052 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -13806,7 +15084,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8942/490_Chip_Multilayer_CAT2021_MLCC.pdf"
 			(at 256.54 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -13830,6 +15108,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 261.62 49.276 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM155R71A104KA01D"
+			(at 256.54 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 256.54 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 256.54 46.99 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13937,83 +15248,6 @@
 			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR048")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 140.97 196.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e5efb505-ddfd-40f5-8f29-986f9df924a1")
-		(property "Reference" "#PWR0109"
-			(at 140.97 200.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 140.716 192.532 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 140.97 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 140.97 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 140.97 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d90d8acf-7925-4493-abcb-24e6ac042df8")
-		)
-		(instances
-			(project "Digichiver"
-				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
-					(reference "#PWR0109")
 					(unit 1)
 				)
 			)
@@ -14168,6 +15402,28 @@
 				)
 			)
 		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 110.49 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 110.49 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "24380e41-08ca-47dd-93b7-0cf490afad55")
 		)
@@ -14214,7 +15470,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 89.8652 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -14225,7 +15481,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/41/CL05A106MQ5NUNC_Spec.pdf"
 			(at 88.9 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -14249,6 +15505,39 @@
 		)
 		(property "Voltage" "10V"
 			(at 83.058 195.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL05A106MQ5NUNC"
+			(at 88.9 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 88.9 193.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 88.9 193.04 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14351,6 +15640,83 @@
 			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "#PWR050")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 110.49 241.3 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "feb865d1-6805-4813-9d6a-eb084bbbd0c7")
+		(property "Reference" "#PWR0109"
+			(at 110.49 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 110.49 245.364 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 110.49 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 110.49 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "88a80ce6-e1bd-4daf-9765-1b8bc7113c78")
+		)
+		(instances
+			(project "Digichiver"
+				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
+					(reference "#PWR0109")
 					(unit 1)
 				)
 			)
