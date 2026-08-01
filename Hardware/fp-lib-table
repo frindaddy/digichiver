@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "Digichiver") (type "KiCad") (uri "${KIPRJMOD}/Digichiver.pretty") (options "") (descr ""))
+)

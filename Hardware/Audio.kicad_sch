@@ -4048,7 +4048,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 234.696 130.556 90)
 			(hide yes)
 			(show_name no)
@@ -4059,7 +4059,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 234.95 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -4093,6 +4093,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 234.95 129.54 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0402FR-07100RL"
 			(at 234.95 129.54 90)
 			(hide yes)
 			(show_name no)
@@ -4398,7 +4409,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 224.536 141.224 90)
 			(hide yes)
 			(show_name no)
@@ -4409,7 +4420,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 223.52 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -4443,6 +4454,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 223.52 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0402FR-07100KL"
 			(at 223.52 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -4653,7 +4675,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 234.696 135.636 90)
 			(hide yes)
 			(show_name no)
@@ -4664,7 +4686,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 234.95 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -4708,6 +4730,17 @@
 				)
 			)
 		)
+		(property "MPN" "RC0402FR-07100RL"
+			(at 234.95 134.62 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c3322c5f-25a3-4bea-bb05-a2d2837f764b")
 		)
@@ -4729,7 +4762,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -4757,7 +4790,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Digichiver:PTV09"
 			(at 165.1 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -6112,7 +6145,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Digichiver:SPKR_CMS-2812-078T"
 			(at 240.03 179.07 0)
 			(hide yes)
 			(show_name no)

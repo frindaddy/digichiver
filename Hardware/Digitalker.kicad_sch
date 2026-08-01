@@ -10923,7 +10923,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 282.194 163.576 90)
 			(hide yes)
 			(show_name no)
@@ -10934,7 +10934,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 283.21 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -10968,6 +10968,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 283.21 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0402FR-07100KL"
 			(at 283.21 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -11504,7 +11515,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 280.924 111.506 90)
 			(hide yes)
 			(show_name no)
@@ -11515,7 +11526,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 281.94 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -11549,6 +11560,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 281.94 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0402FR-0710KL"
 			(at 281.94 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -13046,7 +13068,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 233.426 220.726 90)
 			(hide yes)
 			(show_name no)
@@ -13057,7 +13079,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 233.68 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -13091,6 +13113,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 233.68 219.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0402JR-072K2L"
 			(at 233.68 219.71 90)
 			(hide yes)
 			(show_name no)
@@ -13820,7 +13853,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 220.726 220.726 90)
 			(hide yes)
 			(show_name no)
@@ -13831,7 +13864,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 220.98 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -13865,6 +13898,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 220.98 219.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0402JR-072K2L"
 			(at 220.98 219.71 90)
 			(hide yes)
 			(show_name no)
@@ -14078,7 +14122,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 280.924 61.976 90)
 			(hide yes)
 			(show_name no)
@@ -14089,7 +14133,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 281.94 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -14123,6 +14167,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 281.94 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0402FR-0710KL"
 			(at 281.94 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -14502,7 +14557,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 260.604 147.066 90)
 			(hide yes)
 			(show_name no)
@@ -14513,7 +14568,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 261.62 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -14547,6 +14602,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 261.62 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0402FR-07100KL"
 			(at 261.62 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -14605,7 +14671,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 260.604 157.226 90)
 			(hide yes)
 			(show_name no)
@@ -14616,7 +14682,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 261.62 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -14650,6 +14716,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 261.62 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0402FR-07100KL"
 			(at 261.62 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -15866,7 +15943,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 97.536 194.056 90)
 			(hide yes)
 			(show_name no)
@@ -15877,7 +15954,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 97.79 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -15911,6 +15988,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 97.79 193.04 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0402FR-0710KL"
 			(at 97.79 193.04 90)
 			(hide yes)
 			(show_name no)
@@ -16123,7 +16211,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 97.536 128.016 90)
 			(hide yes)
 			(show_name no)
@@ -16134,7 +16222,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 97.79 127 0)
 			(hide yes)
 			(show_name no)
@@ -16168,6 +16256,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 97.79 127 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0402FR-0710KL"
 			(at 97.79 127 90)
 			(hide yes)
 			(show_name no)
@@ -17257,7 +17356,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 309.626 199.136 90)
 			(hide yes)
 			(show_name no)
@@ -17268,7 +17367,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L"
 			(at 309.88 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -17302,6 +17401,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 309.88 198.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0402BRD078K2L"
 			(at 309.88 198.12 90)
 			(hide yes)
 			(show_name no)
@@ -17471,7 +17581,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "8.2K"
+		(property "Value" "8.2k"
 			(at 291.084 212.09 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17482,7 +17592,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 296.164 210.566 90)
 			(hide yes)
 			(show_name no)
@@ -17493,7 +17603,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L"
 			(at 297.18 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -17527,6 +17637,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 297.18 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RT0402BRD078K2L"
 			(at 297.18 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -17861,7 +17982,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 97.536 61.976 90)
 			(hide yes)
 			(show_name no)
@@ -17872,7 +17993,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
 			(at 97.79 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -17906,6 +18027,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 97.79 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0402FR-0710KL"
 			(at 97.79 60.96 90)
 			(hide yes)
 			(show_name no)
