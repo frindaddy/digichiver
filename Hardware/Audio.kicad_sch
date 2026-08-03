@@ -1370,7 +1370,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4257,7 +4257,7 @@
 		(pin "1"
 			(uuid "974d7c43-03d4-484b-ab72-40048c8ec7e8")
 		)
-		(pin "3"
+		(pin "4"
 			(uuid "0a610e15-3a41-46e7-b811-80d47404049f")
 		)
 		(pin "13"

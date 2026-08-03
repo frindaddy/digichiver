@@ -15696,7 +15696,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bed6f25a-cf4b-41b0-93f2-46eec66b6b24")
-		(property "Reference" "X1"
+		(property "Reference" "XC1"
 			(at 203.2 88.138 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15905,7 +15905,7 @@
 		(instances
 			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/ca4885d7-9004-4a4f-ae69-fc7e29c6fa33"
-					(reference "X1")
+					(reference "XC1")
 					(unit 1)
 				)
 			)

@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.27,
-          "width": 1.27
+          "drill": 2.7,
+          "height": 2.7,
+          "width": 2.7
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -61,9 +61,9 @@
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
           "min_clearance": 0.1,
-          "min_island_area": 10.0,
+          "min_island_area": 9.9999993548,
           "min_thickness": 0.1,
-          "pad_connection": 1,
+          "pad_connection": 2,
           "remove_islands": 0,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
@@ -81,7 +81,44 @@
           "width": 0.254
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "clearance|192449000|128548000|1607abde-a551-4bd2-8a1d-e8f4f9c2a413|9e6d47b6-b0ad-4f43-9ab2-6f2eb4bbc25a",
+          ""
+        ],
+        [
+          "clearance|214461000|129554000|6a8c5d1b-c908-4c1c-9fe7-d81e515a8ca4|401530ae-192f-4e06-8d07-a945c12d14f1",
+          ""
+        ],
+        [
+          "clearance|221234000|132005000|8d949f5d-c8b1-4d74-9d64-5ab4aabfc604|6732f8a2-9544-4ba8-8d60-62598b2bc203",
+          ""
+        ],
+        [
+          "hole_clearance|200150000|126699000|0ac5d6b3-4d3d-4292-bda3-8f391fb61435|7d6f8409-0221-42d8-9f07-4edf8534083e",
+          ""
+        ],
+        [
+          "hole_clearance|200150000|126699000|5978b0c2-af5c-41f8-8cac-54dd49c89bd3|7d6f8409-0221-42d8-9f07-4edf8534083e",
+          ""
+        ],
+        [
+          "hole_clearance|206250000|126699000|79bd51f1-9087-471a-9691-60a822c6c497|686e0830-f64e-456c-8eac-24e6dc96d1c8",
+          ""
+        ],
+        [
+          "hole_clearance|206250000|126699000|81d174a6-b757-4709-a42b-339de18dc047|686e0830-f64e-456c-8eac-24e6dc96d1c8",
+          ""
+        ],
+        [
+          "silk_edge_clearance|265176000|124526000|001f6819-521f-4f9b-904e-499ba0826a3b|91853bd8-ac75-4098-ad83-53f3c54990d8",
+          ""
+        ],
+        [
+          "silk_edge_clearance|265176000|130766000|001f6819-521f-4f9b-904e-499ba0826a3b|92fddbbd-bbe0-453c-ac00-740df6edd80e",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -165,7 +202,7 @@
         "min_text_thickness": 0.15,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.1,
-        "min_via_annular_width": 0.2,
+        "min_via_annular_width": 0.0635,
         "min_via_diameter": 0.4,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
