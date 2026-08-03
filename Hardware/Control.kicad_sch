@@ -8555,7 +8555,7 @@
 				)
 			)
 		)
-		(property "Value" "150060RS75000"
+		(property "Value" "150060AS75000"
 			(at 104.648 162.814 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8576,7 +8576,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060RS75000.pdf"
+		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060AS75000.pdf"
 			(at 104.14 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -8587,7 +8587,7 @@
 				)
 			)
 		)
-		(property "Description" "LED RED CLEAR 0603 SMD"
+		(property "Description" "LED AMBER CLEAR 0603 SMD"
 			(at 105.41 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -8598,7 +8598,7 @@
 				)
 			)
 		)
-		(property "Color" "RED"
+		(property "Color" "AMBER"
 			(at 104.648 164.846 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8608,7 +8608,7 @@
 				)
 			)
 		)
-		(property "MPN" "150060RS75000"
+		(property "MPN" "150060AS75000"
 			(at 105.41 157.48 0)
 			(hide yes)
 			(show_name no)
