@@ -1942,9 +1942,9 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "OUT TO EXTERRNAL SPEAKER"
+	(text "OUT TO EXTERRNAL SPEAKER AMPLIFIER"
 		(exclude_from_sim no)
-		(at 271.526 137.668 0)
+		(at 277.622 136.144 0)
 		(effects
 			(font
 				(size 1.27 1.27)
