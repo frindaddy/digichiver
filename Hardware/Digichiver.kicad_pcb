@@ -27882,15 +27882,14 @@
 			)
 		)
 	)
-	(footprint "Capacitor_SMD:C_0603_1608Metric"
+	(footprint "Capacitor_SMD:C_0402_1005Metric"
 		(layer "B.Cu")
 		(uuid "94be823f-881f-4f17-b796-6980af3145ef")
 		(at 114.3 65.302 90)
-		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C34"
-			(at 0 1.43 270)
-			(unlocked yes)
+			(at 0 1.16 270)
 			(layer "B.SilkS")
 			(uuid "e1f7d8fa-1b0b-426e-99bd-03b83bb1affd")
 			(effects
@@ -27902,7 +27901,7 @@
 			)
 		)
 		(property "Value" "4.7uF"
-			(at 0 -1.43 90)
+			(at 0 -1.16 270)
 			(layer "B.Fab")
 			(uuid "6cf34c5e-e785-4cea-918d-6577d264684a")
 			(effects
@@ -27913,8 +27912,8 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/43/CL10A475KA8NQNC_Spec.pdf"
-			(at 0 0 90)
+		(property "Datasheet" ""
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "8c8a4cfa-4285-448a-a5ce-12469acc851d")
@@ -27925,8 +27924,8 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
-			(at 0 0 90)
+		(property "Description" ""
+			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "7c885595-0dda-4024-b957-9e6029b54731")
@@ -27938,66 +27937,10 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 0 0 90)
+			(at 0 0 270)
 			(layer "B.SilkS")
 			(hide yes)
 			(uuid "e66ce83f-3c02-4372-961a-e7b1a2184e82")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Voltage" "25V"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "9f462387-1369-4b47-9bbc-ba8f594036a1")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "CL10A475KA8NQNC"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "113f9df2-267c-41f5-b296-cca72fc495bc")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "41b61015-dcaa-492e-bb7b-e22c2100d3d1")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "22d3961c-b96d-445f-8ffd-12772e06857c")
 			(effects
 				(font
 					(size 1 1)
@@ -28019,18 +27962,8 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start -0.14058 -0.51)
-			(end 0.14058 -0.51)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "B.SilkS")
-			(uuid "7eaffc0a-4e07-4f48-bf7b-0ca61e62f1a9")
-		)
-		(fp_line
-			(start -0.14058 0.51)
-			(end 0.14058 0.51)
+			(start -0.107836 -0.36)
+			(end 0.107836 -0.36)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -28038,9 +27971,19 @@
 			(layer "B.SilkS")
 			(uuid "ca127f97-897b-4c4f-b728-bffd3710a122")
 		)
+		(fp_line
+			(start -0.107836 0.36)
+			(end 0.107836 0.36)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "B.SilkS")
+			(uuid "7eaffc0a-4e07-4f48-bf7b-0ca61e62f1a9")
+		)
 		(fp_rect
-			(start -1.48 0.73)
-			(end 1.48 -0.73)
+			(start -0.91 0.46)
+			(end 0.91 -0.46)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -28050,8 +27993,8 @@
 			(uuid "d1835fe9-4e51-4ddc-95fd-680c664e1891")
 		)
 		(fp_rect
-			(start -0.8 0.4)
-			(end 0.8 -0.4)
+			(start -0.5 0.25)
+			(end 0.5 -0.25)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -28062,20 +28005,19 @@
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 270)
-			(unlocked yes)
 			(layer "B.Fab")
 			(uuid "4c8df2a9-60c2-4f5f-9e1c-2e53c317831b")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.25 0.25)
+					(thickness 0.04)
 				)
 				(justify mirror)
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.775 0 90)
-			(size 0.9 0.95)
+			(at -0.48 0 90)
+			(size 0.56 0.62)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.25)
 			(net "/Power/+9V_RAW")
@@ -28083,8 +28025,8 @@
 			(uuid "2416dbd3-0bf7-4f97-a01e-6f7dfada9181")
 		)
 		(pad "2" smd roundrect
-			(at 0.775 0 90)
-			(size 0.9 0.95)
+			(at 0.48 0 90)
+			(size 0.56 0.62)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.25)
 			(net "GND")
@@ -28092,7 +28034,7 @@
 			(uuid "4b3730e4-fabd-47f6-92e9-0faffc20af6a")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step"
+		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -34655,6 +34597,14 @@
 		(uuid "2a8349dc-2c4a-4d20-b6f8-95421f961756")
 	)
 	(segment
+		(start 115.062 65.278)
+		(end 114.756 65.278)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "GND")
+		(uuid "2a88caba-4af8-4f3b-b2dd-b74e1a65bed7")
+	)
+	(segment
 		(start 114.272 60.734)
 		(end 114.3 60.706)
 		(width 0.2)
@@ -34735,6 +34685,14 @@
 		(uuid "4228baf5-1fcc-465d-a0e8-11e1f67980b5")
 	)
 	(segment
+		(start 114.756 65.278)
+		(end 114.3 64.822)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "GND")
+		(uuid "438debf6-3ecd-4ce3-a8c6-c96cd283db26")
+	)
+	(segment
 		(start 127.96 82.24)
 		(end 128.016 82.296)
 		(width 0.2)
@@ -34797,14 +34755,6 @@
 		(layer "B.Cu")
 		(net "GND")
 		(uuid "69da381a-7c59-44a4-bad2-66341970fd2c")
-	)
-	(segment
-		(start 114.3 64.527)
-		(end 114.311 64.527)
-		(width 0.2032)
-		(layer "B.Cu")
-		(net "GND")
-		(uuid "6c8df0ab-c3db-4bd4-893a-ced210c9e09d")
 	)
 	(segment
 		(start 143.215 71.669)
@@ -34909,14 +34859,6 @@
 		(layer "B.Cu")
 		(net "GND")
 		(uuid "96ded75c-03ab-4e47-8bcc-eb62d0c7ef3a")
-	)
-	(segment
-		(start 114.311 64.527)
-		(end 115.062 65.278)
-		(width 0.2032)
-		(layer "B.Cu")
-		(net "GND")
-		(uuid "98bc0647-69ba-4f28-b7ce-af72ecae2321")
 	)
 	(segment
 		(start 143.908 71.669)
@@ -37280,12 +37222,12 @@
 		(uuid "d78d444a-707d-4e46-b068-453b4e13489c")
 	)
 	(segment
-		(start 114.3 66.077)
-		(end 115.303 66.077)
+		(start 115.316 66.064)
+		(end 114.582 66.064)
 		(width 0.2)
 		(layer "B.Cu")
 		(net "/Power/+9V_RAW")
-		(uuid "1c13e25f-dda0-4d7e-b26b-da85c6bfa7a1")
+		(uuid "184089b1-4118-43cc-8582-670ba72dcdde")
 	)
 	(segment
 		(start 115.303 66.077)
@@ -37294,6 +37236,14 @@
 		(layer "B.Cu")
 		(net "/Power/+9V_RAW")
 		(uuid "39ce9c29-1cc8-43eb-b996-68196fc64756")
+	)
+	(segment
+		(start 114.582 66.064)
+		(end 114.3 65.782)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "/Power/+9V_RAW")
+		(uuid "62b8e7b6-e428-4ea7-9a78-112191a10535")
 	)
 	(segment
 		(start 127.757598 70.61)
@@ -41562,44 +41512,20 @@
 		(uuid "bb5298c3-bdd9-40cc-a80e-4087bfa373fb")
 	)
 	(segment
-		(start 141.235 116.6545)
-		(end 141.235 126.394471)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "/Digitalker/DIGI_ROM_ADDR0")
-		(uuid "0686ff3d-f37b-4c57-9829-a03adf545913")
-	)
-	(segment
 		(start 141.235 130.804)
 		(end 137.668 134.371)
 		(width 0.2)
 		(layer "F.Cu")
 		(net "/Digitalker/DIGI_ROM_ADDR0")
-		(uuid "2669b4a9-d254-4038-9465-86325dca179e")
+		(uuid "9b71c932-195c-4e3e-b741-9da8457234aa")
 	)
 	(segment
-		(start 141.235 126.394471)
-		(end 141.132 126.497471)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "/Digitalker/DIGI_ROM_ADDR0")
-		(uuid "2c28eff0-dbd0-441b-9345-f52afd8284fd")
-	)
-	(segment
-		(start 141.132 126.994529)
-		(end 141.235 127.097529)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "/Digitalker/DIGI_ROM_ADDR0")
-		(uuid "514d9ecc-25b2-4688-8e9a-035a5ea1fefc")
-	)
-	(segment
-		(start 141.235 127.097529)
+		(start 141.235 116.6545)
 		(end 141.235 130.804)
 		(width 0.2)
 		(layer "F.Cu")
 		(net "/Digitalker/DIGI_ROM_ADDR0")
-		(uuid "52e23349-f206-402c-8b14-a1ae54428602")
+		(uuid "9e4de410-f340-40cf-b4d7-c509810d9e3f")
 	)
 	(segment
 		(start 141.235 116.6545)
@@ -41608,14 +41534,6 @@
 		(layer "F.Cu")
 		(net "/Digitalker/DIGI_ROM_ADDR0")
 		(uuid "d1cb79c6-58df-4895-a502-37d0e79b35a9")
-	)
-	(segment
-		(start 141.132 126.497471)
-		(end 141.132 126.994529)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "/Digitalker/DIGI_ROM_ADDR0")
-		(uuid "eff9f6e9-1708-480c-b759-6c8571250cf7")
 	)
 	(segment
 		(start 141.885 126.593)

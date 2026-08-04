@@ -252,7 +252,7 @@
         "min_track_width": 0.1,
         "min_via_annular_width": 0.0635,
         "min_via_diameter": 0.4,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -718,7 +718,7 @@
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -748,7 +748,7 @@
           "group_by": true,
           "label": "Voltage",
           "name": "Voltage",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -763,7 +763,7 @@
           "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "MPN",
           "name": "MPN",
           "show": true
@@ -791,6 +791,12 @@
           "label": "KLC_S4.2_VREG_LX",
           "name": "KLC_S4.2_VREG_LX",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "JLCPCB Part #",
+          "name": "JLCPCB Part #",
+          "show": true
         }
       ],
       "filter_string": "",
@@ -841,7 +847,7 @@
         "uuid": "51de4045-d2a2-42d9-b145-319acd726bb6"
       }
     ],
-    "used_designators": "U1-6,U8,U11-13,X1-2,SW1-2,#PWR1-49,#PWR58,#PWR60-72,#PWR74-75,#PWR77-80,#PWR84-120,L1-3,C1-28,C31-35,C37-40,C43-56,R1-11,R13-20,R24-36,Y1,J2-6,RV1,LS1,D1-2",
+    "used_designators": "U1-6,U8,U11-13,SW1-2,X1-2,L1-3,#PWR1-49,#PWR58,#PWR60-72,#PWR74-75,#PWR77-80,#PWR84-120,C1-28,C31-35,C37-40,C43-56,R1-11,R13-20,R24-36,Y1,J2-6,RV1,LS1,D1-2",
     "variants": []
   },
   "sheets": [

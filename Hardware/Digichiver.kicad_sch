@@ -1944,6 +1944,17 @@
 				)
 			)
 		)
+		(property "JLCPCB Part #" "C105872"
+			(at 139.7 109.22 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ddcc3ffc-9987-42d8-8a24-7a504932f987")
 		)
@@ -2025,6 +2036,17 @@
 			)
 		)
 		(property "MPN" "USB4105-GF-A"
+			(at 106.68 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C3020560"
 			(at 106.68 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -2337,6 +2359,17 @@
 			)
 		)
 		(property "MPN" "RC0402FR-075K1L"
+			(at 139.7 111.76 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C105872"
 			(at 139.7 111.76 90)
 			(hide yes)
 			(show_name no)

@@ -10047,7 +10047,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 124.968 108.712 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10057,7 +10057,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM155R71A104KA01D"
+		(property "MPN" "CC0402KRX7R8BB104"
 			(at 119.38 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -10080,6 +10080,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 119.38 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C105883"
 			(at 119.38 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -10402,7 +10413,7 @@
 				)
 			)
 		)
-		(property "MPN" "TLV9004IPW"
+		(property "MPN" "TLV9004IPWR"
 			(at 251.46 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -10425,6 +10436,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 251.46 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C2058050"
 			(at 251.46 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -10989,6 +11011,17 @@
 				)
 			)
 		)
+		(property "JLCPCB Part #" "C60491"
+			(at 283.21 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1432bb5a-1e99-4ffa-9c69-fcdb17d6ba91")
 		)
@@ -11068,7 +11101,7 @@
 				)
 			)
 		)
-		(property "MPN" "TLV9004IPW"
+		(property "MPN" "TLV9004IPWR"
 			(at 299.72 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -11091,6 +11124,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 299.72 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C2058050"
 			(at 299.72 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -11581,6 +11625,17 @@
 				)
 			)
 		)
+		(property "JLCPCB Part #" "C60490"
+			(at 281.94 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c03b61be-7e00-4566-8c1c-c91083d2e227")
 		)
@@ -11970,7 +12025,7 @@
 				)
 			)
 		)
-		(property "MPN" "TLV9004IPW"
+		(property "MPN" "TLV9004IPWR"
 			(at 309.88 205.74 0)
 			(hide yes)
 			(show_name no)
@@ -11993,6 +12048,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 309.88 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C2058050"
 			(at 309.88 205.74 0)
 			(hide yes)
 			(show_name no)
@@ -12169,6 +12235,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 226.06 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C105883"
 			(at 226.06 81.28 90)
 			(hide yes)
 			(show_name no)
@@ -12412,7 +12489,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 105.664 174.752 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12422,7 +12499,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM155R71A104KA01D"
+		(property "MPN" "CC0402KRX7R8BB104"
 			(at 111.76 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -12445,6 +12522,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 111.76 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C105883"
 			(at 111.76 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -12534,7 +12622,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 105.664 42.672 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12544,7 +12632,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM155R71A104KA01D"
+		(property "MPN" "CC0402KRX7R8BB104"
 			(at 111.76 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -12567,6 +12655,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 111.76 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C105883"
 			(at 111.76 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -12699,6 +12798,17 @@
 				)
 			)
 		)
+		(property "JLCPCB Part #" "C52923"
+			(at 250.19 170.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "709968fb-a1d5-4605-a05e-88fae24c90d9")
 		)
@@ -12778,7 +12888,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 336.55 172.212 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12788,7 +12898,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM155R71A104KA01D"
+		(property "MPN" "CC0402KRX7R8BB104"
 			(at 336.55 175.26 90)
 			(hide yes)
 			(show_name no)
@@ -12811,6 +12921,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 336.55 175.26 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C105883"
 			(at 336.55 175.26 90)
 			(hide yes)
 			(show_name no)
@@ -12978,7 +13099,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 124.968 42.672 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12988,7 +13109,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM155R71A104KA01D"
+		(property "MPN" "CC0402KRX7R8BB104"
 			(at 119.38 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -13011,6 +13132,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 119.38 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C105883"
 			(at 119.38 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -13124,6 +13256,17 @@
 			)
 		)
 		(property "MPN" "RC0402JR-072K2L"
+			(at 233.68 219.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C163447"
 			(at 233.68 219.71 90)
 			(hide yes)
 			(show_name no)
@@ -13371,7 +13514,7 @@
 				)
 			)
 		)
-		(property "MPN" "SN74LVC245APW"
+		(property "MPN" "SN74LVC245APWR "
 			(at 304.8 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -13394,6 +13537,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 304.8 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C7848"
 			(at 304.8 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -13539,7 +13693,7 @@
 				)
 			)
 		)
-		(property "MPN" "SN74LVC8T245PW"
+		(property "MPN" "SN74LVC8T245PWR"
 			(at 115.57 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -13562,6 +13716,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 115.57 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C27643"
 			(at 115.57 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -13719,7 +13884,7 @@
 				)
 			)
 		)
-		(property "MPN" "SN74LVC245APW"
+		(property "MPN" "SN74LVC245APWR "
 			(at 304.8 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -13742,6 +13907,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 304.8 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C7848"
 			(at 304.8 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -13909,6 +14085,17 @@
 			)
 		)
 		(property "MPN" "RC0402JR-072K2L"
+			(at 220.98 219.71 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C163447"
 			(at 220.98 219.71 90)
 			(hide yes)
 			(show_name no)
@@ -14188,6 +14375,17 @@
 				)
 			)
 		)
+		(property "JLCPCB Part #" "C60490"
+			(at 281.94 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "aec70777-26db-4a92-b8f1-b5ce87fc3502")
 		)
@@ -14387,6 +14585,17 @@
 				)
 			)
 		)
+		(property "JLCPCB Part #" "C5137480"
+			(at 251.46 199.39 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "0d83e4c3-2349-4251-bee2-15f4cbe06d01")
 		)
@@ -14466,7 +14675,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 274.828 159.512 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14476,7 +14685,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM155R71A104KA01D"
+		(property "MPN" "CC0402KRX7R8BB104"
 			(at 269.24 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -14499,6 +14708,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 269.24 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C105883"
 			(at 269.24 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -14623,6 +14843,17 @@
 				)
 			)
 		)
+		(property "JLCPCB Part #" "C60491"
+			(at 261.62 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "452cadf3-24df-4f60-932a-787c78f8764b")
 		)
@@ -14737,6 +14968,17 @@
 				)
 			)
 		)
+		(property "JLCPCB Part #" "C60491"
+			(at 261.62 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6e081462-6bf5-4581-b1a8-70c308617281")
 		)
@@ -14816,7 +15058,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 105.664 108.712 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14826,7 +15068,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM155R71A104KA01D"
+		(property "MPN" "CC0402KRX7R8BB104"
 			(at 111.76 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -14849,6 +15091,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 111.76 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C105883"
 			(at 111.76 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -14938,7 +15191,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 302.26 50.292 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14948,7 +15201,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM155R71A104KA01D"
+		(property "MPN" "CC0402KRX7R8BB104"
 			(at 302.26 53.34 90)
 			(hide yes)
 			(show_name no)
@@ -14971,6 +15224,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 302.26 53.34 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C105883"
 			(at 302.26 53.34 90)
 			(hide yes)
 			(show_name no)
@@ -15449,7 +15713,7 @@
 				)
 			)
 		)
-		(property "MPN" "SN74LVC8T245PW"
+		(property "MPN" "SN74LVC8T245PWR"
 			(at 115.57 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -15472,6 +15736,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 115.57 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C27643"
 			(at 115.57 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -15627,7 +15902,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 273.05 214.122 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15637,7 +15912,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM155R71A104KA01D"
+		(property "MPN" "CC0402KRX7R8BB104"
 			(at 273.05 217.17 90)
 			(hide yes)
 			(show_name no)
@@ -15660,6 +15935,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 273.05 217.17 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C105883"
 			(at 273.05 217.17 90)
 			(hide yes)
 			(show_name no)
@@ -15772,6 +16058,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 205.74 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C2332"
 			(at 205.74 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -15999,6 +16296,17 @@
 			)
 		)
 		(property "MPN" "RC0402FR-0710KL"
+			(at 97.79 193.04 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C60490"
 			(at 97.79 193.04 90)
 			(hide yes)
 			(show_name no)
@@ -16277,6 +16585,17 @@
 				)
 			)
 		)
+		(property "JLCPCB Part #" "C60490"
+			(at 97.79 127 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1238ae64-9790-4aba-a562-2ef0c872fed1")
 		)
@@ -16399,6 +16718,17 @@
 				)
 			)
 		)
+		(property "JLCPCB Part #" "C5137480"
+			(at 241.3 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "a74d2d2c-2ee5-46cb-a5b8-5fb1eb27f594")
 		)
@@ -16478,7 +16808,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 285.75 214.122 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16488,7 +16818,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM155R71A104KA01D"
+		(property "MPN" "CC0402KRX7R8BB104"
 			(at 285.75 217.17 90)
 			(hide yes)
 			(show_name no)
@@ -16511,6 +16841,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 285.75 217.17 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C105883"
 			(at 285.75 217.17 90)
 			(hide yes)
 			(show_name no)
@@ -16679,7 +17020,7 @@
 				)
 			)
 		)
-		(property "MPN" "TLV9004IPW"
+		(property "MPN" "TLV9004IPWR"
 			(at 364.49 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -16702,6 +17043,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 364.49 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C2058050"
 			(at 364.49 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -17422,6 +17774,17 @@
 				)
 			)
 		)
+		(property "JLCPCB Part #" "C852943"
+			(at 309.88 198.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "76321369-6a78-412a-ae73-cb2b748b545a")
 		)
@@ -17501,7 +17864,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 302.26 99.822 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17511,7 +17874,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM155R71A104KA01D"
+		(property "MPN" "CC0402KRX7R8BB104"
 			(at 302.26 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -17534,6 +17897,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 302.26 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C105883"
 			(at 302.26 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -17648,6 +18022,17 @@
 			)
 		)
 		(property "MPN" "RT0402BRD078K2L"
+			(at 297.18 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C852943"
 			(at 297.18 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -17815,7 +18200,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 124.968 174.752 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17825,7 +18210,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM155R71A104KA01D"
+		(property "MPN" "CC0402KRX7R8BB104"
 			(at 119.38 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -17848,6 +18233,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 119.38 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C105883"
 			(at 119.38 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -18048,6 +18444,17 @@
 				)
 			)
 		)
+		(property "JLCPCB Part #" "C60490"
+			(at 97.79 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8c88df14-9914-49f1-9ad3-ce06d83ede2f")
 		)
@@ -18129,7 +18536,7 @@
 				)
 			)
 		)
-		(property "MPN" "SN74LVC8T245PW"
+		(property "MPN" "SN74LVC8T245PWR"
 			(at 115.57 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -18152,6 +18559,17 @@
 			)
 		)
 		(property "KLC_S4.2_VREG_LX" ""
+			(at 115.57 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C27643"
 			(at 115.57 201.93 0)
 			(hide yes)
 			(show_name no)
