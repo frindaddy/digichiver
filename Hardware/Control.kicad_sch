@@ -7104,7 +7104,7 @@
 		(uuid "366483e2-e016-4105-acab-771c0817f3c1")
 	)
 	(hierarchical_label "~{SPEAKER_DISABLE}"
-		(shape input)
+		(shape output)
 		(at 175.26 171.45 180)
 		(effects
 			(font

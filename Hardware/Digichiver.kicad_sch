@@ -2619,7 +2619,7 @@
 				(justify left)
 			)
 		)
-		(pin "~{SPEAKER_DISABLE}" input
+		(pin "~{SPEAKER_DISABLE}" output
 			(at 203.2 167.64 0)
 			(uuid "baee88af-a6f1-487d-be57-697578fd6261")
 			(effects
