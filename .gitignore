@@ -53,3 +53,6 @@ fp-info-cache
 *.bak
 *.asc%
 *.asy%
+
+### Software ###
+.vscode
