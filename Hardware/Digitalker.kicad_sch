@@ -13660,7 +13660,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:TSSOP-24_4.4x6.5mm_P0.5mm"
+		(property "Footprint" "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm"
 			(at 135.89 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -15680,7 +15680,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:TSSOP-24_4.4x6.5mm_P0.5mm"
+		(property "Footprint" "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm"
 			(at 135.89 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -18503,7 +18503,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:TSSOP-24_4.4x6.5mm_P0.5mm"
+		(property "Footprint" "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm"
 			(at 135.89 226.06 0)
 			(hide yes)
 			(show_name no)
