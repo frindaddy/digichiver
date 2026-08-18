@@ -6620,7 +6620,7 @@
 		)
 		(uuid "5fdd5f3b-1082-4aab-9eec-ee60edfcecb0")
 	)
-	(label "USB_D-"
+	(label "USB_D+"
 		(at 166.37 110.49 0)
 		(effects
 			(font
@@ -6628,7 +6628,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "693e6e44-2e9a-4146-b755-9f33d7b03e36")
+		(uuid "6615da16-b330-4df7-a807-1b9fb6a01386")
 	)
 	(label "~{DIGITALKER_CS}"
 		(at 246.38 87.63 0)
@@ -6720,15 +6720,15 @@
 		)
 		(uuid "88dd3c9c-9439-4374-b886-f36f36ee70d1")
 	)
-	(label "D+"
-		(at 184.15 107.95 0)
+	(label "USB_D-"
+		(at 166.37 107.95 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "8b9307d7-9576-44e3-89aa-aaff1fb9291d")
+		(uuid "892d4827-5fc2-4d8b-8921-98807226393c")
 	)
 	(label "RDATA4"
 		(at 246.38 125.73 0)
@@ -6880,16 +6880,6 @@
 		)
 		(uuid "c01a500f-13e3-4d77-abd8-19005ee371e3")
 	)
-	(label "D-"
-		(at 184.15 110.49 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c1d6f6a5-0ebc-436d-ac64-76a42bb436bd")
-	)
 	(label "ROM_ADDR1"
 		(at 246.38 138.43 0)
 		(effects
@@ -6919,16 +6909,6 @@
 			(justify left bottom)
 		)
 		(uuid "cac66c66-d192-4728-8937-c0808b2222df")
-	)
-	(label "USB_D+"
-		(at 166.37 107.95 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "cae38f77-2853-492a-a89e-ea09c12960a6")
 	)
 	(label "SD_MISO"
 		(at 135.89 220.98 0)
@@ -7030,6 +7010,16 @@
 		)
 		(uuid "e6727661-be76-4838-9b99-86f3addc5d21")
 	)
+	(label "D+"
+		(at 184.15 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e9ca8d30-5eb8-411e-8fcd-214c7e6b8049")
+	)
 	(label "SW7"
 		(at 246.38 110.49 0)
 		(effects
@@ -7039,6 +7029,16 @@
 			(justify left bottom)
 		)
 		(uuid "ee67b96c-b79d-4b93-96d0-083edc4b1359")
+	)
+	(label "D-"
+		(at 184.15 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f2737bb3-c38f-43b6-944d-8f369d6fc8d2")
 	)
 	(label "SD_MOSI"
 		(at 177.8 176.53 0)
@@ -7081,7 +7081,7 @@
 		)
 		(uuid "028c3a51-646b-4c44-b2a6-55f36ef24529")
 	)
-	(hierarchical_label "USB_D-"
+	(hierarchical_label "USB_D+"
 		(shape bidirectional)
 		(at 163.83 110.49 180)
 		(effects
@@ -7090,7 +7090,7 @@
 			)
 			(justify right)
 		)
-		(uuid "0a500342-d8ef-4cca-b18a-71c5eaf94c8c")
+		(uuid "0b75e9c8-6d17-4e5d-b92d-ac8f6cf314b1")
 	)
 	(hierarchical_label "DIGITALKER_CLK_4MHZ"
 		(shape output)
@@ -7125,17 +7125,6 @@
 		)
 		(uuid "5870e41e-9565-400b-8615-36d1e09f77aa")
 	)
-	(hierarchical_label "USB_D+"
-		(shape bidirectional)
-		(at 163.83 107.95 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "6c78cace-9bd3-40eb-ad62-95738c6fa200")
-	)
 	(hierarchical_label "SDATA"
 		(shape input)
 		(at 259.08 181.61 0)
@@ -7146,6 +7135,17 @@
 			(justify left)
 		)
 		(uuid "79378d45-b1ad-4238-9e2d-5445cb7ea592")
+	)
+	(hierarchical_label "USB_D-"
+		(shape bidirectional)
+		(at 163.83 107.95 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9bcfcd7b-099c-46e7-9f4e-15a2edcaebcf")
 	)
 	(hierarchical_label "INTR"
 		(shape input)
