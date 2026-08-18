@@ -7,7 +7,7 @@
 	(title_block
 		(title "Digichiver")
 		(date "2026-07-24")
-		(rev "0")
+		(rev "1")
 		(company "J. Thweatt")
 	)
 	(lib_symbols
