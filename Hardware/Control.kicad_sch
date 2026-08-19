@@ -6520,16 +6520,6 @@
 		)
 		(uuid "311995bd-f119-4a13-9d21-fbd0ba060421")
 	)
-	(label "BCLK"
-		(at 246.38 179.07 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "33f4e43d-6ff8-42fe-bf78-4ea2e92ba080")
-	)
 	(label "ROM_ADDR6"
 		(at 246.38 151.13 0)
 		(effects
@@ -6630,6 +6620,16 @@
 		)
 		(uuid "6615da16-b330-4df7-a807-1b9fb6a01386")
 	)
+	(label "FSYNC"
+		(at 246.38 179.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "67e87f04-72c0-4c97-8c7d-53969a49e6d7")
+	)
 	(label "~{DIGITALKER_CS}"
 		(at 246.38 87.63 0)
 		(effects
@@ -6659,6 +6659,16 @@
 			(justify left bottom)
 		)
 		(uuid "71353814-5b2e-48e4-9858-57c1389f6d19")
+	)
+	(label "BCLK"
+		(at 246.38 176.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "732f54bd-d30b-4b7f-8134-ccb9fab714db")
 	)
 	(label "SW1"
 		(at 246.38 95.25 0)
@@ -6960,16 +6970,6 @@
 		)
 		(uuid "dd5d08b3-7e37-43d7-8c15-18b7512508e9")
 	)
-	(label "FSYNC"
-		(at 246.38 176.53 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "de89355f-341e-44e0-9e8a-d3d7e5223046")
-	)
 	(label "XR"
 		(at 171.45 148.59 0)
 		(effects
@@ -7092,6 +7092,28 @@
 		)
 		(uuid "0b75e9c8-6d17-4e5d-b92d-ac8f6cf314b1")
 	)
+	(hierarchical_label "FSYNC"
+		(shape output)
+		(at 259.08 179.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0b85ef91-59fd-46e3-acfc-7636273a9360")
+	)
+	(hierarchical_label "BCLK"
+		(shape output)
+		(at 259.08 176.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "19b838a4-7237-49ff-83db-9699135b6258")
+	)
 	(hierarchical_label "DIGITALKER_CLK_4MHZ"
 		(shape output)
 		(at 271.78 85.09 0)
@@ -7180,17 +7202,6 @@
 		)
 		(uuid "c371d289-858c-487c-bea9-4b1a97b91474")
 	)
-	(hierarchical_label "FSYNC"
-		(shape output)
-		(at 259.08 176.53 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "cbaff312-2447-479f-ac32-495c1d1d7430")
-	)
 	(hierarchical_label "~{ROMEN}"
 		(shape input)
 		(at 259.08 171.45 0)
@@ -7201,17 +7212,6 @@
 			(justify left)
 		)
 		(uuid "e2b88962-fe51-46bd-afd6-808d3ab9f2c1")
-	)
-	(hierarchical_label "BCLK"
-		(shape output)
-		(at 259.08 179.07 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ea965bae-a3c2-4598-bc95-26fe6a160589")
 	)
 	(hierarchical_label "SW[1..8]"
 		(shape output)

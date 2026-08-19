@@ -4381,7 +4381,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:WQFN-20-1EP_3x3mm_P0.4mm_EP1.7x1.7mm"
+		(property "Footprint" "Digichiver:PCM1820IRTER"
 			(at 209.55 71.12 0)
 			(hide yes)
 			(show_name no)
