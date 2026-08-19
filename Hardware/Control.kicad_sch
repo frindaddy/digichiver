@@ -6550,7 +6550,7 @@
 		)
 		(uuid "4599648b-ff6f-442b-803b-dc26e423fc4c")
 	)
-	(label "LED_RED"
+	(label "LED_OR"
 		(at 121.92 157.48 0)
 		(effects
 			(font
@@ -7000,7 +7000,7 @@
 		)
 		(uuid "e5ec64c4-9284-4e14-8d12-5fd655c47290")
 	)
-	(label "LED_RED"
+	(label "LED_OR"
 		(at 177.8 168.91 0)
 		(effects
 			(font
@@ -8664,7 +8664,7 @@
 				)
 			)
 		)
-		(property "Color" "AMBER"
+		(property "Color" "ORANGE"
 			(at 104.648 164.846 0)
 			(show_name no)
 			(do_not_autoplace no)
