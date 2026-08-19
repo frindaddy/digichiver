@@ -83,15 +83,7 @@
       ],
       "drc_exclusions": [
         [
-          "clearance|118789000|67080000|9e6d47b6-b0ad-4f43-9ab2-6f2eb4bbc25a|1607abde-a551-4bd2-8a1d-e8f4f9c2a413",
-          ""
-        ],
-        [
           "clearance|141001000|68086000|401530ae-192f-4e06-8d07-a945c12d14f1|6a8c5d1b-c908-4c1c-9fe7-d81e515a8ca4",
-          ""
-        ],
-        [
-          "clearance|147574000|70537000|8d949f5d-c8b1-4d74-9d64-5ab4aabfc604|6732f8a2-9544-4ba8-8d60-62598b2bc203",
           ""
         ],
         [
@@ -143,27 +135,11 @@
           ""
         ],
         [
-          "silk_over_copper|130882819|86907809|268a042a-cd6c-4dbe-8a5a-d70b18d89883|f66bb445-15ea-452d-ae4a-49f211755291",
-          ""
-        ],
-        [
-          "silk_over_copper|131644723|89098285|268a042a-cd6c-4dbe-8a5a-d70b18d89883|c0353918-7efa-4a93-a982-e42bf38e411b",
-          ""
-        ],
-        [
           "silk_over_copper|172374000|101346000|43ff6e5d-b306-4d30-ae0d-6d6fef79145f|042438f7-bd4b-428f-a9e3-c9ef07c6ca05",
           ""
         ],
         [
-          "silk_over_copper|176914914|66442409|5310d488-fa62-4754-b3d1-2f7c99b4abfb|76b7e0e0-b9b9-4cc3-8019-bd240c7bdfba",
-          ""
-        ],
-        [
           "silk_over_copper|182374000|101346000|6d292edb-7e87-4ace-ae9d-d362be0fdbec|bb821a9a-5251-4cf0-b6b3-f657626f048d",
-          ""
-        ],
-        [
-          "text_height|138841000|71415000|41319c98-b436-439c-a0ad-c454afd4ad81|00000000-0000-0000-0000-000000000000",
           ""
         ]
       ],
