@@ -5691,7 +5691,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PAM8302AAD"
+		(property "Value" "PAM8302AASCR"
 			(at 211.6933 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5735,7 +5735,7 @@
 				)
 			)
 		)
-		(property "MPN" "PAM8302AADCR "
+		(property "MPN" "PAM8302AASCR"
 			(at 209.55 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -5768,7 +5768,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C112137"
+		(property "JLCPCB Part #" "C113367"
 			(at 209.55 179.07 0)
 			(hide yes)
 			(show_name no)
