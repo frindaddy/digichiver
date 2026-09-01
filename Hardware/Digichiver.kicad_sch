@@ -6,8 +6,8 @@
 	(paper "B")
 	(title_block
 		(title "Digichiver")
-		(date "2026-07-24")
-		(rev "1")
+		(date "2026-09-01")
+		(rev "2")
 		(company "J. Thweatt")
 	)
 	(lib_symbols
@@ -1933,7 +1933,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-075K1L"
+		(property "MPN" "0402WGF5101TCE"
 			(at 139.7 109.22 90)
 			(hide yes)
 			(show_name no)
@@ -1944,7 +1944,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105872"
+		(property "JLCPCB Part #" "C25905"
 			(at 139.7 109.22 90)
 			(hide yes)
 			(show_name no)
@@ -2358,7 +2358,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-075K1L"
+		(property "MPN" "0402WGF5101TCE"
 			(at 139.7 111.76 90)
 			(hide yes)
 			(show_name no)
@@ -2369,7 +2369,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105872"
+		(property "JLCPCB Part #" "C25905"
 			(at 139.7 111.76 90)
 			(hide yes)
 			(show_name no)

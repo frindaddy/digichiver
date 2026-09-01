@@ -6,8 +6,8 @@
 	(paper "B")
 	(title_block
 		(title "Digichiver")
-		(date "2026-07-24")
-		(rev "1")
+		(date "2026-09-01")
+		(rev "2")
 		(company "J. Thweatt")
 	)
 	(lib_symbols
@@ -10057,7 +10057,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 119.38 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -10090,7 +10090,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 119.38 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -11000,7 +11000,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-07100KL"
+		(property "MPN" "0402WGF1003TCE"
 			(at 283.21 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -11011,7 +11011,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C60491"
+		(property "JLCPCB Part #" "C25741"
 			(at 283.21 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -11614,7 +11614,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-0710KL"
+		(property "MPN" "0402WGF1002TCE"
 			(at 281.94 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -11625,7 +11625,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C60490"
+		(property "JLCPCB Part #" "C25744"
 			(at 281.94 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -12212,7 +12212,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 226.06 81.28 90)
 			(hide yes)
 			(show_name no)
@@ -12245,7 +12245,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 226.06 81.28 90)
 			(hide yes)
 			(show_name no)
@@ -12499,7 +12499,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 111.76 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -12532,7 +12532,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 111.76 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -12632,7 +12632,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 111.76 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -12665,7 +12665,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 111.76 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -12898,7 +12898,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 336.55 175.26 90)
 			(hide yes)
 			(show_name no)
@@ -12931,7 +12931,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 336.55 175.26 90)
 			(hide yes)
 			(show_name no)
@@ -13109,7 +13109,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 119.38 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -13142,7 +13142,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 119.38 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -13255,7 +13255,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402JR-072K2L"
+		(property "MPN" "0402WGF2201TCE"
 			(at 233.68 219.71 90)
 			(hide yes)
 			(show_name no)
@@ -13266,7 +13266,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C163447"
+		(property "JLCPCB Part #" "C25879"
 			(at 233.68 219.71 90)
 			(hide yes)
 			(show_name no)
@@ -14084,7 +14084,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402JR-072K2L"
+		(property "MPN" "0402WGF2201TCE"
 			(at 220.98 219.71 90)
 			(hide yes)
 			(show_name no)
@@ -14095,7 +14095,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C163447"
+		(property "JLCPCB Part #" "C25879"
 			(at 220.98 219.71 90)
 			(hide yes)
 			(show_name no)
@@ -14364,7 +14364,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-0710KL"
+		(property "MPN" "0402WGF1002TCE"
 			(at 281.94 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -14375,7 +14375,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C60490"
+		(property "JLCPCB Part #" "C25744"
 			(at 281.94 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -14542,7 +14542,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "50V"
 			(at 251.46 196.342 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14585,7 +14585,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C5137480"
+		(property "JLCPCB Part #" "C15195"
 			(at 251.46 199.39 90)
 			(hide yes)
 			(show_name no)
@@ -14685,7 +14685,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 269.24 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -14718,7 +14718,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 269.24 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -14832,7 +14832,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-07100KL"
+		(property "MPN" "0402WGF1003TCE"
 			(at 261.62 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -14843,7 +14843,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C60491"
+		(property "JLCPCB Part #" "C25741"
 			(at 261.62 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -14957,7 +14957,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-07100KL"
+		(property "MPN" "0402WGF1003TCE"
 			(at 261.62 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -14968,7 +14968,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C60491"
+		(property "JLCPCB Part #" "C25741"
 			(at 261.62 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -15068,7 +15068,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 111.76 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -15101,7 +15101,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 111.76 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -15201,7 +15201,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 302.26 53.34 90)
 			(hide yes)
 			(show_name no)
@@ -15234,7 +15234,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 302.26 53.34 90)
 			(hide yes)
 			(show_name no)
@@ -15912,7 +15912,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 273.05 217.17 90)
 			(hide yes)
 			(show_name no)
@@ -15945,7 +15945,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 273.05 217.17 90)
 			(hide yes)
 			(show_name no)
@@ -15977,7 +15977,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -16295,7 +16295,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-0710KL"
+		(property "MPN" "0402WGF1002TCE"
 			(at 97.79 193.04 90)
 			(hide yes)
 			(show_name no)
@@ -16306,7 +16306,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C60490"
+		(property "JLCPCB Part #" "C25744"
 			(at 97.79 193.04 90)
 			(hide yes)
 			(show_name no)
@@ -16574,7 +16574,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-0710KL"
+		(property "MPN" "0402WGF1002TCE"
 			(at 97.79 127 90)
 			(hide yes)
 			(show_name no)
@@ -16585,7 +16585,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C60490"
+		(property "JLCPCB Part #" "C25744"
 			(at 97.79 127 90)
 			(hide yes)
 			(show_name no)
@@ -16675,7 +16675,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "50V"
 			(at 236.22 229.616 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16718,7 +16718,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C5137480"
+		(property "JLCPCB Part #" "C15195"
 			(at 241.3 227.33 0)
 			(hide yes)
 			(show_name no)
@@ -16818,7 +16818,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 285.75 217.17 90)
 			(hide yes)
 			(show_name no)
@@ -16851,7 +16851,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 285.75 217.17 90)
 			(hide yes)
 			(show_name no)
@@ -17763,7 +17763,7 @@
 				)
 			)
 		)
-		(property "MPN" "RT0402BRD078K2L"
+		(property "MPN" "0402WGF8201TCE"
 			(at 309.88 198.12 90)
 			(hide yes)
 			(show_name no)
@@ -17774,7 +17774,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C852943"
+		(property "JLCPCB Part #" "C25924"
 			(at 309.88 198.12 90)
 			(hide yes)
 			(show_name no)
@@ -17874,7 +17874,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 302.26 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -17907,7 +17907,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 302.26 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -18021,7 +18021,7 @@
 				)
 			)
 		)
-		(property "MPN" "RT0402BRD078K2L"
+		(property "MPN" "0402WGF8201TCE"
 			(at 297.18 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -18032,7 +18032,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C852943"
+		(property "JLCPCB Part #" "C25924"
 			(at 297.18 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -18210,7 +18210,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 119.38 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -18243,7 +18243,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 119.38 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -18433,7 +18433,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-0710KL"
+		(property "MPN" "0402WGF1002TCE"
 			(at 97.79 60.96 90)
 			(hide yes)
 			(show_name no)
@@ -18444,7 +18444,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C60490"
+		(property "JLCPCB Part #" "C25744"
 			(at 97.79 60.96 90)
 			(hide yes)
 			(show_name no)

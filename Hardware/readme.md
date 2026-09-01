@@ -70,7 +70,7 @@ An I2S interface connects the PCM1809 audio ADC to the RP2354B.
 
 An SPI interface connects the RP2354B to the microSD card port.
 
-One pushbutton, one green "Ready" LED, and one orange "Activity" LED are connected to the RP2354B as GPIO.
+One pushbutton, one green "Ready" LED, and one yellow "Activity" LED are connected to the RP2354B as GPIO.
 
 ### microSD Card
 

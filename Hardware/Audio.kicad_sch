@@ -6,8 +6,8 @@
 	(paper "B")
 	(title_block
 		(title "Digichiver")
-		(date "2026-07-24")
-		(rev "1")
+		(date "2026-09-01")
+		(rev "2")
 		(company "J. Thweatt")
 	)
 	(lib_symbols
@@ -3614,7 +3614,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 204.47 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -3647,7 +3647,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 204.47 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -4047,7 +4047,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 233.3752 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -4080,7 +4080,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 237.49 72.136 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4090,7 +4090,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL05A106MP5NUNC"
+		(property "MPN" "CL10A106MA8NRNC"
 			(at 232.41 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -4123,7 +4123,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C315248"
+		(property "JLCPCB Part #" "C96446"
 			(at 232.41 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -4312,7 +4312,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-07100RL"
+		(property "MPN" "0402WGF1000TCE"
 			(at 234.95 129.54 90)
 			(hide yes)
 			(show_name no)
@@ -4323,7 +4323,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C106232"
+		(property "JLCPCB Part #" "C25076"
 			(at 234.95 129.54 90)
 			(hide yes)
 			(show_name no)
@@ -4695,7 +4695,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-07100KL"
+		(property "MPN" "0402WGF1003TCE"
 			(at 223.52 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -4706,7 +4706,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C60491"
+		(property "JLCPCB Part #" "C25741"
 			(at 223.52 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -4972,7 +4972,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-07100RL"
+		(property "MPN" "0402WGF1000TCE"
 			(at 234.95 134.62 90)
 			(hide yes)
 			(show_name no)
@@ -4983,7 +4983,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C106232"
+		(property "JLCPCB Part #" "C25076"
 			(at 234.95 134.62 90)
 			(hide yes)
 			(show_name no)
@@ -5412,7 +5412,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 187.6552 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -5445,7 +5445,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 181.102 72.136 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5455,7 +5455,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL05A106MP5NUNC"
+		(property "MPN" "CL10A106MA8NRNC"
 			(at 186.69 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -5488,7 +5488,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C315248"
+		(property "JLCPCB Part #" "C96446"
 			(at 186.69 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -6695,7 +6695,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 246.0752 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -6728,7 +6728,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 250.19 72.136 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6738,7 +6738,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL05A106MP5NUNC"
+		(property "MPN" "CL10A106MA8NRNC"
 			(at 245.11 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -6771,7 +6771,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C315248"
+		(property "JLCPCB Part #" "C96446"
 			(at 245.11 69.85 0)
 			(hide yes)
 			(show_name no)

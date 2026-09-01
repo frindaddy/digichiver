@@ -6,8 +6,8 @@
 	(paper "B")
 	(title_block
 		(title "Digichiver")
-		(date "2026-07-24")
-		(rev "1")
+		(date "2026-09-01")
+		(rev "2")
 		(company "J. Thweatt")
 	)
 	(lib_symbols
@@ -2945,7 +2945,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Switch:SW_Push"
+		(symbol "SW_Push_1"
 			(pin_numbers
 				(hide yes)
 			)
@@ -2958,18 +2958,19 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "SW1"
-				(at 0 7.62 0)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "PTS_647_SN50_SMTR2_LFS"
-				(at 0 5.08 0)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -2989,7 +2990,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://octopart.com/datasheet/c-k-components/PTS647SN50SMTR2LFS"
+			(property "Datasheet" ""
 				(at 0 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3000,8 +3001,8 @@
 					)
 				)
 			)
-			(property "Description" "Push button switch, SPST"
-				(at 0 -2.54 0)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -3022,19 +3023,7 @@
 					)
 				)
 			)
-			(symbol "SW_Push_0_1"
-				(polyline
-					(pts
-						(xy -2.54 -1.27) (xy -2.032 -1.27) (xy -2.032 -0.508)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			(symbol "SW_Push_1_0_1"
 				(circle
 					(center -2.032 0)
 					(radius 0.508)
@@ -3081,24 +3070,10 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 2.54 -1.27) (xy 2.032 -1.27) (xy 2.032 -0.508)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SW_Push_1_1"
 				(pin passive line
 					(at -5.08 0 0)
 					(length 2.54)
-					(name ""
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3114,9 +3089,9 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -1.27 0)
+					(at 5.08 0 180)
 					(length 2.54)
-					(name ""
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3131,17 +3106,145 @@
 						)
 					)
 				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "SW_Push_2"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SW_Push_2_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(pin passive line
-					(at 5.08 0 180)
+					(at -5.08 0 0)
 					(length 2.54)
-					(name ""
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3150,16 +3253,180 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 -1.27 180)
+					(at 5.08 0 180)
 					(length 2.54)
-					(name ""
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "4"
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Switch:SW_Push"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SW_Push_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3699,12 +3966,6 @@
 		(uuid "69406607-d5f7-4f18-a3b8-3fe05ac18b87")
 	)
 	(junction
-		(at 121.92 114.3)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6952d3ea-71fe-45a1-9d6e-9e10e00e2d5b")
-	)
-	(junction
 		(at 210.82 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3715,12 +3976,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7545bb69-3975-4c11-8def-1a23e3ce7b61")
-	)
-	(junction
-		(at 290.83 184.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "88392b98-0112-455b-8305-ba29354c48e8")
 	)
 	(junction
 		(at 173.99 72.39)
@@ -3759,12 +4014,6 @@
 		(uuid "a15d027e-07bb-4e12-a944-99e3c465846d")
 	)
 	(junction
-		(at 144.78 132.08)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a15e3a5e-0757-49dc-a0de-3be08c248c89")
-	)
-	(junction
 		(at 222.25 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3775,12 +4024,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a44ba885-3fd3-40df-aebf-325a8ab13d89")
-	)
-	(junction
-		(at 278.13 184.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a562f7da-a310-45bc-aff9-69203d75c73a")
 	)
 	(junction
 		(at 118.11 210.82)
@@ -3805,12 +4048,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "af09c667-5cd1-4246-8608-941ea0a64de4")
-	)
-	(junction
-		(at 123.19 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b61b218a-cb1c-4a59-83a5-baf2aa2bf9b2")
 	)
 	(junction
 		(at 279.4 52.07)
@@ -3859,12 +4096,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "efbedd9b-0277-4c03-84c7-be491c535876")
-	)
-	(junction
-		(at 146.05 118.11)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f26eab11-d4b2-4b45-92d9-23b3b96b9b09")
 	)
 	(junction
 		(at 267.97 52.07)
@@ -4272,16 +4503,6 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 118.11) (xy 146.05 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d6a8d2d-90fd-4f03-be2f-41af6971d489")
-	)
-	(wire
-		(pts
 			(xy 110.49 231.14) (xy 146.05 231.14)
 		)
 		(stroke
@@ -4352,16 +4573,6 @@
 	)
 	(wire
 		(pts
-			(xy 290.83 184.15) (xy 290.83 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1235bf37-4efd-41d2-8345-5326233aacce")
-	)
-	(wire
-		(pts
 			(xy 153.67 148.59) (xy 149.86 148.59)
 		)
 		(stroke
@@ -4392,7 +4603,7 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 118.11) (xy 163.83 118.11)
+			(xy 144.78 118.11) (xy 163.83 118.11)
 		)
 		(stroke
 			(width 0)
@@ -4419,16 +4630,6 @@
 			(type default)
 		)
 		(uuid "1ca8e876-4180-419b-932b-a1bf9565328c")
-	)
-	(wire
-		(pts
-			(xy 123.19 113.03) (xy 123.19 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1cdbf94e-13e4-49f7-bf02-9b063d787922")
 	)
 	(wire
 		(pts
@@ -4572,16 +4773,6 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 132.08) (xy 146.05 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "36200911-91b7-41e8-a5fc-76dffde3bb00")
-	)
-	(wire
-		(pts
 			(xy 274.32 184.15) (xy 274.32 181.61)
 		)
 		(stroke
@@ -4649,16 +4840,6 @@
 			(type default)
 		)
 		(uuid "3a7c38ab-9e51-4a3e-97fb-277830540cc6")
-	)
-	(wire
-		(pts
-			(xy 146.05 118.11) (xy 146.05 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3a99958a-3123-4116-b8f5-89d96d5686ed")
 	)
 	(wire
 		(pts
@@ -4812,16 +4993,6 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 100.33) (xy 123.19 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4a2da18b-2732-49c1-a4ca-da08ae72a9dd")
-	)
-	(wire
-		(pts
 			(xy 267.97 52.07) (xy 279.4 52.07)
 		)
 		(stroke
@@ -4902,7 +5073,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 132.08) (xy 144.78 133.35)
+			(xy 144.78 130.81) (xy 144.78 133.35)
 		)
 		(stroke
 			(width 0)
@@ -4969,16 +5140,6 @@
 			(type default)
 		)
 		(uuid "5dea155b-caaf-47c0-8cf6-53900c509b08")
-	)
-	(wire
-		(pts
-			(xy 146.05 132.08) (xy 146.05 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5e7a1dc4-ce07-40a9-8cfd-0b9c7413b89a")
 	)
 	(wire
 		(pts
@@ -5059,16 +5220,6 @@
 			(type default)
 		)
 		(uuid "64e21cc7-c0dc-4931-86f8-fc5809d130b2")
-	)
-	(wire
-		(pts
-			(xy 121.92 113.03) (xy 121.92 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6576c255-032b-4999-97a0-6860739f74aa")
 	)
 	(wire
 		(pts
@@ -5272,16 +5423,6 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 130.81) (xy 144.78 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "807e0c47-e991-416a-81cb-5ef54f8be280")
-	)
-	(wire
-		(pts
 			(xy 125.73 204.47) (xy 125.73 215.9)
 		)
 		(stroke
@@ -5412,16 +5553,6 @@
 	)
 	(wire
 		(pts
-			(xy 279.4 185.42) (xy 278.13 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "90836339-79ef-4009-8c39-ff546a3d53fb")
-	)
-	(wire
-		(pts
 			(xy 161.29 53.34) (xy 161.29 52.07)
 		)
 		(stroke
@@ -5492,7 +5623,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 114.3) (xy 121.92 115.57)
+			(xy 121.92 113.03) (xy 121.92 115.57)
 		)
 		(stroke
 			(width 0)
@@ -5669,16 +5800,6 @@
 			(type default)
 		)
 		(uuid "b3677ab3-8d7e-49a5-9871-733f35be6c85")
-	)
-	(wire
-		(pts
-			(xy 290.83 185.42) (xy 289.56 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b52928d9-d8b0-4e4b-ab34-de95ec93c082")
 	)
 	(wire
 		(pts
@@ -5942,7 +6063,7 @@
 	)
 	(wire
 		(pts
-			(xy 278.13 184.15) (xy 279.4 184.15)
+			(xy 274.32 184.15) (xy 279.4 184.15)
 		)
 		(stroke
 			(width 0)
@@ -6062,16 +6183,6 @@
 	)
 	(wire
 		(pts
-			(xy 278.13 185.42) (xy 278.13 184.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e32d2c72-bfc5-4f2d-a80b-395737f5621f")
-	)
-	(wire
-		(pts
 			(xy 92.71 158.75) (xy 92.71 157.48)
 		)
 		(stroke
@@ -6079,16 +6190,6 @@
 			(type default)
 		)
 		(uuid "e47a087a-b03c-4b9e-ae98-698bc427f27d")
-	)
-	(wire
-		(pts
-			(xy 123.19 100.33) (xy 121.92 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e526bfe5-1d1e-4817-bc61-aa7cebcf3764")
 	)
 	(bus
 		(pts
@@ -6192,16 +6293,6 @@
 	)
 	(wire
 		(pts
-			(xy 274.32 184.15) (xy 278.13 184.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f126148f-57a3-4540-abc8-b02a28d9232e")
-	)
-	(wire
-		(pts
 			(xy 214.63 69.85) (xy 218.44 69.85)
 		)
 		(stroke
@@ -6212,7 +6303,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 100.33) (xy 187.96 100.33)
+			(xy 121.92 100.33) (xy 187.96 100.33)
 		)
 		(stroke
 			(width 0)
@@ -6229,16 +6320,6 @@
 			(type default)
 		)
 		(uuid "f604e89a-6082-4b57-b0f2-ac29efdd908b")
-	)
-	(wire
-		(pts
-			(xy 123.19 114.3) (xy 121.92 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f62c7778-b2a3-410b-80d4-6d61a7764ebd")
 	)
 	(wire
 		(pts
@@ -6550,7 +6631,7 @@
 		)
 		(uuid "4599648b-ff6f-442b-803b-dc26e423fc4c")
 	)
-	(label "LED_OR"
+	(label "LED_YEL"
 		(at 121.92 157.48 0)
 		(effects
 			(font
@@ -7000,7 +7081,7 @@
 		)
 		(uuid "e5ec64c4-9284-4e14-8d12-5fd655c47290")
 	)
-	(label "LED_OR"
+	(label "LED_YEL"
 		(at 177.8 168.91 0)
 		(effects
 			(font
@@ -7309,7 +7390,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 96.52 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -7342,7 +7423,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 96.52 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -7679,7 +7760,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 172.72 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -7712,7 +7793,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 172.72 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -7818,7 +7899,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 245.11 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -7851,7 +7932,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 245.11 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -8030,7 +8111,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "50V"
 			(at 177.8 157.226 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8040,7 +8121,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402JRNPO9BN150"
+		(property "MPN" "0402CG150J500NT"
 			(at 172.72 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -8073,7 +8154,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C106997"
+		(property "JLCPCB Part #" "C1548"
 			(at 172.72 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -8270,7 +8351,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-0710KL"
+		(property "MPN" "0402WGF1002TCE"
 			(at 125.73 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -8281,7 +8362,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C60490"
+		(property "JLCPCB Part #" "C25744"
 			(at 125.73 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -8381,7 +8462,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 302.26 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -8414,7 +8495,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 302.26 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -8621,7 +8702,7 @@
 				)
 			)
 		)
-		(property "Value" "150060AS75000"
+		(property "Value" "KT-0805Y"
 			(at 104.648 162.814 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8631,7 +8712,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 105.41 153.035 0)
 			(hide yes)
 			(show_name no)
@@ -8664,7 +8745,7 @@
 				)
 			)
 		)
-		(property "Color" "ORANGE"
+		(property "Color" "YELLOW"
 			(at 104.648 164.846 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8674,7 +8755,7 @@
 				)
 			)
 		)
-		(property "MPN" "150060AS75000"
+		(property "MPN" "KT-0805Y"
 			(at 105.41 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -8707,7 +8788,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C6976659"
+		(property "JLCPCB Part #" "C2296"
 			(at 105.41 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -8728,6 +8809,129 @@
 			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 116.84 143.51 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "23714547-ae63-4e0e-a916-65f74ba16d06")
+		(property "Reference" "R13"
+			(at 116.84 146.05 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 116.84 148.59 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 116.586 144.526 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
+			(at 116.84 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 116.84 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_DVDD" ""
+			(at 116.84 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KLC_S4.2_VREG_LX" ""
+			(at 116.84 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0402WGF1001TCE"
+			(at 116.84 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "C11702"
+			(at 116.84 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a557c33b-2d40-4ec2-81d1-ee008549d8a4")
+		)
+		(pin "2"
+			(uuid "08c44e9b-3862-495b-a30d-01e9387e1acd")
+		)
+		(instances
+			(project "Digichiver"
+				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -9270,7 +9474,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402JR-071KL"
+		(property "MPN" "0402WGF1001TCE"
 			(at 156.21 72.39 90)
 			(hide yes)
 			(show_name no)
@@ -9281,7 +9485,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105637"
+		(property "JLCPCB Part #" "C11702"
 			(at 156.21 72.39 90)
 			(hide yes)
 			(show_name no)
@@ -9387,7 +9591,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 210.82 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -9420,7 +9624,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 210.82 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -9830,7 +10034,7 @@
 				)
 			)
 		)
-		(property "Voltage" "25V"
+		(property "Voltage" "10V"
 			(at 143.51 92.456 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9840,7 +10044,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL05A475MO5NUNC"
+		(property "MPN" "CL05A475MP5NRNC"
 			(at 138.43 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -9873,7 +10077,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C318563"
+		(property "JLCPCB Part #" "C23733"
 			(at 138.43 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -9979,7 +10183,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 290.83 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -10012,7 +10216,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 290.83 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -10102,7 +10306,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "50V"
 			(at 148.59 157.226 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10112,7 +10316,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402JRNPO9BN150"
+		(property "MPN" "0402CG150J500NT"
 			(at 153.67 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -10145,7 +10349,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C106997"
+		(property "JLCPCB Part #" "C1548"
 			(at 153.67 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -10266,7 +10470,7 @@
 		(dnp no)
 		(uuid "5fd9c70c-a2f9-4329-a4f3-f69895425a4e")
 		(property "Reference" "SW3"
-			(at 280.924 187.452 0)
+			(at 283.718 186.436 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10275,8 +10479,8 @@
 				)
 			)
 		)
-		(property "Value" "PTS_647_SN50_SMTR2_LFS"
-			(at 291.592 189.992 0)
+		(property "Value" "TS-1088-AR02016"
+			(at 291.084 188.468 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10285,7 +10489,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS647_Sx50"
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_TS-1088-xR020"
 			(at 284.48 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -10307,7 +10511,7 @@
 				)
 			)
 		)
-		(property "Description" "Push button switch, SPST"
+		(property "Description" "Push button switch, generic, two pins"
 			(at 284.48 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -10318,7 +10522,7 @@
 				)
 			)
 		)
-		(property "MPN" "PTS_647_SN50_SMTR2_LFS"
+		(property "MPN" "TS-1088-AR02016"
 			(at 284.48 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -10351,7 +10555,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2799414"
+		(property "JLCPCB Part #" "C720477"
 			(at 284.48 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -10367,12 +10571,6 @@
 		)
 		(pin "1"
 			(uuid "a6e29ca2-4665-4463-a4bf-bc604fa8227e")
-		)
-		(pin "3"
-			(uuid "492a5da8-9a6d-4979-bf6d-eeda1ffe4d31")
-		)
-		(pin "4"
-			(uuid "793df43c-6e6c-47c3-8dec-17029abb7c87")
 		)
 		(instances
 			(project "control"
@@ -10453,7 +10651,7 @@
 				)
 			)
 		)
-		(property "Voltage" "25V"
+		(property "Voltage" "10V"
 			(at 179.07 79.756 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10463,7 +10661,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL05A475MO5NUNC"
+		(property "MPN" "CL05A475MP5NRNC"
 			(at 173.99 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -10496,7 +10694,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C318563"
+		(property "JLCPCB Part #" "C23733"
 			(at 173.99 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -10633,7 +10831,7 @@
 				)
 			)
 		)
-		(property "Value" "150060VS75000"
+		(property "Value" "KT-0805G"
 			(at 104.648 148.844 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10643,7 +10841,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 105.41 139.065 0)
 			(hide yes)
 			(show_name no)
@@ -10686,7 +10884,7 @@
 				)
 			)
 		)
-		(property "MPN" "150060VS75000"
+		(property "MPN" "KT-0805G"
 			(at 105.41 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -10719,7 +10917,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C6848499"
+		(property "JLCPCB Part #" "C2297"
 			(at 105.41 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -10746,6 +10944,7 @@
 		)
 	)
 	(symbol
+		(lib_name "SW_Push_2")
 		(lib_id "Switch:SW_Push")
 		(at 144.78 125.73 90)
 		(unit 1)
@@ -10768,7 +10967,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "PTS_647_SN50_SMTR2_LFS"
+		(property "Value" "TS-1088-AR02016"
 			(at 147.32 126.9999 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10779,7 +10978,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS647_Sx50"
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_TS-1088-xR020"
 			(at 139.7 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -10801,7 +11000,7 @@
 				)
 			)
 		)
-		(property "Description" "Push button switch, SPST"
+		(property "Description" "Push button switch, generic, two pins"
 			(at 147.32 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -10812,7 +11011,7 @@
 				)
 			)
 		)
-		(property "MPN" "PTS_647_SN50_SMTR2_LFS"
+		(property "MPN" "TS-1088-AR02016"
 			(at 144.78 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -10845,7 +11044,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2799414"
+		(property "JLCPCB Part #" "C720477"
 			(at 144.78 125.73 90)
 			(hide yes)
 			(show_name no)
@@ -10861,12 +11060,6 @@
 		)
 		(pin "1"
 			(uuid "dc12a6ed-ea8a-4bda-947d-21e374b474e8")
-		)
-		(pin "3"
-			(uuid "be2c9900-b0d4-4f1c-bd56-4a56799d96f6")
-		)
-		(pin "4"
-			(uuid "6de5b824-d13e-4b60-84e9-57c28eaa68cf")
 		)
 		(instances
 			(project "control"
@@ -10947,7 +11140,7 @@
 				)
 			)
 		)
-		(property "Voltage" "25V"
+		(property "Voltage" "10V"
 			(at 189.23 59.436 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10957,7 +11150,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL05A475MO5NUNC"
+		(property "MPN" "CL05A475MP5NRNC"
 			(at 184.15 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -10990,7 +11183,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C318563"
+		(property "JLCPCB Part #" "C23733"
 			(at 184.15 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -11096,7 +11289,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 161.29 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -11129,7 +11322,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 161.29 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -11235,7 +11428,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 279.4 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -11268,7 +11461,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 279.4 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -11704,7 +11897,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-0710KL"
+		(property "MPN" "0402WGF1002TCE"
 			(at 269.24 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -11715,7 +11908,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C60490"
+		(property "JLCPCB Part #" "C25744"
 			(at 269.24 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -11821,7 +12014,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 233.68 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -11854,7 +12047,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 233.68 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -11960,7 +12153,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 274.32 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -11993,7 +12186,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 274.32 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -12113,7 +12306,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-0710KL"
+		(property "MPN" "0402WGF1002TCE"
 			(at 133.35 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -12124,7 +12317,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C60490"
+		(property "JLCPCB Part #" "C25744"
 			(at 133.35 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -12181,7 +12374,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 178.816 111.506 90)
 			(hide yes)
 			(show_name no)
@@ -12236,7 +12429,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-0727RL"
+		(property "MPN" "0603WAF270JT5E"
 			(at 179.07 110.49 90)
 			(hide yes)
 			(show_name no)
@@ -12247,7 +12440,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C138021"
+		(property "JLCPCB Part #" "C25190"
 			(at 179.07 110.49 90)
 			(hide yes)
 			(show_name no)
@@ -12434,6 +12627,7 @@
 		)
 	)
 	(symbol
+		(lib_name "SW_Push_1")
 		(lib_id "Switch:SW_Push")
 		(at 121.92 107.95 90)
 		(unit 1)
@@ -12456,7 +12650,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "PTS_647_SN50_SMTR2_LFS"
+		(property "Value" "TS-1088-AR02016"
 			(at 124.46 109.2199 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12467,7 +12661,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_PTS647_Sx50"
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_TS-1088-xR020"
 			(at 116.84 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -12489,7 +12683,7 @@
 				)
 			)
 		)
-		(property "Description" "Push button switch, SPST"
+		(property "Description" "Push button switch, generic, two pins"
 			(at 124.46 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -12500,7 +12694,7 @@
 				)
 			)
 		)
-		(property "MPN" "PTS_647_SN50_SMTR2_LFS"
+		(property "MPN" "TS-1088-AR02016"
 			(at 121.92 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -12533,7 +12727,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C2799414"
+		(property "JLCPCB Part #" "C720477"
 			(at 121.92 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -12549,12 +12743,6 @@
 		)
 		(pin "1"
 			(uuid "2938844e-216e-4d8b-8750-8eed09816327")
-		)
-		(pin "3"
-			(uuid "e4fb9a53-8707-44fd-80a4-d70825f85447")
-		)
-		(pin "4"
-			(uuid "4e343fa2-baea-4040-a154-779e56e954b8")
 		)
 		(instances
 			(project "control"
@@ -12657,7 +12845,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402JR-071KL"
+		(property "MPN" "0402WGF1001TCE"
 			(at 167.64 118.11 90)
 			(hide yes)
 			(show_name no)
@@ -12668,7 +12856,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105637"
+		(property "JLCPCB Part #" "C11702"
 			(at 167.64 118.11 90)
 			(hide yes)
 			(show_name no)
@@ -12858,7 +13046,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 267.97 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -12891,7 +13079,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 267.97 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -13196,7 +13384,7 @@
 				)
 			)
 		)
-		(property "Voltage" "25V"
+		(property "Voltage" "10V"
 			(at 154.94 92.456 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13206,7 +13394,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL05A475MO5NUNC"
+		(property "MPN" "CL05A475MP5NRNC"
 			(at 149.86 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -13239,7 +13427,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C318563"
+		(property "JLCPCB Part #" "C23733"
 			(at 149.86 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -13359,7 +13547,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-0710KL"
+		(property "MPN" "0402WGF1002TCE"
 			(at 110.49 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -13370,7 +13558,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C60490"
+		(property "JLCPCB Part #" "C25744"
 			(at 110.49 237.49 0)
 			(hide yes)
 			(show_name no)
@@ -13500,7 +13688,7 @@
 				)
 			)
 		)
-		(property "Value" "133"
+		(property "Value" "150"
 			(at 116.84 162.56 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13565,7 +13753,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-07133RL"
+		(property "MPN" "0402WGF1500TCE"
 			(at 116.84 157.48 90)
 			(hide yes)
 			(show_name no)
@@ -13576,7 +13764,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C327373"
+		(property "JLCPCB Part #" "C25082"
 			(at 116.84 157.48 90)
 			(hide yes)
 			(show_name no)
@@ -13676,7 +13864,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 222.25 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -13709,7 +13897,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 222.25 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -13772,7 +13960,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 178.816 108.966 90)
 			(hide yes)
 			(show_name no)
@@ -13827,7 +14015,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-0727RL"
+		(property "MPN" "0603WAF270JT5E"
 			(at 179.07 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -13838,7 +14026,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C138021"
+		(property "JLCPCB Part #" "C25190"
 			(at 179.07 107.95 90)
 			(hide yes)
 			(show_name no)
@@ -14411,7 +14599,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402JR-071KL"
+		(property "MPN" "0402WGF1001TCE"
 			(at 121.92 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -14422,7 +14610,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105637"
+		(property "JLCPCB Part #" "C11702"
 			(at 121.92 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -14443,129 +14631,6 @@
 			(project "Digichiver"
 				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
 					(reference "R10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 116.84 143.51 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ac29c932-519a-4dc2-9d07-76554b764f97")
-		(property "Reference" "R13"
-			(at 116.84 146.05 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "133"
-			(at 116.84 148.59 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 116.586 144.526 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
-			(at 116.84 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 116.84 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_DVDD" ""
-			(at 116.84 143.51 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KLC_S4.2_VREG_LX" ""
-			(at 116.84 143.51 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RC0402FR-07133RL"
-			(at 116.84 143.51 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Part #" "C327373"
-			(at 116.84 143.51 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6ba45478-f8e3-4f6f-8b27-01ed6eb6ea27")
-		)
-		(pin "2"
-			(uuid "16617476-b595-4e14-b1dc-17a3dbc2ebf1")
-		)
-		(instances
-			(project "Digichiver"
-				(path "/51de4045-d2a2-42d9-b145-319acd726bb6/7bd3bb5c-26f1-47ae-a373-5b3a637c22c5"
-					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -14659,7 +14724,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-0710KL"
+		(property "MPN" "0402WGF1002TCE"
 			(at 118.11 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -14670,7 +14735,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C60490"
+		(property "JLCPCB Part #" "C25744"
 			(at 118.11 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -15352,7 +15417,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402JR-071KL"
+		(property "MPN" "0402WGF1001TCE"
 			(at 179.07 148.59 90)
 			(hide yes)
 			(show_name no)
@@ -15363,7 +15428,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105637"
+		(property "JLCPCB Part #" "C11702"
 			(at 179.07 148.59 90)
 			(hide yes)
 			(show_name no)
@@ -15552,7 +15617,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R8BB104"
+		(property "MPN" "CL05B104KB54PNC"
 			(at 256.54 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -15585,7 +15650,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105883"
+		(property "JLCPCB Part #" "C307331"
 			(at 256.54 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -15948,7 +16013,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-0710KL"
+		(property "MPN" "0402WGF1002TCE"
 			(at 110.49 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -15959,7 +16024,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C60490"
+		(property "JLCPCB Part #" "C25744"
 			(at 110.49 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -16016,7 +16081,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 89.8652 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -16049,7 +16114,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 83.058 195.58 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16059,7 +16124,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL05A106MP5NUNC"
+		(property "MPN" "CL10A106MA8NRNC"
 			(at 88.9 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -16092,7 +16157,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C315248"
+		(property "JLCPCB Part #" "C96446"
 			(at 88.9 193.04 0)
 			(hide yes)
 			(show_name no)

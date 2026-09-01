@@ -6,8 +6,8 @@
 	(paper "B")
 	(title_block
 		(title "Digichiver")
-		(date "2026-07-24")
-		(rev "1")
+		(date "2026-09-01")
+		(rev "2")
 		(company "J. Thweatt")
 	)
 	(lib_symbols
@@ -2443,7 +2443,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 234.6452 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -2486,7 +2486,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL05A475MO5NUNC"
+		(property "MPN" "CL21A475KAQNNNE"
 			(at 233.68 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -2519,7 +2519,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C318563"
+		(property "JLCPCB Part #" "C1779"
 			(at 233.68 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -3133,7 +3133,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-0710KL"
+		(property "MPN" "0402WGF1002TCE"
 			(at 226.06 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -3144,7 +3144,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C60490"
+		(property "JLCPCB Part #" "C25744"
 			(at 226.06 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -3301,7 +3301,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -3563,7 +3563,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "6.3V"
 			(at 254 105.156 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3964,7 +3964,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "6.3V"
 			(at 242.57 105.156 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4602,7 +4602,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0402FR-0718KL"
+		(property "MPN" "0402WGF1802TCE"
 			(at 196.85 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -4613,7 +4613,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C138044"
+		(property "JLCPCB Part #" "C25762"
 			(at 196.85 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -4824,7 +4824,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 187.6552 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -4857,7 +4857,7 @@
 				)
 			)
 		)
-		(property "Voltage" "10V"
+		(property "Voltage" "25V"
 			(at 181.102 105.156 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4867,7 +4867,7 @@
 				)
 			)
 		)
-		(property "MPN" "CL05A106MP5NUNC"
+		(property "MPN" "CL10A106MA8NRNC"
 			(at 186.69 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -4900,7 +4900,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C315248"
+		(property "JLCPCB Part #" "C96446"
 			(at 186.69 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -5009,7 +5009,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)

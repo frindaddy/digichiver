@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 2.7,
-          "height": 2.7,
-          "width": 2.7
+          "drill": 0.0,
+          "height": 0.62,
+          "width": 0.56
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -61,9 +61,9 @@
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
           "min_clearance": 0.1,
-          "min_island_area": 9.9999993548,
+          "min_island_area": 9.99999999996,
           "min_thickness": 0.1,
-          "pad_connection": 2,
+          "pad_connection": 1,
           "remove_islands": 0,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
@@ -83,10 +83,6 @@
       ],
       "drc_exclusions": [
         [
-          "clearance|141001000|68086000|401530ae-192f-4e06-8d07-a945c12d14f1|6a8c5d1b-c908-4c1c-9fe7-d81e515a8ca4",
-          ""
-        ],
-        [
           "hole_clearance|126490000|65231000|0ac5d6b3-4d3d-4292-bda3-8f391fb61435|7d6f8409-0221-42d8-9f07-4edf8534083e",
           ""
         ],
@@ -103,27 +99,7 @@
           ""
         ],
         [
-          "lib_footprint_mismatch|132540000|70982000|31e1b55a-e4fc-493e-9d39-555038ecf711|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|132540000|71982000|511e4f9b-4fe3-4542-bb00-969bcbc3b3a0|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|142325000|62230000|12fc0602-cbb9-4a7f-8fac-3b6ce5daed5a|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|159723000|94996000|70bf1f48-c48f-4e43-9ea3-edd41ccb7b25|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|160020000|62230000|37030c3c-0ec3-4ce9-928c-3f4ad61b2695|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "lib_footprint_mismatch|177038000|121158000|44cf3c66-c900-4e21-aa1d-39dd913399be|00000000-0000-0000-0000-000000000000",
+          "lib_footprint_mismatch|159766000|95123000|70bf1f48-c48f-4e43-9ea3-edd41ccb7b25|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
@@ -212,7 +188,7 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.1,
+        "min_clearance": 0.0889,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
@@ -225,7 +201,7 @@
         "min_text_height": 1.0,
         "min_text_thickness": 0.15,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.1,
+        "min_track_width": 0.0889,
         "min_via_annular_width": 0.0635,
         "min_via_diameter": 0.4,
         "solder_mask_to_copper_clearance": 0.005,
@@ -233,11 +209,11 @@
       },
       "teardrop_options": [
         {
-          "td_onpthpad": true,
+          "td_onpthpad": false,
           "td_onroundshapesonly": false,
-          "td_onsmdpad": true,
-          "td_ontrackend": false,
-          "td_onvia": true
+          "td_onsmdpad": false,
+          "td_ontrackend": true,
+          "td_onvia": false
         }
       ],
       "teardrop_parameters": [
@@ -277,6 +253,7 @@
       ],
       "track_widths": [
         0.0,
+        0.0889,
         0.254
       ],
       "tuning_pattern_settings": {
@@ -324,7 +301,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "1"
+      "sch_revision": "2"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -595,6 +572,15 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "clearance": 0.0889,
+        "name": "Fanout",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.0889,
+        "tuning_profile": ""
       }
     ],
     "meta": {
@@ -602,7 +588,40 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Fanout",
+        "pattern": "/RDATA(0|1|2|3)"
+      },
+      {
+        "netclass": "Fanout",
+        "pattern": "/RDATA4"
+      },
+      {
+        "netclass": "Fanout",
+        "pattern": "/RDATA5"
+      },
+      {
+        "netclass": "Fanout",
+        "pattern": "/SW(4|5|6|7|8)"
+      },
+      {
+        "netclass": "Fanout",
+        "pattern": "/ROM_ADDR(4|5|6|7)"
+      },
+      {
+        "netclass": "Fanout",
+        "pattern": "/Control/BUTTON|/Control/SD_MISO|/Control/SD_MOSI|/Control/SD_SCK|/Control/~{SD_CS}|/SDATA"
+      },
+      {
+        "netclass": "Fanout",
+        "pattern": "/Control/VREG_LX"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/Control/VREG_LX"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -823,7 +842,7 @@
         "uuid": "51de4045-d2a2-42d9-b145-319acd726bb6"
       }
     ],
-    "used_designators": "U1-6,U8,U11-13,SW1-2,X1-2,L1-3,#PWR1-49,#PWR58,#PWR60-72,#PWR74-75,#PWR77-80,#PWR84-120,C1-28,C31-35,C37-40,C43-56,R1-11,R13-20,R24-36,Y1,J2-6,RV1,LS1,D1-2",
+    "used_designators": "U1-6,U8,U11-13,SW1-2,X1-2,L1-3,#PWR1-49,#PWR58,#PWR60-72,#PWR74-75,#PWR77-80,#PWR84-120,C1-28,C31-35,C37-40,C43-56,R1-11,R13-20,R24-37,Y1,J2-6,RV1,LS1,D1-2",
     "variants": []
   },
   "sheets": [
