@@ -47,6 +47,24 @@ class Digitalker:
         for i in range(8):
             self.SW[i].value((data >> i) & 1)
     
+    def _wait_for_interrupt(self, timeout_ms: int = 10000) -> bool:
+        """Wait for the Digitalker chip to signal it is done speaking.
+
+        INTR is reset low by a valid command and rises at the completion of
+        the speech sequence (DT1050 datasheet, Functional Description).
+
+        Args:
+            timeout_ms (int, optional): The maximum time to wait for the interrupt in milliseconds. Defaults to 10000.
+
+        Returns:
+            bool: True if the interrupt was received before the timeout, False otherwise.
+        """
+        start_time = time.ticks_ms()
+        while self.INTR.value() == 0:  # Wait for INTR to go high
+            if time.ticks_diff(time.ticks_ms(), start_time) > timeout_ms:
+                return False  # Timeout occurred
+        return True  # INTR went high, speech finished
+    
     def speak_word(self, address: int) -> None:
         """Send a word address to the Digitalker to speak.
 
@@ -75,28 +93,4 @@ class Digitalker:
         time.sleep_us(5)    # Short delay to ensure WR_N is registered (min 430ns)
         self.CS_N.value(1)  # Set CS_N high to deselect the Digitalker
 
-        # A valid start command resets INTR low.  Require that acknowledgement
-        # so a stale high completion level cannot be mistaken for this word
-        # finishing immediately.
-        start = time.ticks_us()
-        while self.INTR.value() == 1:
-            if time.ticks_diff(time.ticks_us(), start) > 1000:
-                raise RuntimeError("Digitalker did not accept the start command")
-        
-    def wait_for_interrupt(self, timeout_ms: int = 10000) -> bool:
-        """Wait for the Digitalker chip to signal it is done speaking.
-
-        INTR is reset low by a valid command and rises at the completion of
-        the speech sequence (DT1050 datasheet, Functional Description).
-
-        Args:
-            timeout_ms (int, optional): The maximum time to wait for the interrupt in milliseconds. Defaults to 10000.
-
-        Returns:
-            bool: True if the interrupt was received before the timeout, False otherwise.
-        """
-        start_time = time.ticks_ms()
-        while self.INTR.value() == 0:  # Wait for INTR to go high
-            if time.ticks_diff(time.ticks_ms(), start_time) > timeout_ms:
-                return False  # Timeout occurred
-        return True  # INTR went high, speech finished
+        self._wait_for_interrupt()  # Wait for the Digitalker to signal completion
