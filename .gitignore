@@ -57,3 +57,4 @@ fp-info-cache
 ### Software ###
 .vscode
 __pycache__
+tests
