@@ -4,7 +4,6 @@ from board import LED_GREEN, SPEAKER_DISABLE_N
 from digitalker import Digitalker
 from rom_emulator import RomEmulator
 
-
 rom = RomEmulator()
 rom.load()
 rom.start()
