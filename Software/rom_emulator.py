@@ -4,12 +4,41 @@ No Python executes after ROMEN asserts.  PIO1 turns each ROM request into an
 absolute SRAM pointer, DMA fetches the byte, and PIO0 drives RDATA[0..7].
 """
 
-from machine import Pin, mem32
 import rp2
 import uctypes
+from machine import Pin, mem32
 
 from rom_image import ROM_SIZE, load_ssr_pair
 
+# add type hinting for rp2.pio functions if available, but don't require it for runtime.
+try:
+    import typing
+    if typing.TYPE_CHECKING:
+        from rp2 import (  # noqa: TC004
+            block,
+            gpio,
+            in_,
+            isr,
+            jmp,
+            label,
+            mov,
+            noblock,
+            null,
+            osr,
+            out,
+            pin,
+            pins,
+            pull,
+            push,
+            wait,
+            wrap,
+            wrap_target,
+            x,
+            x_not_y,
+            y,
+        )
+except ImportError:
+    pass
 
 # RP2350 peripheral addresses and register layout.  The DMA channel aliases
 # are deliberately used so one DMA channel can arm and trigger the other.
@@ -54,13 +83,34 @@ ROM_ADDR_BASE = 20
 ROMEN_GPIO = 34
 
 
-def _dma_channel_base(channel):
+def _dma_channel_base(channel: int) -> int:
+    """Return the base address of a DMA channel's registers.
+
+    Args:
+        channel (int): The DMA channel number.
+
+    Returns:
+        int: The base address of the DMA channel's registers.
+    """
     return DMA_BASE + channel * DMA_CH_STRIDE
 
+def _dma_ctrl(*, size: int, inc_read: bool, inc_write: bool, treq: int, chain_to: int, ring_size: int=0,
+              ring_write: bool=False, high_priority: bool=True) -> int:
+    """Build the RP2350 DMA CTRL_TRIG value needed by this emulator.
 
-def _dma_ctrl(*, size, inc_read, inc_write, treq, chain_to, ring_size=0,
-              ring_write=False, high_priority=True):
-    """Build the RP2350 DMA CTRL_TRIG value needed by this emulator."""
+    Args:
+        size (int): The size of each transfer (0=byte, 1=halfword, 2=word).
+        inc_read (bool): Whether to increment the read address after each transfer.
+        inc_write (bool): Whether to increment the write address after each transfer.
+        treq (int): The DREQ value for the DMA channel (0-31).
+        chain_to (int): The DMA channel to chain to after this channel completes (0-11).
+        ring_size (int, optional): The size of the ring buffer. Defaults to 0.
+        ring_write (bool, optional): Whether to write to the ring buffer. Defaults to False.
+        high_priority (bool, optional): Whether to give the DMA channel high priority. Defaults to True.
+
+    Returns:
+        int: The constructed CTRL_TRIG value for the DMA channel.
+    """
     # RP2350 keeps DATA_SIZE and INCR_READ in their RP2040 positions, but
     # inserts INCR_READ_REV and INCR_WRITE_REV.  INCR_WRITE and every field
     # above it therefore move.  See RP2350 datasheet table 1151.
@@ -106,6 +156,16 @@ def _capture_request():
     jmp("active")
     wrap()
 
+@rp2.asm_pio(
+    out_shiftdir=rp2.PIO.SHIFT_RIGHT,
+    out_init=(rp2.PIO.OUT_LOW,) * 8, # type: ignore
+)
+def _drive_data():
+    """Consume one DMA word and present its low byte on RDATA[0..7]."""
+    wrap_target()
+    pull(block)
+    out(pins, 8)
+    wrap()
 
 @rp2.asm_pio(in_shiftdir=rp2.PIO.SHIFT_LEFT)
 def _trace_request():
@@ -134,20 +194,8 @@ def _trace_request():
     wrap()
 
 
-@rp2.asm_pio(
-    out_shiftdir=rp2.PIO.SHIFT_RIGHT,
-    out_init=(rp2.PIO.OUT_LOW,) * 8,
-)
-def _drive_data():
-    """Consume one DMA word and present its low byte on RDATA[0..7]."""
-    wrap_target()
-    pull(block)
-    out(pins, 8)
-    wrap()
-
-
 class RomEmulator:
-    """Serve an SSR1/SSR2 image as the MM54104's 16 KiB parallel ROM."""
+    """Serve a ROM image as the MM54104's 16 KiB parallel ROM."""
 
     def __init__(self, ssr1_path="SSR1.bin", ssr2_path="SSR2.bin"):
         self.ssr1_path = ssr1_path
@@ -211,7 +259,7 @@ class RomEmulator:
 
         self._configure_dma()
         self._output_sm.active(1)
-        self._capture_sm.put(self._rom_address >> 14)
+        self._capture_sm.put(self._rom_address >> 14) # type: ignore
         self._trace_sm.active(1)
         self._capture_sm.active(1)
         self.running = True
@@ -247,7 +295,7 @@ class RomEmulator:
         result = []
         for _ in range(min(4, self._trace_sm.rx_fifo())):
             offset = self._trace_sm.get() & (ROM_SIZE - 1)
-            result.append((offset, self._rom[offset]))
+            result.append((offset, self._rom[offset])) # type: ignore
 
         # Discard anything beyond the documented four-entry trace.
         while self._trace_sm.rx_fifo():
@@ -264,7 +312,7 @@ class RomEmulator:
         data_read_address = mem32[data + DMA_READ_ADDR] & 0xFFFFFFFF
         last_offset = data_read_address - self._rom_address
         if 0 <= last_offset < ROM_SIZE:
-            last_byte = self._rom[last_offset]
+            last_byte = self._rom[last_offset] # type: ignore
         else:
             last_offset = None
             last_byte = None
@@ -298,6 +346,7 @@ class RomEmulator:
         }
 
     def _configure_dma(self):
+        """Configure the two reserved DMA channels for the ROM emulator."""
         data = _dma_channel_base(DMA_DATA_CHANNEL)
         control = _dma_channel_base(DMA_CONTROL_CHANNEL)
 
