@@ -10,11 +10,20 @@ LED_GREEN.value(1)
 
 SPEAKER_DISABLE_N.value(1)
 try:
-    rom.load("DT1052.bin")
-    for i in range(10):
-        digitalker.speak_word(i)
-    rom.load("SSR1.bin", "SSR2.bin")
+    rom.load("DVSSROM1.bin")
     for i in range(144):
+        digitalker.speak_word(i)
+    rom.load("DVSSROM2.bin")
+    for i in range(133):
+        digitalker.speak_word(i)
+    rom.load("DVSSROM3.bin")
+    for i in range(129):
+        digitalker.speak_word(i)
+    rom.load("DVSSROM4.bin")
+    for i in range(140):
+        digitalker.speak_word(i)
+    rom.load("DVSSROM5.bin")
+    for i in range(108):
         digitalker.speak_word(i)
 finally:
     SPEAKER_DISABLE_N.value(0)
