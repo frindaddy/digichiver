@@ -127,32 +127,58 @@ def _dma_ctrl(*, size: int, inc_read: bool, inc_write: bool, treq: int, chain_to
     value |= 1 << 23  # IRQ_QUIET: this streaming path does not need IRQs.
     return value
 
-def _load_ssr_pair(target, ssr1_path, ssr2_path):
-    """Load SSR1 then SSR2 into a writable 16 KiB buffer.
+def _load_rom(target: memoryview, rom_paths: tuple) -> None:
+    """Load one image or two 8 KiB banks into a writable 16 KiB buffer.
 
-    The Digitalker presents ROM_ADDR13 as the 8 KiB-bank select: SSR1 occupies
-    addresses 0x0000..0x1fff and SSR2 occupies 0x2000..0x3fff.
+    Args:
+        target (memoryview): The writable 16 KiB ROM buffer.
+        rom_paths (tuple): One image path or two 8 KiB bank paths.
     """
     if len(target) != ROM_SIZE:
         raise ValueError(f"ROM target must be exactly {ROM_SIZE} bytes")
 
-    # bytearray slices are copies on CPython and MicroPython; DMA needs the
-    # original allocation, so always pass writable memoryviews to readinto().
-    view = memoryview(target)
-    _read_exact(ssr1_path, view[:ROM_BANK_SIZE])
-    _read_exact(ssr2_path, view[ROM_BANK_SIZE:])
+    if len(rom_paths) == 1:
+        for index in range(ROM_SIZE):
+            target[index] = 0
+        _read_into(target, rom_paths[0], ROM_SIZE, allow_short=True)
+        return
+    if len(rom_paths) != 2:
+        raise ValueError("ROM source must contain one or two paths")
 
-def _read_exact(path, target):
-    """Read one ROM bank into *target*, rejecting short and oversized files."""
+    view = memoryview(target)
+    _read_into(view[:ROM_BANK_SIZE], rom_paths[0], ROM_BANK_SIZE)
+    _read_into(view[ROM_BANK_SIZE:], rom_paths[1], ROM_BANK_SIZE)
+
+
+def _read_into(
+    target: memoryview,
+    path: str,
+    expected_size: int,
+    allow_short: bool=False,
+) -> None:
+    """Read a ROM file into a buffer, rejecting invalid file sizes.
+
+    Args:
+        target (memoryview): The writable destination buffer.
+        path (str): The ROM file path.
+        expected_size (int): The required destination size.
+        allow_short (bool, optional): Allow a non-empty file shorter than the destination. Defaults to False.
+    """
     with open(path, "rb") as rom_file:
         bytes_read = rom_file.readinto(target)
-        if bytes_read != ROM_BANK_SIZE:
-            raise ValueError(f"{path} must contain exactly {ROM_BANK_SIZE} bytes")
+        if allow_short and bytes_read:
+            if rom_file.read(1):
+                raise ValueError(f"{path} must not exceed {ROM_SIZE} bytes")
+            return
+        if bytes_read != expected_size:
+            raise ValueError(f"{path} must contain exactly {expected_size} bytes")
         if rom_file.read(1):
-            raise ValueError(f"{path} must contain exactly {ROM_BANK_SIZE} bytes")
+            if expected_size == ROM_SIZE:
+                raise ValueError(f"{path} must not exceed {ROM_SIZE} bytes")
+            raise ValueError(f"{path} must contain exactly {expected_size} bytes")
 
 @rp2.asm_pio(in_shiftdir=rp2.PIO.SHIFT_LEFT)
-def _capture_request():
+def _capture_request() -> None:
     """Push an absolute SRAM address whenever the active ROM address changes."""
     pull(block)
     # OSR permanently holds the SRAM base address divided by 16 KiB.  X is
@@ -184,7 +210,7 @@ def _capture_request():
     out_shiftdir=rp2.PIO.SHIFT_RIGHT,
     out_init=(rp2.PIO.OUT_LOW,) * 8, # type: ignore
 )
-def _drive_data():
+def _drive_data() -> None:
     """Consume one DMA word and present its low byte on RDATA[0..7]."""
     wrap_target()
     pull(block)
@@ -192,7 +218,7 @@ def _drive_data():
     wrap()
 
 @rp2.asm_pio(in_shiftdir=rp2.PIO.SHIFT_LEFT)
-def _trace_request():
+def _trace_request() -> None:
     """Passively retain the first few distinct ROM addresses for bring-up."""
     wrap_target()
     label("trace_idle")
@@ -221,9 +247,7 @@ def _trace_request():
 class RomEmulator:
     """Serve a ROM image as the MM54104's 16 KiB parallel ROM."""
 
-    def __init__(self, ssr1_path="SSR1.bin", ssr2_path="SSR2.bin"):
-        self.ssr1_path = ssr1_path
-        self.ssr2_path = ssr2_path
+    def __init__(self) -> None:
         self._allocation = None
         self._rom = None
         self._rom_address = None
@@ -232,7 +256,7 @@ class RomEmulator:
         self._trace_sm = None
         self.running = False
 
-    def _abort_dma_channels(self):
+    def _abort_dma_channels(self) -> None:
         """Put both reserved DMA channels into a known idle state."""
         channels = (DMA_DATA_CHANNEL, DMA_CONTROL_CHANNEL)
         mask = (1 << DMA_DATA_CHANNEL) | (1 << DMA_CONTROL_CHANNEL)
@@ -259,7 +283,7 @@ class RomEmulator:
                 DMA_BASE + DMA_CH_DBG_CTDREQ_BASE + channel * DMA_CH_STRIDE
             ] = 0
 
-    def _configure_dma(self):
+    def _configure_dma(self) -> None:
             """Configure the two reserved DMA channels for the ROM emulator."""
             data = _dma_channel_base(DMA_DATA_CHANNEL)
             control = _dma_channel_base(DMA_CONTROL_CHANNEL)
@@ -299,8 +323,34 @@ class RomEmulator:
                 chain_to=DMA_CONTROL_CHANNEL,
             )
 
-    def diagnostics(self):
-            """Return raw hardware state useful when bringing up the ROM bus."""
+    def _stage_rom(self, rom_paths: tuple) -> tuple:
+        """Allocate, align, and populate a ROM image before publication.
+
+        Args:
+            rom_paths (tuple): One image path or two 8 KiB bank paths.
+
+        Returns:
+            tuple: The backing allocation, aligned ROM view, and ROM address.
+        """
+        # PIO creates the DMA source address by replacing the low 14 bits, so
+        # the backing image must begin on a 16 KiB boundary.
+        allocation = bytearray(ROM_SIZE + ROM_ALIGNMENT - 1)
+        allocation_address = uctypes.addressof(allocation)
+        offset = (-allocation_address) & (ROM_ALIGNMENT - 1)
+        rom = memoryview(allocation)[offset:offset + ROM_SIZE]
+        _load_rom(rom, rom_paths)
+
+        rom_address = uctypes.addressof(rom)
+        if rom_address & (ROM_ALIGNMENT - 1):
+            raise RuntimeError("unable to allocate a 16 KiB-aligned ROM image")
+        return allocation, rom, rom_address
+
+    def diagnostics(self) -> dict:
+            """Return raw hardware state useful when bringing up the ROM bus.
+
+            Returns:
+                dict: The current DMA, PIO, and ROM state.
+            """
             control = _dma_channel_base(DMA_CONTROL_CHANNEL)
             data = _dma_channel_base(DMA_DATA_CHANNEL)
             data_read_address = mem32[data + DMA_READ_ADDR] & 0xFFFFFFFF
@@ -339,27 +389,26 @@ class RomEmulator:
                 "pio1_fdebug": mem32[PIO1_BASE + PIO_FDEBUG] & 0xFFFFFFFF,
             }
 
-    def load(self):
-        """Allocate an aligned SRAM image and load SSR1 followed by SSR2."""
+    def load(self, *rom_paths: str) -> None:
+        """Load one image or two banks and automatically start the emulator.
+
+        Args:
+            *rom_paths (str): One image path or two 8 KiB bank paths.
+        """
+        if len(rom_paths) not in (1, 2):
+            raise ValueError("ROM source must contain one or two paths")
+
+        allocation, rom, rom_address = self._stage_rom(rom_paths)
         if self.running:
-            raise RuntimeError("stop the ROM emulator before loading a new image")
-
-        # PIO creates the DMA source address by replacing the low 14 bits, so
-        # the backing image must begin on a 16 KiB boundary.
-        allocation = bytearray(ROM_SIZE + ROM_ALIGNMENT - 1)
-        allocation_address = uctypes.addressof(allocation)
-        offset = (-allocation_address) & (ROM_ALIGNMENT - 1)
-        rom = memoryview(allocation)[offset:offset + ROM_SIZE]
-        _load_ssr_pair(rom, self.ssr1_path, self.ssr2_path)
-
+            self.stop()
         self._allocation = allocation  # Keep the DMA buffer alive and fixed.
         self._rom = rom
-        self._rom_address = uctypes.addressof(rom)
-        if self._rom_address & (ROM_ALIGNMENT - 1):
-            raise RuntimeError("unable to allocate a 16 KiB-aligned ROM image")
+        self._rom_address = rom_address
+        print(f"ROM loaded from {rom_paths}, aligned at 0x{rom_address:08X}")
+        self.start()
 
-    def start(self):
-        """Arm PIO and DMA.  Call load() successfully before start()."""
+    def start(self) -> None:
+        """Arm PIO and DMA. Call load() successfully before start()."""
         if self.running:
             return
         if self._rom is None:
@@ -395,7 +444,7 @@ class RomEmulator:
         self._capture_sm.active(1)
         self.running = True
 
-    def stop(self):
+    def stop(self) -> None:
         """Disable request generation before stopping the DMA pipeline."""
         if self._capture_sm is not None:
             self._capture_sm.active(0)
@@ -406,12 +455,15 @@ class RomEmulator:
         self._abort_dma_channels()
         self.running = False
 
-    def request_trace(self):
+    def request_trace(self) -> list:
         """Drain and return captured ``(ROM offset, ROM byte)`` pairs.
 
         The passive trace state machine has a four-entry FIFO.  It records the
         first four requests since the previous call and drops later requests,
         so reading it immediately before a command starts a fresh trace.
+
+        Returns:
+            list: Captured ``(ROM offset, ROM byte)`` pairs.
         """
         if self._trace_sm is None:
             return []
