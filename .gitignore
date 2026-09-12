@@ -58,3 +58,4 @@ fp-info-cache
 .vscode
 __pycache__
 tests
+.venv
