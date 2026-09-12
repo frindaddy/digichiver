@@ -27,6 +27,6 @@ ROM files to the Pico and pass their filenames to `load()`.
 
 ### ROM Image Sources
 
-ROM images from the Digitalker Digital Voice Selection Software (DVSS) are provided as a courtesy by [@MarkD833](https://github.com/MarkD833) thanks to his invaluable work archiving the DVSS outputs [link to DVSS repo](https://github.com/MarkD833/Digitalker-Digital-Voice-Selection-Software). In this project, the DVSS images have been converted from Intel HEX to binary files for compatability with the Digichiver hardware.
+ROM images from the Digitalker Digital Voice Selection Software (DVSS) are provided as a courtesy by [@MarkD833](https://github.com/MarkD833) thanks to his invaluable work archiving the DVSS outputs [link to DVSS repo](https://github.com/MarkD833/Digitalker-Digital-Voice-Selection-Software). The DVSS images have been converted from Intel HEX to binary files for compatability with the Digichiver hardware.
 
 All other ROM images are sourced from the [Internet Archive](https://archive.org/details/digitalker).
