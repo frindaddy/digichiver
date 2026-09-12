@@ -232,6 +232,113 @@ class RomEmulator:
         self._trace_sm = None
         self.running = False
 
+    def _abort_dma_channels(self):
+        """Put both reserved DMA channels into a known idle state."""
+        channels = (DMA_DATA_CHANNEL, DMA_CONTROL_CHANNEL)
+        mask = (1 << DMA_DATA_CHANNEL) | (1 << DMA_CONTROL_CHANNEL)
+
+        for channel in channels:
+            # EN=0 pauses the channel; CHAIN_TO=self disables chaining.  The
+            # two error bits are write-one-to-clear.
+            mem32[_dma_channel_base(channel) + DMA_CTRL_TRIG] = (
+                DMA_CTRL_READ_ERROR
+                | DMA_CTRL_WRITE_ERROR
+                | (channel << 13)
+            )
+
+        mem32[DMA_BASE + DMA_CHAN_ABORT] = mask
+        for _ in range(100_000):
+            if not (mem32[DMA_BASE + DMA_CHAN_ABORT] & mask):
+                break
+        else:
+            raise RuntimeError("DMA channels 10/11 did not abort")
+
+        # Reset accumulated DREQ credits and re-initiate each handshake.
+        for channel in channels:
+            mem32[
+                DMA_BASE + DMA_CH_DBG_CTDREQ_BASE + channel * DMA_CH_STRIDE
+            ] = 0
+
+    def _configure_dma(self):
+            """Configure the two reserved DMA channels for the ROM emulator."""
+            data = _dma_channel_base(DMA_DATA_CHANNEL)
+            control = _dma_channel_base(DMA_CONTROL_CHANNEL)
+    
+            # A MicroPython soft reset does not necessarily reset the DMA block.
+            # Clearing EN only pauses a BUSY channel, so an old endless transfer
+            # would ignore all triggers below.  Abort both sides of the pipeline
+            # together, as required by RP2350 datasheet section 12.6.8.3.
+            self._abort_dma_channels()
+    
+            # Clear any stale FIFO error flags from an earlier bring-up attempt.
+            mem32[PIO0_BASE + PIO_FDEBUG] = 0xFFFFFFFF
+            mem32[PIO1_BASE + PIO_FDEBUG] = 0xFFFFFFFF
+    
+            # The data channel is dormant until control DMA writes READ_ADDR_TRIG.
+            # Its reload count remains one, so every trigger fetches one byte.  A
+            # byte-wide peripheral write replicates the byte in the PIO FIFO word;
+            # _drive_data always shifts out its low eight bits.
+            mem32[data + DMA_READ_ADDR] = self._rom_address
+            mem32[data + DMA_WRITE_ADDR] = PIO_TXF0
+            mem32[data + DMA_TRANS_COUNT] = 1
+            # AL1_CTRL is a non-triggering alias, leaving this channel armed but
+            # dormant until the first address arrives from the control channel.
+            mem32[data + DMA_AL1_CTRL] = _dma_ctrl(
+                size=0, inc_read=False, inc_write=False, treq=DREQ_PIO0_TX0,
+                chain_to=DMA_DATA_CHANNEL,
+            )
+    
+            # Each request is one absolute address.  Writing it directly to the
+            # data channel's AL3_READ_ADDR_TRIG alias reloads COUNT=1 and starts
+            # the byte fetch.
+            mem32[control + DMA_READ_ADDR] = PIO_RXF0
+            mem32[control + DMA_WRITE_ADDR] = data + DMA_AL3_READ_ADDR_TRIG
+            mem32[control + DMA_TRANS_COUNT] = DMA_TRANS_COUNT_TRIGGER_SELF | 1
+            mem32[control + DMA_CTRL_TRIG] = _dma_ctrl(
+                size=2, inc_read=False, inc_write=False, treq=DREQ_PIO1_RX0,
+                chain_to=DMA_CONTROL_CHANNEL,
+            )
+
+    def diagnostics(self):
+            """Return raw hardware state useful when bringing up the ROM bus."""
+            control = _dma_channel_base(DMA_CONTROL_CHANNEL)
+            data = _dma_channel_base(DMA_DATA_CHANNEL)
+            data_read_address = mem32[data + DMA_READ_ADDR] & 0xFFFFFFFF
+            last_offset = data_read_address - self._rom_address
+            if 0 <= last_offset < ROM_SIZE:
+                last_byte = self._rom[last_offset] # type: ignore
+            else:
+                last_offset = None
+                last_byte = None
+            return {
+                "implementation": "rp2350-dma-v6-romen-index",
+                "running": self.running,
+                "rom_address": self._rom_address,
+                # The low 28 bits are the remaining transfers in the current
+                # self-triggered one-address control block.
+                "control_dma_count": mem32[control + DMA_TRANS_COUNT] & 0xFFFFFFFF,
+                "control_dma_reload": mem32[
+                    DMA_BASE + DMA_CH_DBG_TCR_BASE + DMA_CONTROL_CHANNEL * DMA_CH_STRIDE
+                ] & 0xFFFFFFFF,
+                "control_dma_dreq_credits": mem32[
+                    DMA_BASE + DMA_CH_DBG_CTDREQ_BASE + DMA_CONTROL_CHANNEL * DMA_CH_STRIDE
+                ] & 0x3F,
+                "control_dma_ctrl": mem32[control + DMA_CTRL_TRIG] & 0xFFFFFFFF,
+                "data_dma_read_address": data_read_address,
+                "last_rom_offset": last_offset,
+                "last_rom_byte": last_byte,
+                "data_dma_count": mem32[data + DMA_TRANS_COUNT] & 0xFFFFFFFF,
+                "data_dma_reload": mem32[
+                    DMA_BASE + DMA_CH_DBG_TCR_BASE + DMA_DATA_CHANNEL * DMA_CH_STRIDE
+                ] & 0xFFFFFFFF,
+                "data_dma_ctrl": mem32[data + DMA_CTRL_TRIG] & 0xFFFFFFFF,
+                "pio0_flevel": mem32[PIO0_BASE + PIO_FLEVEL] & 0xFFFFFFFF,
+                "pio0_fdebug": mem32[PIO0_BASE + PIO_FDEBUG] & 0xFFFFFFFF,
+                "pio1_flevel": mem32[PIO1_BASE + PIO_FLEVEL] & 0xFFFFFFFF,
+                "pio1_fstat": mem32[PIO1_BASE + PIO_FSTAT] & 0xFFFFFFFF,
+                "pio1_fdebug": mem32[PIO1_BASE + PIO_FDEBUG] & 0xFFFFFFFF,
+            }
+
     def load(self):
         """Allocate an aligned SRAM image and load SSR1 followed by SSR2."""
         if self.running:
@@ -328,110 +435,3 @@ class RomEmulator:
         if was_active:
             self._trace_sm.active(1)
         return result
-
-    def diagnostics(self):
-        """Return raw hardware state useful when bringing up the ROM bus."""
-        control = _dma_channel_base(DMA_CONTROL_CHANNEL)
-        data = _dma_channel_base(DMA_DATA_CHANNEL)
-        data_read_address = mem32[data + DMA_READ_ADDR] & 0xFFFFFFFF
-        last_offset = data_read_address - self._rom_address
-        if 0 <= last_offset < ROM_SIZE:
-            last_byte = self._rom[last_offset] # type: ignore
-        else:
-            last_offset = None
-            last_byte = None
-        return {
-            "implementation": "rp2350-dma-v6-romen-index",
-            "running": self.running,
-            "rom_address": self._rom_address,
-            # The low 28 bits are the remaining transfers in the current
-            # self-triggered one-address control block.
-            "control_dma_count": mem32[control + DMA_TRANS_COUNT] & 0xFFFFFFFF,
-            "control_dma_reload": mem32[
-                DMA_BASE + DMA_CH_DBG_TCR_BASE + DMA_CONTROL_CHANNEL * DMA_CH_STRIDE
-            ] & 0xFFFFFFFF,
-            "control_dma_dreq_credits": mem32[
-                DMA_BASE + DMA_CH_DBG_CTDREQ_BASE + DMA_CONTROL_CHANNEL * DMA_CH_STRIDE
-            ] & 0x3F,
-            "control_dma_ctrl": mem32[control + DMA_CTRL_TRIG] & 0xFFFFFFFF,
-            "data_dma_read_address": data_read_address,
-            "last_rom_offset": last_offset,
-            "last_rom_byte": last_byte,
-            "data_dma_count": mem32[data + DMA_TRANS_COUNT] & 0xFFFFFFFF,
-            "data_dma_reload": mem32[
-                DMA_BASE + DMA_CH_DBG_TCR_BASE + DMA_DATA_CHANNEL * DMA_CH_STRIDE
-            ] & 0xFFFFFFFF,
-            "data_dma_ctrl": mem32[data + DMA_CTRL_TRIG] & 0xFFFFFFFF,
-            "pio0_flevel": mem32[PIO0_BASE + PIO_FLEVEL] & 0xFFFFFFFF,
-            "pio0_fdebug": mem32[PIO0_BASE + PIO_FDEBUG] & 0xFFFFFFFF,
-            "pio1_flevel": mem32[PIO1_BASE + PIO_FLEVEL] & 0xFFFFFFFF,
-            "pio1_fstat": mem32[PIO1_BASE + PIO_FSTAT] & 0xFFFFFFFF,
-            "pio1_fdebug": mem32[PIO1_BASE + PIO_FDEBUG] & 0xFFFFFFFF,
-        }
-
-    def _configure_dma(self):
-        """Configure the two reserved DMA channels for the ROM emulator."""
-        data = _dma_channel_base(DMA_DATA_CHANNEL)
-        control = _dma_channel_base(DMA_CONTROL_CHANNEL)
-
-        # A MicroPython soft reset does not necessarily reset the DMA block.
-        # Clearing EN only pauses a BUSY channel, so an old endless transfer
-        # would ignore all triggers below.  Abort both sides of the pipeline
-        # together, as required by RP2350 datasheet section 12.6.8.3.
-        self._abort_dma_channels()
-
-        # Clear any stale FIFO error flags from an earlier bring-up attempt.
-        mem32[PIO0_BASE + PIO_FDEBUG] = 0xFFFFFFFF
-        mem32[PIO1_BASE + PIO_FDEBUG] = 0xFFFFFFFF
-
-        # The data channel is dormant until control DMA writes READ_ADDR_TRIG.
-        # Its reload count remains one, so every trigger fetches one byte.  A
-        # byte-wide peripheral write replicates the byte in the PIO FIFO word;
-        # _drive_data always shifts out its low eight bits.
-        mem32[data + DMA_READ_ADDR] = self._rom_address
-        mem32[data + DMA_WRITE_ADDR] = PIO_TXF0
-        mem32[data + DMA_TRANS_COUNT] = 1
-        # AL1_CTRL is a non-triggering alias, leaving this channel armed but
-        # dormant until the first address arrives from the control channel.
-        mem32[data + DMA_AL1_CTRL] = _dma_ctrl(
-            size=0, inc_read=False, inc_write=False, treq=DREQ_PIO0_TX0,
-            chain_to=DMA_DATA_CHANNEL,
-        )
-
-        # Each request is one absolute address.  Writing it directly to the
-        # data channel's AL3_READ_ADDR_TRIG alias reloads COUNT=1 and starts
-        # the byte fetch.
-        mem32[control + DMA_READ_ADDR] = PIO_RXF0
-        mem32[control + DMA_WRITE_ADDR] = data + DMA_AL3_READ_ADDR_TRIG
-        mem32[control + DMA_TRANS_COUNT] = DMA_TRANS_COUNT_TRIGGER_SELF | 1
-        mem32[control + DMA_CTRL_TRIG] = _dma_ctrl(
-            size=2, inc_read=False, inc_write=False, treq=DREQ_PIO1_RX0,
-            chain_to=DMA_CONTROL_CHANNEL,
-        )
-
-    def _abort_dma_channels(self):
-        """Put both reserved DMA channels into a known idle state."""
-        channels = (DMA_DATA_CHANNEL, DMA_CONTROL_CHANNEL)
-        mask = (1 << DMA_DATA_CHANNEL) | (1 << DMA_CONTROL_CHANNEL)
-
-        for channel in channels:
-            # EN=0 pauses the channel; CHAIN_TO=self disables chaining.  The
-            # two error bits are write-one-to-clear.
-            mem32[_dma_channel_base(channel) + DMA_CTRL_TRIG] = (
-                DMA_CTRL_READ_ERROR
-                | DMA_CTRL_WRITE_ERROR
-                | (channel << 13)
-            )
-
-        mem32[DMA_BASE + DMA_CHAN_ABORT] = mask
-        for _ in range(100_000):
-            if not (mem32[DMA_BASE + DMA_CHAN_ABORT] & mask):
-                break
-        else:
-            raise RuntimeError("DMA channels 10/11 did not abort")
-
-        # Reset accumulated DREQ credits and re-initiate each handshake.
-        for channel in channels:
-            mem32[
-                DMA_BASE + DMA_CH_DBG_CTDREQ_BASE + channel * DMA_CH_STRIDE
-            ] = 0
