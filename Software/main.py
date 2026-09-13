@@ -36,21 +36,22 @@ def handle_command(command: str, rom: RomEmulator, digitalker: Digitalker, COMMA
         print("  /say <text>     - Speak the specified text using the Digitalker.")
         print("  /say_all        - Speak all words in the DVSS dictionary.")
         print("  /exit or /quit  - Exit the interactive command loop.")
-    if command == "/say_all":
+    
+    # Handle speech commands in a try-finally block to ensure the speaker is disabled 
+    # and the LED is turned on if an error occurs
+    try:
         SPEAKER_DISABLE_N.value(1)
-        try:
+        if command == "/say_all":
             say_all(rom, digitalker)
-        finally:
-            SPEAKER_DISABLE_N.value(0)
-    if command == "/say" or command.startswith("/say "):
-        SPEAKER_DISABLE_N.value(1)
-        try:
+        if command == "/say" or command.startswith("/say "):
             say(command[4:].strip(), rom, digitalker)
-        finally:
-            SPEAKER_DISABLE_N.value(0)
-        
-    LED_GREEN.value(1)  # Turn on the green LED to indicate the system is ready
-    return True         # Command was handled
+    finally:
+        LED_GREEN.value(1)
+        SPEAKER_DISABLE_N.value(0)
+    
+    SPEAKER_DISABLE_N.value(0)  # Disable the speaker after the command
+    LED_GREEN.value(1)          # Turn on the green LED to indicate the system is ready
+    return True                 # Command was handled
 
 def print_banner():
     print("=====================================================")
@@ -81,6 +82,7 @@ def main() -> None:
         except SayError as error:
             print(error)
             SPEAKER_DISABLE_N.value(0)  # Disable speaker after an error
+            LED_GREEN.value(1)          # Turn on the green LED to indicate the system is ready
 
 if __name__ == "__main__":
     main()
