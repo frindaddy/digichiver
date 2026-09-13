@@ -73,7 +73,7 @@ I2S_DMA_BYTES = I2S_DMA_SAMPLES * 2
 I2S_WRITE_SAMPLES = 2048
 # INTR reports the end of the digital speech stream.  Retain a short tail for
 # the analog filter and ADC path so final consonants are not clipped.
-POST_SPEECH_TAIL_MS = 50
+POST_SPEECH_TAIL_MS = 100
 
 
 def _dma_channel_base(channel: int) -> int:
