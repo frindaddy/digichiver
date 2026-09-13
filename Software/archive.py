@@ -9,10 +9,10 @@ import json
 import os
 import struct
 import time
-import uctypes
 
-from machine import Pin, SPI, mem32
 import rp2
+import uctypes
+from machine import SPI, mem32
 
 from sdcard import SDCard
 
