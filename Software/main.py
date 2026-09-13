@@ -3,7 +3,7 @@
 from board import LED_GREEN, SPEAKER_DISABLE_N
 from digitalker import Digitalker
 from rom_emulator import RomEmulator
-from say import SayError, say, say_all
+from free_speak import SayError, free_speak, say_all
 
 
 def handle_command(command: str, rom: RomEmulator, digitalker: Digitalker, COMMANDS: list) -> bool:
@@ -44,7 +44,7 @@ def handle_command(command: str, rom: RomEmulator, digitalker: Digitalker, COMMA
         if command == "/say_all":
             say_all(rom, digitalker)
         if command == "/say" or command.startswith("/say "):
-            say(command[4:].strip(), rom, digitalker)
+            free_speak(command[4:].strip(), rom, digitalker)
     finally:
         LED_GREEN.value(1)
         SPEAKER_DISABLE_N.value(0)

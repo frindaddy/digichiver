@@ -29,17 +29,18 @@ ROM files to the Pico and pass their filenames to `load()`.
 
 The Digichiver software is capable of free speech using the `/say` REPL command.
 
-`say.py` uses the PDF-derived table in `dvss_dictionary.json` to resolve
+`free_speak.py` exposes `free_speak()` and uses the PDF-derived table in
+`dvss_dictionary.json` to resolve
 DVSS vocabulary entries to a ROM filename and Digitalker word index:
 
 ```python
 from digitalker import Digitalker
-from say import say
+from free_speak import free_speak
 from rom_emulator import RomEmulator
 
 rom = RomEmulator()
 digitalker = Digitalker()
-say("emergency enable", rom, digitalker)
+free_speak("emergency enable", rom, digitalker)
 ```
 
 Input is case-insensitive and whitespace is collapsed. The complete input is
@@ -55,9 +56,9 @@ and `context` metadata in the JSON file. The runtime never strips suffixes or
 chooses between pronunciation variants automatically.
 
 The five `DVSSROM*.bin` files must be in the same flat MicroPython directory
-as `say.py`, `rom_emulator.py`, and `dvss_dictionary.json`.
+as `free_speak.py`, `rom_emulator.py`, and `dvss_dictionary.json`.
 
-Numbers in `say()` are expanded into available DVSS words. Integer values are
+Numbers in `free_speak()` are expanded into available DVSS words. Integer values are
 spoken structurally through exactly one billion, which is pronounced as
 `one thousand million` because the vocabulary has no `billion` entry. Larger
 values are spoken digit by digit. Commas are accepted as separators, leading
@@ -65,7 +66,7 @@ zeroes are preserved digit by digit, signs use `minus` or `plus`, and decimal
 fractions use `point` followed by individual digits.
 
 The dictionary was transcribed from `ROMs/DVSS/DVSS_ROMS_INDEX.pdf`.
-The five ROM files and `dvss_dictionary.json` must be deployed together with `say.py`.
+The five ROM files and `dvss_dictionary.json` must be deployed together with `free_speak.py`.
 
 ### REPL commands
 

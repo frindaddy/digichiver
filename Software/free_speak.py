@@ -225,7 +225,7 @@ def _speak_resolved(resolved: list, rom: "RomEmulator", digitalker: "Digitalker"
             active_rom = rom_name
         digitalker.speak_word(address)
 
-def say(text: str, rom: "RomEmulator", digitalker: "Digitalker") -> None:
+def free_speak(text: str, rom: "RomEmulator", digitalker: "Digitalker") -> None:
     """Speak DVSS words from a string, switching ROMs as required.
 
     Args:
