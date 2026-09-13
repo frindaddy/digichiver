@@ -279,7 +279,7 @@ class I2SRecorder:
 
     def __init__(self) -> None:
         """Configure the 48 kHz I2S clock source and 16-bit PCM DMA ring."""
-        from board import BCLK, FSYNC, SDATA
+        from board import BCLK, SDATA
         mem32[PIO2_BASE + PIO_GPIOBASE] = PIO2_GPIOBASE
         self.clock_sm = rp2.StateMachine(
             I2S_CLOCK_SM,
