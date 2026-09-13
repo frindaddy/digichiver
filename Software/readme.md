@@ -25,7 +25,7 @@ ROM files larger than 16 KiB are rejected.
 Paths are resolved from the MicroPython working directory. Copy the selected
 ROM files to the Pico and pass their filenames to `load()`.
 
-## Free Speech
+## Free Speak
 
 The Digichiver software is capable of free speech using the `/say` REPL command.
 
