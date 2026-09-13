@@ -2,6 +2,7 @@
 
 import json
 import re
+import time
 
 try:
     import typing
@@ -271,13 +272,14 @@ def _small_number_words(value: int) -> list:
         words.extend(_small_number_words(remainder))
     return words
 
-def _speak_resolved(resolved: list, rom: "RomEmulator", digitalker: "Digitalker") -> None:
+def _speak_resolved(resolved: list, rom: "RomEmulator", digitalker: "Digitalker", speech_pause_ms: int=0) -> None:
     """Speak resolved entries while loading each ROM only when it changes.
 
     Args:
         resolved (list): ROM, address, and word tuples in speech order.
         rom (RomEmulator): The ROM emulator used to select vocabulary images.
         digitalker (Digitalker): The Digitalker driver used to speak addresses.
+        speech_pause_ms (int): Optional pause in milliseconds between words.
     """
     active_rom = None
 
@@ -286,6 +288,8 @@ def _speak_resolved(resolved: list, rom: "RomEmulator", digitalker: "Digitalker"
             rom.load(rom_name)
             active_rom = rom_name
         digitalker.speak_word(address)
+        if speech_pause_ms:
+            time.sleep_ms(speech_pause_ms)
 
 def free_speak(text: str, rom: "RomEmulator", digitalker: "Digitalker") -> None:
     """Speak DVSS words from a string, switching ROMs as required.
@@ -303,12 +307,13 @@ def free_speak(text: str, rom: "RomEmulator", digitalker: "Digitalker") -> None:
     resolved = _resolve(normalized)
     _speak_resolved(resolved, rom, digitalker)
 
-def say_all(rom: "RomEmulator", digitalker: "Digitalker") -> None:
+def say_all(rom: "RomEmulator", digitalker: "Digitalker", speech_pause_ms: int=50) -> None:
     """Speak every canonical DVSS dictionary entry in ROM order.
 
     Args:
         rom (RomEmulator): The ROM emulator used to select vocabulary images.
         digitalker (Digitalker): The Digitalker driver used to speak addresses.
+        speech_pause_ms (int): Optional pause in milliseconds between words.
     """
     resolved = [
         (rom_name, address, word)
@@ -319,4 +324,4 @@ def say_all(rom: "RomEmulator", digitalker: "Digitalker") -> None:
         for words in [_dictionary_data["roms"][rom_name]]
         for address, word in enumerate(words, 1)
     ]
-    _speak_resolved(resolved, rom, digitalker)
+    _speak_resolved(resolved, rom, digitalker, speech_pause_ms)
