@@ -77,7 +77,6 @@ for _number_word in _SMALL_NUMBER_WORDS[0:20] + [word for word in _TENS_NUMBER_W
         raise ValueError(f"number word is not in DVSS vocabulary: {_number_word}")
     
 _NUMERIC_TOKEN = re.compile(r"^[+-]?[0-9][0-9,]*(?:\.[0-9]+)?$")
-_COMMA_FORMAT = re.compile(r"^[0-9]{1,3}(?:,[0-9]{3})+$")
 
 def _composed_words(word: str) -> list:
     """Compose an unknown word from literal prefix, root, and suffix parts.
@@ -184,11 +183,18 @@ def _numeric_words(token: str) -> list:
 
     integer_text, separator, fraction_text = token.partition(".")
     integer_digits = integer_text.replace(",", "")
-    comma_match = _COMMA_FORMAT.match(integer_text)
-    if "," in integer_text and (
-        comma_match is None or comma_match.group(0) != integer_text
-    ):
-        raise SayError(f"invalid comma placement in numeric token: {token}")
+    if "," in integer_text:
+        comma_groups = integer_text.split(",")
+        if (
+            len(comma_groups[0]) < 1
+            or len(comma_groups[0]) > 3
+            or not comma_groups[0].isdigit()
+            or any(
+                len(group) != 3 or not group.isdigit()
+                for group in comma_groups[1:]
+            )
+        ):
+            raise SayError(f"invalid comma placement in numeric token: {token}")
     if len(integer_digits) > 1 and integer_digits.startswith("0"):
         words = [_DIGIT_WORDS[int(digit)] for digit in integer_digits]
     else:
