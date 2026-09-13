@@ -74,10 +74,14 @@ def main() -> None:
     COMMANDS = ["help", "/say", "/say_all"]
     prompt = "digichiver> "
 
+    # turn on the green LED to indicate the system is ready
+    LED_GREEN.value(1)
+
     # run the REPL until /exit or /quit is entered
     while True:
         command = input(prompt)
         if command in ("/quit", "/exit"):
+            LED_GREEN.value(0)  # Turn off the green LED
             return
         try:
             if not handle_command(command, rom, digitalker):
