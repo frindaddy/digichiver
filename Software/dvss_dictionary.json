@@ -82,6 +82,7 @@
     "remove": "remove.s",
     "repair": "repair.r",
     "return": "return.s",
+    "-s": "-s.ms1",
     "send": "send.r",
     "september": "september.r",
     "sequence": "sequence.m",
