@@ -31,19 +31,23 @@ def handle_command(command: str, rom: RomEmulator, digitalker: Digitalker, COMMA
         LED_GREEN.value(1)  # Turn on the green LED to indicate the system is ready
         return False        # Command was not handled
     
-    if command == "help" or command == "/help":
+    if command == "/help":
         print("Available commands:")
         print("  /say <text>     - Speak the specified text using the Digitalker.")
         print("  /say_all        - Speak all words in the DVSS dictionary.")
         print("  /exit or /quit  - Exit the interactive command loop.")
     if command == "/say_all":
         SPEAKER_DISABLE_N.value(1)
-        say_all(rom, digitalker)
-        SPEAKER_DISABLE_N.value(0)
+        try:
+            say_all(rom, digitalker)
+        finally:
+            SPEAKER_DISABLE_N.value(0)
     if command == "/say" or command.startswith("/say "):
         SPEAKER_DISABLE_N.value(1)
-        say(command[4:].strip(), rom, digitalker)
-        SPEAKER_DISABLE_N.value(0)
+        try:
+            say(command[4:].strip(), rom, digitalker)
+        finally:
+            SPEAKER_DISABLE_N.value(0)
         
     LED_GREEN.value(1)  # Turn on the green LED to indicate the system is ready
     return True         # Command was handled
@@ -59,7 +63,7 @@ def main() -> None:
     
     rom = RomEmulator()
     digitalker = Digitalker()
-    COMMANDS = ["help", "/say", "/say_all"]
+    COMMANDS = ["/help", "/say", "/say_all"]
     prompt = "digichiver> "
 
     # Turn on the green LED to indicate the system is ready
