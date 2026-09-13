@@ -29,7 +29,7 @@ def handle_command(command: str, rom: RomEmulator, digitalker: Digitalker, COMMA
     # Return False if command is not in command list
     if command not in COMMANDS and not any(command.startswith(cmd + " ") for cmd in COMMANDS):
         LED_GREEN.value(1)  # Turn on the green LED to indicate the system is ready
-        return False 
+        return False        # Command was not handled
     
     if command == "help" or command == "/help":
         print("Available commands:")
@@ -57,22 +57,19 @@ def main() -> None:
     """Run the interactive command loop."""
     print_banner()
     
-    # initialize the Digitalker and ROM emulator
     rom = RomEmulator()
     digitalker = Digitalker()
-    
-    # initialize command list and prompt
     COMMANDS = ["help", "/say", "/say_all"]
     prompt = "digichiver> "
 
-    # turn on the green LED to indicate the system is ready
+    # Turn on the green LED to indicate the system is ready
     LED_GREEN.value(1)
 
-    # run the REPL until /exit or /quit is entered
+    # Run the REPL until /exit or /quit is entered
     while True:
         command = input(prompt)
         if command in ("/quit", "/exit"):
-            LED_GREEN.value(0)  # Turn off the green LED
+            LED_GREEN.value(0)
             return
         try:
             if not handle_command(command, rom, digitalker, COMMANDS):
