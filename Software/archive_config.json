@@ -7,7 +7,8 @@
     },
     "ssr5/ssr6": {
       "sources": ["SSR5.bin", "SSR6.bin"],
-      "dictionary": "SSR5_SSR6_dictionary.json",
+      "dictionary": null,
+      "max_index": 130,
       "output": "ssr5_ssr6"
     },
     "jameco-je-520": {

@@ -166,22 +166,46 @@ class ArchiveError(RuntimeError):
 def archive_group(group_id: str, rom, digitalker) -> None:
     """Archive every configured word in one ROM group.
 
-    Each completed word is written as ``/sd/<output>/<index>_<word>.wav`` and
-    announced on the REPL.  Existing files with the same names are replaced.
+    Each completed word is written as ``/sd/<output>/<index>_<word>.wav`` (if a
+    dictionary is configured) or ``/sd/<output>/<index>.wav`` (if no dictionary
+    is configured) and announced on the REPL. Existing files with the same names
+    are replaced.
 
     Args:
         group_id (str): Metadata group identifier.
         rom: A RomEmulator instance.
         digitalker: A Digitalker instance.
+
+    Raises:
+        ArchiveError: If the group is unknown, ROM sources are invalid, or
+            configuration is malformed.
     """
     groups = load_archive_groups()
     group = groups.get(group_id)
     if group is None:
         raise ArchiveError(f"unknown archive group: {group_id}")
-    dictionary = load_word_dictionary(group["dictionary"])
-    sources = group["sources"]
-    if len(sources) not in (1, 2):
+    sources = group.get("sources", [])
+    if not isinstance(sources, list) or len(sources) not in (1, 2):
         raise ArchiveError("archive group requires a supported one- or two-file ROM")
+
+    dictionary_path = group.get("dictionary")
+    if dictionary_path:
+        dictionary = load_word_dictionary(dictionary_path)
+        items = [
+            (int(index_text), dictionary[index_text])
+            for index_text in sorted(dictionary, key=lambda value: int(value))
+        ]
+    else:
+        max_index = group.get("max_index")
+        if (
+            max_index is None
+            or isinstance(max_index, bool)
+            or not isinstance(max_index, int)
+            or max_index < 0
+        ):
+            raise ArchiveError(f"archive group {group_id!r} missing valid max_index")
+        items = [(index, None) for index in range(max_index + 1)]
+
     card = SDArchive()
     rom.load(*sources)
     recorder = I2SRecorder()
@@ -191,15 +215,18 @@ def archive_group(group_id: str, rom, digitalker) -> None:
     except OSError:
         pass
     try:
-        for index_text in sorted(dictionary, key=lambda value: int(value)):
-            index = int(index_text)
-            word = dictionary[index_text]
-            path = output_dir + "/" + str(index) + "_" + sanitize_filename(word) + ".wav"
+        for index, word in items:
+            if word is not None:
+                path = output_dir + "/" + str(index) + "_" + sanitize_filename(word) + ".wav"
+                description = word
+            else:
+                path = output_dir + "/" + str(index) + ".wav"
+                description = f"index {index}"
             writer = WavWriter(path)
             try:
                 recorder.record_word(digitalker, index, writer)
                 writer.close()
-                print("saved " + word + " to " + path)
+                print("saved " + description + " to " + path)
             except Exception:
                 writer.discard()
                 raise
@@ -222,13 +249,32 @@ def load_archive_groups(config_path: str="archive_config.json") -> dict:
         ArchiveError: If metadata is missing or malformed.
     """
     try:
-        with open(config_path, "r") as dictionary_file:
-            data = json.load(dictionary_file)
+        with open(config_path, "r") as config_file:
+            data = json.load(config_file)
         groups = data["groups"]
     except (OSError, KeyError, TypeError, ValueError) as error:
         raise ArchiveError(f"cannot load archive metadata: {error}") from error
     if not isinstance(groups, dict):
         raise ArchiveError("groups must be a JSON object")
+    for group_id, group in groups.items():
+        if not isinstance(group, dict):
+            raise ArchiveError(f"archive group {group_id!r} must be a JSON object")
+        dictionary = group.get("dictionary")
+        max_index = group.get("max_index")
+        if dictionary is None:
+            if (
+                max_index is None
+                or isinstance(max_index, bool)
+                or not isinstance(max_index, int)
+                or max_index < 0
+            ):
+                raise ArchiveError(
+                    f"archive group {group_id!r} requires a valid dictionary path or non-negative max_index"
+                )
+        elif not isinstance(dictionary, str) or not dictionary:
+            raise ArchiveError(
+                f"archive group {group_id!r} dictionary must be a non-empty string or null"
+            )
     return groups
 
 

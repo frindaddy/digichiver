@@ -95,16 +95,19 @@ Archive mode is metadata-driven and requires an inserted microSD card:
 /archive ssr1/ssr2
 ```
 
-Each archive group declares its ROM source files and an index-to-word JSON
-dictionary in `archive_config.json`. Output is written beneath `/sd`
-as files named `<index>_<word>.wav`. WAV output targets 48 kHz, 16-bit, mono
-PCM. The archive recorder uses the PCM1809 I2S input and records around each
-blocking Digitalker word command.
+Each archive group declares its ROM source files and either an index-to-word JSON
+dictionary or a `max_index` in `archive_config.json`. When a dictionary is
+configured, output is written beneath `/sd` as `<index>_<word>.wav`. For ROMs
+without a known word dictionary (such as SSR5/SSR6), `dictionary` is set to
+`null` (or omitted) with `max_index` specified, and output files are named
+`<index>.wav`. WAV output targets 48 kHz, 16-bit, mono PCM. The archive recorder
+uses the PCM1809 I2S input and records around each blocking Digitalker word
+command.
 
 The group metadata currently includes SSR1/SSR2, SSR5/SSR6, and Jameco JE-520.
-The corresponding per-group word dictionaries must be deployed before those
-groups can be archived. Jameco's four 8 KiB files also require ROM bank/window
-support beyond the current 16 KiB emulator image.
+For groups with dictionary files, the corresponding word dictionaries must be
+deployed before archiving. Jameco's four 8 KiB files also require ROM
+bank/window support beyond the current 16 KiB emulator image.
 
 ### ROM Image Sources
 
