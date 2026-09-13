@@ -1,5 +1,10 @@
 {
   "groups": {
+    "dt1052": {
+      "sources": ["DT1052.bin"],
+      "dictionary": "DT1052_dictionary.json",
+      "output": "dt1052"
+    },
     "ssr1/ssr2": {
       "sources": ["SSR1.bin", "SSR2.bin"],
       "dictionary": "SSR1_SSR2_dictionary.json",
