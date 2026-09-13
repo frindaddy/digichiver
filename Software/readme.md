@@ -57,6 +57,13 @@ chooses between pronunciation variants automatically.
 The five `DVSSROM*.bin` files must be in the same flat MicroPython directory
 as `say.py`, `rom_emulator.py`, and `dvss_dictionary.json`.
 
+Numbers in `say()` are expanded into available DVSS words. Integer values are
+spoken structurally through exactly one billion, which is pronounced as
+`one thousand million` because the vocabulary has no `billion` entry. Larger
+values are spoken digit by digit. Commas are accepted as separators, leading
+zeroes are preserved digit by digit, signs use `minus` or `plus`, and decimal
+fractions use `point` followed by individual digits.
+
 The dictionary was transcribed from `ROMs/DVSS/DVSS_ROMS_INDEX.pdf`.
 The five ROM files and `dvss_dictionary.json` must be deployed together with `say.py`.
 
