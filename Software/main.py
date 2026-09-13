@@ -76,7 +76,7 @@ def main() -> None:
                 print(f"unknown command; available commands: {', '.join(COMMANDS)}")
         except SayError as error:
             print(error)
-            SPEAKER_DISABLE_N.value(1) # Disable speaker after an error
+            SPEAKER_DISABLE_N.value(0)  # Disable speaker after an error
 
 if __name__ == "__main__":
     main()
