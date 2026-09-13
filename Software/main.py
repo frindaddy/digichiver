@@ -2,8 +2,8 @@
 
 from board import LED_GREEN, SPEAKER_DISABLE_N
 from digitalker import Digitalker
-from rom_emulator import RomEmulator
 from free_speak import SayError, free_speak, say_all
+from rom_emulator import RomEmulator
 
 
 def handle_command(command: str, rom: RomEmulator, digitalker: Digitalker, COMMANDS: list) -> bool:
