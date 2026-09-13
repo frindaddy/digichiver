@@ -87,6 +87,28 @@ Enter commands such as:
 
 Use `/exit` or `/quit` to leave the helper loop and return to the normal code.
 
+### ROM archiving
+
+Archive mode is metadata-driven and requires an inserted microSD card:
+
+```text
+/archive ssr1/ssr2
+```
+
+Each archive group declares its ROM source files and either an index-to-word JSON
+dictionary or a `max_index` in `archive_config.json`. When a dictionary is
+configured, output is written beneath `/sd` as `<index>_<word>.wav`. For ROMs
+without a known word dictionary (such as SSR5/SSR6), `dictionary` is set to
+`null` (or omitted) with `max_index` specified, and output files are named
+`<index>.wav`. WAV output targets 48 kHz, 16-bit, mono PCM. The archive recorder
+uses the PCM1809 I2S input and records around each blocking Digitalker word
+command.
+
+The group metadata currently includes SSR1/SSR2, SSR5/SSR6, and Jameco JE-520.
+For groups with dictionary files, the corresponding word dictionaries must be
+deployed before archiving. Jameco's four 8 KiB files also require ROM
+bank/window support beyond the current 16 KiB emulator image.
+
 ### ROM Image Sources
 
 ROM images from the Digitalker Digital Voice Selection Software (DVSS) are provided as a courtesy by [@MarkD833](https://github.com/MarkD833) thanks to his invaluable work archiving the DVSS outputs [(link to DVSS repo)](https://github.com/MarkD833/Digitalker-Digital-Voice-Selection-Software). The DVSS images have been converted from Intel HEX to binary files for compatability with the Digichiver hardware.

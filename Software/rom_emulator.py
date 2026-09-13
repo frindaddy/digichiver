@@ -405,7 +405,11 @@ class RomEmulator:
         self._rom = rom
         self._rom_address = rom_address
         print(f"ROM loaded from {rom_paths}, aligned at 0x{rom_address:08X}")
-        self.start()
+        try:
+            self.start()
+        except Exception:
+            self.stop()
+            raise
 
     def start(self) -> None:
         """Arm PIO and DMA. Call load() successfully before start()."""
@@ -453,6 +457,13 @@ class RomEmulator:
         if self._trace_sm is not None:
             self._trace_sm.active(0)
         self._abort_dma_channels()
+        for state_machine in (self._capture_sm, self._output_sm, self._trace_sm):
+            deinit = getattr(state_machine, "deinit", None)
+            if deinit is not None:
+                deinit()
+        self._capture_sm = None
+        self._output_sm = None
+        self._trace_sm = None
         self.running = False
 
     def request_trace(self) -> list:

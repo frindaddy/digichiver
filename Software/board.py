@@ -18,8 +18,8 @@ ROMEN_N = Pin(34, Pin.IN)
 RDATA = [Pin(i, Pin.OUT) for i in range(12, 20)]
 
 # I2S Bus
-FSYNC = Pin(36, Pin.OUT)
-BCLK = Pin(37, Pin.OUT)
+BCLK = Pin(36, Pin.OUT)
+FSYNC = Pin(37, Pin.OUT)
 SDATA = Pin(38, Pin.IN)
 
 # microSD

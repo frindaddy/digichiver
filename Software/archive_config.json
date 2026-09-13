@@ -1,0 +1,25 @@
+{
+  "groups": {
+    "ssr1/ssr2": {
+      "sources": ["SSR1.bin", "SSR2.bin"],
+      "dictionary": "SSR1_SSR2_dictionary.json",
+      "output": "ssr1_ssr2"
+    },
+    "ssr5/ssr6": {
+      "sources": ["SSR5.bin", "SSR6.bin"],
+      "dictionary": null,
+      "max_index": 130,
+      "output": "ssr5_ssr6"
+    },
+    "jameco-je-520": {
+      "sources": [
+        "1-U6.bin",
+        "2-U7.bin",
+        "3-U8.bin",
+        "4-U9.bin"
+      ],
+      "dictionary": "Jameco_JE-520_dictionary.json",
+      "output": "jameco_je-520"
+    }
+  }
+}
