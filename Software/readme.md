@@ -57,8 +57,7 @@ chooses between pronunciation variants automatically.
 The five `DVSSROM*.bin` files must be in the same flat MicroPython directory
 as `say.py`, `rom_emulator.py`, and `dvss_dictionary.json`.
 
-The dictionary was transcribed from `DVSS_ROMS_INDEX.pdf`
-[here](https://github.com/MarkD833/Digitalker-Digital-Voice-Selection-Software/blob/main/ROMs/DVSS_ROMS_INDEX.pdf).
+The dictionary was transcribed from `ROMs/DVSS/DVSS_ROMS_INDEX.pdf`.
 The five ROM files and `dvss_dictionary.json` must be deployed together with `say.py`.
 
 ### REPL commands
