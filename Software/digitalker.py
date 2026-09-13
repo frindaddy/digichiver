@@ -6,6 +6,7 @@ from board import (
     DIGITALKER_CS_N,
     DIGITALKER_WR_N,
     INTR,
+    LED_ORANGE,
     SW,
 )
 
@@ -20,6 +21,7 @@ class Digitalker:
         self.CLK = DIGITALKER_CLK_4MHZ
         self.CS_N = DIGITALKER_CS_N
         self.INTR = INTR
+        self.LED_ORANGE = LED_ORANGE
         self.SW = SW
         self.WR_N = DIGITALKER_WR_N
 
@@ -80,17 +82,18 @@ class Digitalker:
         # Set word address on the SW bus
         self._write_sw_bus(address)
 
-        self.CMS.value(0)   # Set CMS pin low to reset interrupt and start speech sequence
-        self.CS_N.value(0)  # Set CS_N low to select the Digitalker
-        time.sleep_us(5)    # Short delay to ensure CMS is registered (min 350ns)
+        self.CMS.value(0)           # Set CMS pin low to reset interrupt and start speech sequence
+        self.LED_ORANGE.value(1)    # Turn on the orange LED to indicate speech is in progress
+        self.CS_N.value(0)          # Set CS_N low to select the Digitalker
+        time.sleep_us(5)            # Short delay to ensure CMS is registered (min 350ns)
 
         # Assert write strobe to latch the address
-        self.WR_N.value(0)  # Set WR_N low
-        time.sleep_us(5)    # Short delay to ensure WR_N is registered (min 430ns)
-        self.WR_N.value(1)  # Set WR_N high to latch the address
+        self.WR_N.value(0)          # Set WR_N low
+        time.sleep_us(5)            # Short delay to ensure WR_N is registered (min 430ns)
+        self.WR_N.value(1)          # Set WR_N high to latch the address
         
         # Release CS_N after the write operation
-        time.sleep_us(5)    # Short delay to ensure WR_N is registered (min 430ns)
-        self.CS_N.value(1)  # Set CS_N high to deselect the Digitalker
-
+        time.sleep_us(5)            # Short delay to ensure WR_N is registered (min 430ns)
+        self.CS_N.value(1)          # Set CS_N high to deselect the Digitalker
         self._wait_for_interrupt()  # Wait for the Digitalker to signal completion
+        self.LED_ORANGE.value(0)    # Turn off the orange LED to indicate speech is complete
