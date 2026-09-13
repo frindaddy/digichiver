@@ -5,8 +5,8 @@ import json
 try:
     import typing
     if typing.TYPE_CHECKING:
-        from digitalker import Digitalker  # noqa: TC004
-        from rom_emulator import RomEmulator  # noqa: TC004
+        from digitalker import Digitalker
+        from rom_emulator import RomEmulator
 except ImportError:
     pass
 
@@ -100,7 +100,7 @@ def _resolve(text: str) -> list:
         resolved.append((entry[0], entry[1], word))
     return resolved
 
-def _speak_resolved(resolved: list, rom: RomEmulator, digitalker: Digitalker) -> None:
+def _speak_resolved(resolved: list, rom: "RomEmulator", digitalker: "Digitalker") -> None:
     """Speak resolved entries while loading each ROM only when it changes.
 
     Args:
@@ -116,7 +116,7 @@ def _speak_resolved(resolved: list, rom: RomEmulator, digitalker: Digitalker) ->
             active_rom = rom_name
         digitalker.speak_word(address)
 
-def say(text: str, rom: RomEmulator, digitalker: Digitalker) -> None:
+def say(text: str, rom: "RomEmulator", digitalker: "Digitalker") -> None:
     """Speak DVSS words from a string, switching ROMs as required.
 
     Args:
@@ -132,7 +132,7 @@ def say(text: str, rom: RomEmulator, digitalker: Digitalker) -> None:
     resolved = _resolve(normalized)
     _speak_resolved(resolved, rom, digitalker)
 
-def say_all(rom: RomEmulator, digitalker: Digitalker) -> None:
+def say_all(rom: "RomEmulator", digitalker: "Digitalker") -> None:
     """Speak every canonical DVSS dictionary entry in ROM order.
 
     Args:
