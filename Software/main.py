@@ -34,21 +34,49 @@ def handle_command(command: str, rom: RomEmulator, digitalker: Digitalker, COMMA
     
     if command == "/help":
         print("Available commands:")
-        print("  /say <text>     - Speak the specified text using the Digitalker.")
-        print("  /say_all        - Speak all words in the free-speak dictionary.")
-        print("  /archive <group> - Archive a ROM group to the SD card.")
-        print("  /exit or /quit  - Exit the interactive command loop.")
+        print("  /archive <group>          - Archive a ROM group to the SD card.")
+        print("  /exit or /quit           - Exit the interactive command loop.")
+        print("  /help                     - Show available commands.")
+        print("  /load_rom <file1> [file2] - Load one ROM image or two 8 KiB bank files.")
+        print("  /say <text>              - Speak the specified text using the Digitalker.")
+        print("  /say_all                 - Speak all words in the free-speak dictionary.")
+        print("  /say_index <index>       - Speak the word at the specified index (0-255).")
     
     # Handle speech commands in a try-finally block to ensure the speaker is disabled 
     # and the LED is turned on if an error occurs
     try:
         SPEAKER_DISABLE_N.value(1)
-        if command == "/say_all":
-            say_all(rom, digitalker)
-        if command == "/say" or command.startswith("/say "):
-            free_speak(command[4:].strip(), rom, digitalker)
         if command.startswith("/archive "):
             archive_group(command[9:].strip(), rom, digitalker)
+        elif command == "/load_rom" or command.startswith("/load_rom "):
+            args = command[9:].strip().split()
+            if len(args) not in (1, 2):
+                print("Usage: /load_rom <file1> [file2]")
+            else:
+                try:
+                    rom.load(*args)
+                except (OSError, RuntimeError, ValueError) as error:
+                    print(f"Failed to load ROM: {error}")
+        elif command == "/say_index" or command.startswith("/say_index "):
+            if not getattr(rom, "running", False):
+                print("No ROM loaded. Use /load_rom <file1> [file2] first.")
+            else:
+                arg = command[10:].strip()
+                if not arg:
+                    print("Usage: /say_index <index>")
+                else:
+                    try:
+                        index = int(arg, 0)
+                        if not (0 <= index <= 255):
+                            print(f"Index out of range: {index} (must be 0-255)")
+                        else:
+                            digitalker.speak_word(index)
+                    except ValueError:
+                        print(f"Invalid index: {arg!r} (must be an integer 0-255)")
+        elif command == "/say_all":
+            say_all(rom, digitalker)
+        elif command == "/say" or command.startswith("/say "):
+            free_speak(command[4:].strip(), rom, digitalker)
     finally:
         LED_GREEN.value(1)
         SPEAKER_DISABLE_N.value(0)
@@ -68,7 +96,7 @@ def main() -> None:
     
     rom = RomEmulator()
     digitalker = Digitalker()
-    COMMANDS = ["/help", "/say", "/say_all", "/archive"]
+    COMMANDS = ["/archive", "/help", "/load_rom", "/say_index", "/say", "/say_all"]
     prompt = "digichiver> "
 
     # Turn on the green LED to indicate the system is ready
