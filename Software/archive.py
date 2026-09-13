@@ -16,6 +16,27 @@ from machine import SPI, mem32
 
 from sdcard import SDCard
 
+# Add type hinting for rp2.pio functions if available, but don't require it for runtime.
+try:
+    import typing
+    if typing.TYPE_CHECKING:
+        from rp2 import (  # noqa: TC004
+            gpio,
+            in_,
+            jmp,
+            label,
+            nop,
+            pins,
+            set,
+            wait,
+            wrap,
+            wrap_target,
+            x,
+            x_dec,
+        )
+except ImportError:
+    pass
+
 SAMPLE_RATE = 48_000
 SAMPLE_BITS = 16
 CHANNELS = 1
