@@ -5,15 +5,10 @@
       "dictionary": "DT1052_dictionary.json",
       "output": "dt1052"
     },
-    "ssr1/ssr2": {
-      "sources": ["SSR1.bin", "SSR2.bin"],
-      "dictionary": "SSR1_SSR2_dictionary.json",
-      "output": "ssr1_ssr2"
-    },
-    "ssr5/ssr6": {
-      "sources": ["SSR5.bin", "SSR6.bin"],
-      "dictionary": "SSR5_SSR6_dictionary.json",
-      "output": "ssr5_ssr6"
+    "elevator": {
+      "sources": ["elevator.bin"],
+      "dictionary": "elevator_dictionary.json",
+      "output": "elevator"
     },
     "jameco-je-520": {
       "sources": [
@@ -24,6 +19,16 @@
       ],
       "dictionary": "Jameco_JE-520_dictionary.json",
       "output": "jameco_je-520"
-    }
+    },
+    "ssr1/ssr2": {
+      "sources": ["SSR1.bin", "SSR2.bin"],
+      "dictionary": "SSR1_SSR2_dictionary.json",
+      "output": "ssr1_ssr2"
+    },
+    "ssr5/ssr6": {
+      "sources": ["SSR5.bin", "SSR6.bin"],
+      "dictionary": "SSR5_SSR6_dictionary.json",
+      "output": "ssr5_ssr6"
+    }    
   }
 }
