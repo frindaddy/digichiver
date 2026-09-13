@@ -97,110 +97,6 @@ _SUFFIX_FRAGMENTS = {
 }
 _FRAGMENT_KEYS = set(_PREFIX_FRAGMENTS.values()) | set(_SUFFIX_FRAGMENTS.values())
 
-def _normalize_text(text: str) -> str:
-    """Normalize case and whitespace without changing DVSS punctuation.
-
-    Args:
-        text (str): The input text.
-
-    Returns:
-        str: Lowercase text with runs of whitespace collapsed.
-
-    Raises:
-        SayError: If the input is empty or contains no words.
-    """
-    normalized = " ".join(text.lower().split())
-    if not normalized:
-        raise SayError("speech text must contain at least one word")
-    return normalized
-
-def _small_number_words(value: int) -> list:
-    """Convert a number from 0 through 999 into vocabulary words.
-
-    Args:
-        value (int): The non-negative number to convert.
-
-    Returns:
-        list: Spoken number words without a conjunction such as ``and``.
-    """
-    if value < 20:
-        return [_SMALL_NUMBER_WORDS[value]]
-    if value < 100:
-        words = [_TENS_NUMBER_WORDS[value // 10]]
-        if value % 10:
-            words.append(_SMALL_NUMBER_WORDS[value % 10])
-        return words
-
-    words = [_SMALL_NUMBER_WORDS[value // 100], "hundred"]
-    remainder = value % 100
-    if remainder:
-        words.extend(_small_number_words(remainder))
-    return words
-
-def _integer_number_words(value: int) -> list:
-    """Convert an integer through one billion into vocabulary words.
-
-    Args:
-        value (int): The non-negative integer to convert.
-
-    Returns:
-        list: Spoken number words, using ``thousand`` and ``million`` groups.
-    """
-    if value == 0:
-        return ["zero"]
-    if value > 1_000_000_000:
-        return [_DIGIT_WORDS[int(digit)] for digit in str(value)]
-
-    words = []
-    millions, value = divmod(value, 1_000_000)
-    thousands, remainder = divmod(value, 1_000)
-    if millions:
-        words.extend(_integer_number_words(millions))
-        words.append("million")
-    if thousands:
-        words.extend(_small_number_words(thousands))
-        words.append("thousand")
-    if remainder:
-        words.extend(_small_number_words(remainder))
-    return words
-
-def _numeric_words(token: str) -> list:
-    """Convert a validated numeric token into vocabulary words.
-
-    Args:
-        token (str): A signed decimal token with optional commas.
-
-    Returns:
-        list: Spoken vocabulary words for the numeric token.
-
-    Raises:
-        SayError: If the token uses invalid comma placement or syntax.
-    """
-    numeric_match = _NUMERIC_TOKEN.match(token)
-    if numeric_match is None or numeric_match.group(0) != token:
-        raise SayError(f"invalid numeric token: {token}")
-
-    sign = []
-    if token[0] in "+-":
-        sign = ["plus" if token[0] == "+" else "minus"]
-        token = token[1:]
-
-    integer_text, separator, fraction_text = token.partition(".")
-    integer_digits = integer_text.replace(",", "")
-    comma_match = _COMMA_FORMAT.match(integer_text)
-    if "," in integer_text and (
-        comma_match is None or comma_match.group(0) != integer_text
-    ):
-        raise SayError(f"invalid comma placement in numeric token: {token}")
-    if len(integer_digits) > 1 and integer_digits.startswith("0"):
-        words = [_DIGIT_WORDS[int(digit)] for digit in integer_digits]
-    else:
-        words = _integer_number_words(int(integer_digits))
-    if separator:
-        words.append("point")
-        words.extend(_DIGIT_WORDS[int(digit)] for digit in fraction_text)
-    return sign + words
-
 def _composed_words(word: str) -> list:
     """Compose an unknown word from literal prefix, root, and suffix parts.
 
@@ -238,6 +134,87 @@ def _composed_words(word: str) -> list:
                 parts.append(suffix_fragment)
             return parts
     return []
+
+def _integer_number_words(value: int) -> list:
+    """Convert an integer through one billion into vocabulary words.
+
+    Args:
+        value (int): The non-negative integer to convert.
+
+    Returns:
+        list: Spoken number words, using ``thousand`` and ``million`` groups.
+    """
+    if value == 0:
+        return ["zero"]
+    if value > 1_000_000_000:
+        return [_DIGIT_WORDS[int(digit)] for digit in str(value)]
+
+    words = []
+    millions, value = divmod(value, 1_000_000)
+    thousands, remainder = divmod(value, 1_000)
+    if millions:
+        words.extend(_integer_number_words(millions))
+        words.append("million")
+    if thousands:
+        words.extend(_small_number_words(thousands))
+        words.append("thousand")
+    if remainder:
+        words.extend(_small_number_words(remainder))
+    return words
+
+def _normalize_text(text: str) -> str:
+    """Normalize case and whitespace without changing DVSS punctuation.
+
+    Args:
+        text (str): The input text.
+
+    Returns:
+        str: Lowercase text with runs of whitespace collapsed.
+
+    Raises:
+        SayError: If the input is empty or contains no words.
+    """
+    normalized = " ".join(text.lower().split())
+    if not normalized:
+        raise SayError("speech text must contain at least one word")
+    return normalized
+
+def _numeric_words(token: str) -> list:
+    """Convert a validated numeric token into vocabulary words.
+
+    Args:
+        token (str): A signed decimal token with optional commas.
+
+    Returns:
+        list: Spoken vocabulary words for the numeric token.
+
+    Raises:
+        SayError: If the token uses invalid comma placement or syntax.
+    """
+    numeric_match = _NUMERIC_TOKEN.match(token)
+    if numeric_match is None or numeric_match.group(0) != token:
+        raise SayError(f"invalid numeric token: {token}")
+
+    sign = []
+    if token[0] in "+-":
+        sign = ["plus" if token[0] == "+" else "minus"]
+        token = token[1:]
+
+    integer_text, separator, fraction_text = token.partition(".")
+    integer_digits = integer_text.replace(",", "")
+    comma_match = _COMMA_FORMAT.match(integer_text)
+    if "," in integer_text and (
+        comma_match is None or comma_match.group(0) != integer_text
+    ):
+        raise SayError(f"invalid comma placement in numeric token: {token}")
+    if len(integer_digits) > 1 and integer_digits.startswith("0"):
+        words = [_DIGIT_WORDS[int(digit)] for digit in integer_digits]
+    else:
+        words = _integer_number_words(int(integer_digits))
+    if separator:
+        words.append("point")
+        words.extend(_DIGIT_WORDS[int(digit)] for digit in fraction_text)
+    return sign + words
 
 def _resolve(text: str) -> list:
     """Resolve all input words before any speech begins.
@@ -282,6 +259,29 @@ def _resolve(text: str) -> list:
             continue
         resolved.append((entry[0], entry[1], word))
     return resolved
+
+def _small_number_words(value: int) -> list:
+    """Convert a number from 0 through 999 into vocabulary words.
+
+    Args:
+        value (int): The non-negative number to convert.
+
+    Returns:
+        list: Spoken number words without a conjunction such as ``and``.
+    """
+    if value < 20:
+        return [_SMALL_NUMBER_WORDS[value]]
+    if value < 100:
+        words = [_TENS_NUMBER_WORDS[value // 10]]
+        if value % 10:
+            words.append(_SMALL_NUMBER_WORDS[value % 10])
+        return words
+
+    words = [_SMALL_NUMBER_WORDS[value // 100], "hundred"]
+    remainder = value % 100
+    if remainder:
+        words.extend(_small_number_words(remainder))
+    return words
 
 def _speak_resolved(resolved: list, rom: "RomEmulator", digitalker: "Digitalker") -> None:
     """Speak resolved entries while loading each ROM only when it changes.
