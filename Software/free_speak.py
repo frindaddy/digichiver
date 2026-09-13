@@ -312,7 +312,11 @@ def say_all(rom: "RomEmulator", digitalker: "Digitalker") -> None:
     """
     resolved = [
         (rom_name, address, word)
-        for rom_name, words in _dictionary_data["roms"].items()
+        for rom_name in sorted(
+            _dictionary_data["roms"].keys(),
+            key=lambda name: int(name.replace("DVSSROM", "").replace(".bin", "")),
+        )
+        for words in [_dictionary_data["roms"][rom_name]]
         for address, word in enumerate(words, 1)
     ]
     _speak_resolved(resolved, rom, digitalker)
