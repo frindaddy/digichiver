@@ -60,42 +60,24 @@ def _build_index() -> dict:
 
 SAY_INDEX = _build_index()
 
-_SMALL_NUMBER_WORDS = (
-    "zero", "one", "two", "three", "four", "five", "six", "seven",
-    "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen",
-    "fifteen", "sixteen", "seventeen", "eighteen", "nineteen",
-)
-_TENS_NUMBER_WORDS = (
-    "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy",
-    "eighty", "ninety",
-)
+_COMPOSITION_DATA = _dictionary_data["composition"]
+_PREFIX_FRAGMENTS = _COMPOSITION_DATA["prefixes"]
+_SUFFIX_FRAGMENTS = _COMPOSITION_DATA["suffixes"]
+_FRAGMENT_KEYS = set(_PREFIX_FRAGMENTS.values()) | set(_SUFFIX_FRAGMENTS.values())
+for _fragment in _FRAGMENT_KEYS:
+    if _fragment not in SAY_INDEX:
+        raise ValueError(f"composition fragment is not in DVSS vocabulary: {_fragment}")
+
+_NUMBER_DATA = _dictionary_data["numbers"]
+_SMALL_NUMBER_WORDS = _NUMBER_DATA["small"]
+_TENS_NUMBER_WORDS = _NUMBER_DATA["tens"]
 _DIGIT_WORDS = _SMALL_NUMBER_WORDS[:10]
+for _number_word in _SMALL_NUMBER_WORDS[0:20] + [word for word in _TENS_NUMBER_WORDS if word]:
+    if _number_word not in SAY_INDEX:
+        raise ValueError(f"number word is not in DVSS vocabulary: {_number_word}")
+    
 _NUMERIC_TOKEN = re.compile(r"^[+-]?[0-9][0-9,]*(?:\.[0-9]+)?$")
 _COMMA_FORMAT = re.compile(r"^[0-9]{1,3}(?:,[0-9]{3})+$")
-_PREFIX_FRAGMENTS = {
-    "a": "a-.fgt",
-    "centi": "centi-.fp",
-    "in": "in-.rp",
-    "kilo": "kilo-.fp",
-    "meg": "meg-.rp",
-    "mega": "mega-.rp",
-    "micro": "micro-.rp",
-    "milli": "milli-.mp",
-    "nano": "nano-.rp",
-    "per": "per-.sp",
-    "pico": "pico-.rp",
-    "re": "re-.spl",
-    "un": "un-.rp1",
-}
-_SUFFIX_FRAGMENTS = {
-    "ed": "-ed.fs1",
-    "er": "-er.ms5",
-    "ing": "-ing.fs1",
-    "s": "-s.ms1",
-    "th": "-th.ms",
-    "uth": "-uth.ms",
-}
-_FRAGMENT_KEYS = set(_PREFIX_FRAGMENTS.values()) | set(_SUFFIX_FRAGMENTS.values())
 
 def _composed_words(word: str) -> list:
     """Compose an unknown word from literal prefix, root, and suffix parts.

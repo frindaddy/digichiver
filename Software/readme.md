@@ -65,7 +65,9 @@ values are spoken digit by digit. Commas are accepted as separators, leading
 zeroes are preserved digit by digit, signs use `minus` or `plus`, and decimal
 fractions use `point` followed by individual digits.
 
-Unknown words are also checked for literal DVSS affix composition. For example,
+Unknown words are also checked for literal DVSS affix composition. The selected
+prefix/suffix mappings and number-word tables live in the `composition` and
+`numbers` sections of `dvss_dictionary.json`. For example,
 `degrees` is spoken as `degree` plus `-s.ms1`, and `reenter` is spoken as
 `re-.spl` plus `enter`. Composition uses one selected prefix, one exact root,
 and one selected suffix at most. It does not apply spelling transformations;

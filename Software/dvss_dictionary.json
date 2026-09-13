@@ -115,5 +115,41 @@
     "with": "with.r",
     "within": "within.r",
     "your": "your.r"
+  },
+  "composition": {
+    "prefixes": {
+      "a": "a-.fgt",
+      "centi": "centi-.fp",
+      "in": "in-.rp",
+      "kilo": "kilo-.fp",
+      "meg": "meg-.rp",
+      "mega": "mega-.rp",
+      "micro": "micro-.rp",
+      "milli": "milli-.mp",
+      "nano": "nano-.rp",
+      "per": "per-.sp",
+      "pico": "pico-.rp",
+      "re": "re-.spl",
+      "un": "un-.rp1"
+    },
+    "suffixes": {
+      "ed": "-ed.fs1",
+      "er": "-er.ms5",
+      "ing": "-ing.fs1",
+      "s": "-s.ms1",
+      "th": "-th.ms",
+      "uth": "-uth.ms"
+    }
+  },
+  "numbers": {
+    "small": [
+      "zero", "one", "two", "three", "four", "five", "six", "seven",
+      "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen",
+      "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
+    ],
+    "tens": [
+      "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy",
+      "eighty", "ninety"
+    ]
   }
 }
