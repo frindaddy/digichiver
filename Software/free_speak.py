@@ -1,4 +1,4 @@
-"""Resolve DVSS vocabulary text and speak it through the Digitalker."""
+"""Resolve free-speak vocabulary and speak it through the Digitalker."""
 
 import json
 import re
@@ -12,15 +12,15 @@ try:
 except ImportError:
     pass
 
-with open("dvss_dictionary.json", "r") as _dictionary_file:
+with open("free_speak_dictionary.json", "r") as _dictionary_file:
     _dictionary_data = json.load(_dictionary_file)
 
-class SayError(ValueError):
-    """Base exception for invalid speech input."""
+class FreeSpeakError(ValueError):
+    """Base exception for invalid free-speak input."""
 
 
-class UnknownWordError(SayError):
-    """Raised when an input token is not in the DVSS vocabulary."""
+class UnknownWordError(FreeSpeakError):
+    """Raised when an input token is not in the free-speak vocabulary."""
 
     def __init__(self, word: str, position: int) -> None:
         """Initialize an error for an unknown input token.
@@ -31,7 +31,7 @@ class UnknownWordError(SayError):
         """
         self.word = word
         self.position = position
-        super().__init__(f"unknown DVSS word {word!r} at position {position}")
+        super().__init__(f"unknown free-speak word {word!r} at position {position}")
 
 
 def _build_index() -> dict:
@@ -45,39 +45,51 @@ def _build_index() -> dict:
         for address, word in enumerate(words, 1):
             key = word.lower()
             if key in index:
-                raise ValueError(f"duplicate DVSS vocabulary key: {word}")
+                raise ValueError(f"duplicate free-speak vocabulary key: {word}")
             index[key] = (rom_name, address)
     for alias, canonical in _dictionary_data.get("aliases", {}).items():
         if not isinstance(canonical, str):
             raise TypeError(f"alias target must be a string: {alias}")
         target = index.get(canonical.lower())
         if target is None:
-            raise ValueError(f"alias target is not in DVSS vocabulary: {canonical}")
+            raise ValueError(f"alias target is not in free-speak vocabulary: {canonical}")
         alias_key = alias.lower()
         if alias_key in index:
             raise ValueError(f"alias shadows canonical vocabulary: {alias}")
         index[alias_key] = target
     return index
 
-SAY_INDEX = _build_index()
+FREE_SPEAK_INDEX = _build_index()
 
 _COMPOSITION_DATA = _dictionary_data["composition"]
 _PREFIX_FRAGMENTS = _COMPOSITION_DATA["prefixes"]
 _SUFFIX_FRAGMENTS = _COMPOSITION_DATA["suffixes"]
 _FRAGMENT_KEYS = set(_PREFIX_FRAGMENTS.values()) | set(_SUFFIX_FRAGMENTS.values())
 for _fragment in _FRAGMENT_KEYS:
-    if _fragment not in SAY_INDEX:
-        raise ValueError(f"composition fragment is not in DVSS vocabulary: {_fragment}")
+    if _fragment not in FREE_SPEAK_INDEX:
+        raise ValueError(f"composition fragment is not in free-speak vocabulary: {_fragment}")
 
 _NUMBER_DATA = _dictionary_data["numbers"]
 _SMALL_NUMBER_WORDS = _NUMBER_DATA["small"]
 _TENS_NUMBER_WORDS = _NUMBER_DATA["tens"]
 _DIGIT_WORDS = _SMALL_NUMBER_WORDS[:10]
 for _number_word in _SMALL_NUMBER_WORDS[0:20] + [word for word in _TENS_NUMBER_WORDS if word]:
-    if _number_word not in SAY_INDEX:
-        raise ValueError(f"number word is not in DVSS vocabulary: {_number_word}")
+    if _number_word not in FREE_SPEAK_INDEX:
+        raise ValueError(f"number word is not in free-speak vocabulary: {_number_word}")
     
 _NUMERIC_TOKEN = re.compile(r"^[+-]?[0-9][0-9,]*(?:\.[0-9]+)?$")
+
+
+def _sleep_ms(milliseconds: int) -> None:
+    """Sleep for milliseconds on MicroPython or CPython.
+
+    Args:
+        milliseconds (int): The duration to sleep.
+    """
+    if hasattr(time, "sleep_ms"):
+        time.sleep_ms(milliseconds)
+    else:
+        time.sleep(milliseconds / 1000)
 
 def _composed_words(word: str) -> list:
     """Compose an unknown word from literal prefix, root, and suffix parts.
@@ -105,7 +117,7 @@ def _composed_words(word: str) -> list:
                 continue
             root_end = len(after_prefix) - len(suffix_spelling)
             root = after_prefix[:root_end]
-            root_entry = SAY_INDEX.get(root)
+            root_entry = FREE_SPEAK_INDEX.get(root)
             if root_entry is None or root in _FRAGMENT_KEYS:
                 continue
             parts = []
@@ -154,11 +166,11 @@ def _normalize_text(text: str) -> str:
         str: Lowercase text with runs of whitespace collapsed.
 
     Raises:
-        SayError: If the input is empty or contains no words.
+        FreeSpeakError: If the input is empty or contains no words.
     """
     normalized = " ".join(text.lower().split())
     if not normalized:
-        raise SayError("speech text must contain at least one word")
+        raise FreeSpeakError("speech text must contain at least one word")
     return normalized
 
 def _numeric_words(token: str) -> list:
@@ -171,11 +183,11 @@ def _numeric_words(token: str) -> list:
         list: Spoken vocabulary words for the numeric token.
 
     Raises:
-        SayError: If the token uses invalid comma placement or syntax.
+        FreeSpeakError: If the token uses invalid comma placement or syntax.
     """
     numeric_match = _NUMERIC_TOKEN.match(token)
     if numeric_match is None or numeric_match.group(0) != token:
-        raise SayError(f"invalid numeric token: {token}")
+        raise FreeSpeakError(f"invalid numeric token: {token}")
 
     sign = []
     if token[0] in "+-":
@@ -195,7 +207,7 @@ def _numeric_words(token: str) -> list:
                 for group in comma_groups[1:]
             )
         ):
-            raise SayError(f"invalid comma placement in numeric token: {token}")
+            raise FreeSpeakError(f"invalid comma placement in numeric token: {token}")
     if len(integer_digits) > 1 and integer_digits.startswith("0"):
         words = [_DIGIT_WORDS[int(digit)] for digit in integer_digits]
     else:
@@ -215,9 +227,9 @@ def _resolve(text: str) -> list:
         list: Tuples containing the ROM filename, address, and original word.
 
     Raises:
-        UnknownWordError: If a word is absent from the DVSS dictionary.
+        UnknownWordError: If a word is absent from the free-speak dictionary.
     """
-    whole_entry = SAY_INDEX.get(text)
+    whole_entry = FREE_SPEAK_INDEX.get(text)
     if whole_entry is not None:
         return [(whole_entry[0], whole_entry[1], text)]
 
@@ -226,21 +238,21 @@ def _resolve(text: str) -> list:
         if _NUMERIC_TOKEN.match(word):
             words = _numeric_words(word)
             for numeric_word in words:
-                entry = SAY_INDEX.get(numeric_word)
+                entry = FREE_SPEAK_INDEX.get(numeric_word)
                 if entry is None:
-                    raise SayError(f"numeric word is not in DVSS vocabulary: {numeric_word}")
+                    raise FreeSpeakError(f"numeric word is not in free-speak vocabulary: {numeric_word}")
                 resolved.append((entry[0], entry[1], numeric_word))
             continue
-        entry = SAY_INDEX.get(word)
+        entry = FREE_SPEAK_INDEX.get(word)
         if entry is None:
             composed = _composed_words(word)
             if not composed:
                 raise UnknownWordError(word, position)
             for composed_word in composed:
-                composed_entry = SAY_INDEX.get(composed_word)
+                composed_entry = FREE_SPEAK_INDEX.get(composed_word)
                 if composed_entry is None:
-                    raise SayError(
-                        f"composed word is not in DVSS vocabulary: {composed_word}"
+                    raise FreeSpeakError(
+                        f"composed word is not in free-speak vocabulary: {composed_word}"
                     )
                 resolved.append(
                     (composed_entry[0], composed_entry[1], composed_word)
@@ -289,7 +301,7 @@ def _speak_resolved(resolved: list, rom: "RomEmulator", digitalker: "Digitalker"
             active_rom = rom_name
         digitalker.speak_word(address)
         if speech_pause_ms:
-            time.sleep_ms(speech_pause_ms)
+            _sleep_ms(speech_pause_ms)
 
 def free_speak(text: str, rom: "RomEmulator", digitalker: "Digitalker") -> None:
     """Speak DVSS words from a string, switching ROMs as required.
@@ -300,15 +312,15 @@ def free_speak(text: str, rom: "RomEmulator", digitalker: "Digitalker") -> None:
         digitalker (Digitalker): The Digitalker driver used to speak addresses.
 
     Raises:
-        SayError: If the text is empty.
-        UnknownWordError: If any word is not in the DVSS dictionary.
+        FreeSpeakError: If the text is empty.
+        UnknownWordError: If any word is not in the free-speak dictionary.
     """
     normalized = _normalize_text(text)
     resolved = _resolve(normalized)
     _speak_resolved(resolved, rom, digitalker)
 
 def say_all(rom: "RomEmulator", digitalker: "Digitalker", speech_pause_ms: int=50) -> None:
-    """Speak every canonical DVSS dictionary entry in ROM order.
+    """Speak every canonical free-speak dictionary entry in ROM order.
 
     Args:
         rom (RomEmulator): The ROM emulator used to select vocabulary images.

@@ -29,9 +29,8 @@ ROM files to the Pico and pass their filenames to `load()`.
 
 The Digichiver software is capable of free speech using the `/say` REPL command.
 
-`free_speak.py` exposes `free_speak()` and uses the PDF-derived table in
-`dvss_dictionary.json` to resolve
-DVSS vocabulary entries to a ROM filename and Digitalker word index:
+`free_speak.py` exposes `free_speak()` and uses `free_speak_dictionary.json`
+to resolve vocabulary entries to a ROM filename and Digitalker word index:
 
 ```python
 from digitalker import Digitalker
@@ -56,7 +55,7 @@ to canonical dictionary entries in the JSON file. The runtime never strips suffi
 chooses between pronunciation variants automatically.
 
 The five `DVSSROM*.bin` files must be in the same flat MicroPython directory
-as `free_speak.py`, `rom_emulator.py`, and `dvss_dictionary.json`.
+as `free_speak.py`, `rom_emulator.py`, and `free_speak_dictionary.json`.
 
 Numbers in `free_speak()` are expanded into available DVSS words. Integer values are
 spoken structurally through exactly one billion, which is pronounced as
@@ -67,14 +66,15 @@ fractions use `point` followed by individual digits.
 
 Unknown words are also checked for literal DVSS affix composition. The selected
 prefix/suffix mappings and number-word tables live in the `composition` and
-`numbers` sections of `dvss_dictionary.json`. For example,
+`numbers` sections of `free_speak_dictionary.json`. For example,
 `degrees` is spoken as `degree` plus `-s.ms1`, and `reenter` is spoken as
 `re-.spl` plus `enter`. Composition uses one selected prefix, one exact root,
 and one selected suffix at most. It does not apply spelling transformations;
 the exact dictionary entry or alias is always preferred.
 
-The dictionary was transcribed from `ROMs/DVSS/DVSS_ROMS_INDEX.pdf`.
-The five ROM files and `dvss_dictionary.json` must be deployed together with `free_speak.py`.
+The free-speak dictionary was generated from the DVSS index at
+`ROMs/DVSS/DVSS_ROMS_INDEX.pdf`.
+The five ROM files and `free_speak_dictionary.json` must be deployed together with `free_speak.py`.
 
 ### REPL commands
 

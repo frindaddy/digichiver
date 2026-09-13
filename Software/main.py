@@ -2,7 +2,7 @@
 
 from board import LED_GREEN, SPEAKER_DISABLE_N
 from digitalker import Digitalker
-from free_speak import SayError, free_speak, say_all
+from free_speak import FreeSpeakError, free_speak, say_all
 from rom_emulator import RomEmulator
 
 
@@ -20,7 +20,7 @@ def handle_command(command: str, rom: RomEmulator, digitalker: Digitalker, COMMA
         bool: True when a known command was handled, otherwise False.
 
     Raises:
-        SayError: If a speech command contains invalid or unknown words.
+        FreeSpeakError: If a speech command contains invalid or unknown words.
     """
     LED_GREEN.value(0)  # Turn off the green LED to indicate the system is busy
     
@@ -34,7 +34,7 @@ def handle_command(command: str, rom: RomEmulator, digitalker: Digitalker, COMMA
     if command == "/help":
         print("Available commands:")
         print("  /say <text>     - Speak the specified text using the Digitalker.")
-        print("  /say_all        - Speak all words in the DVSS dictionary.")
+        print("  /say_all        - Speak all words in the free-speak dictionary.")
         print("  /exit or /quit  - Exit the interactive command loop.")
     
     # Handle speech commands in a try-finally block to ensure the speaker is disabled 
@@ -79,7 +79,7 @@ def main() -> None:
         try:
             if not handle_command(command, rom, digitalker, COMMANDS):
                 print(f"unknown command; available commands: {', '.join(COMMANDS)}")
-        except SayError as error:
+        except FreeSpeakError as error:
             print(error)
             SPEAKER_DISABLE_N.value(0)  # Disable speaker after an error
             LED_GREEN.value(1)          # Turn on the green LED to indicate the system is ready
