@@ -72,6 +72,30 @@ _TENS_NUMBER_WORDS = (
 _DIGIT_WORDS = _SMALL_NUMBER_WORDS[:10]
 _NUMERIC_TOKEN = re.compile(r"^[+-]?[0-9][0-9,]*(?:\.[0-9]+)?$")
 _COMMA_FORMAT = re.compile(r"^[0-9]{1,3}(?:,[0-9]{3})+$")
+_PREFIX_FRAGMENTS = {
+    "a": "a-.fgt",
+    "centi": "centi-.fp",
+    "in": "in-.rp",
+    "kilo": "kilo-.fp",
+    "meg": "meg-.rp",
+    "mega": "mega-.rp",
+    "micro": "micro-.rp",
+    "milli": "milli-.mp",
+    "nano": "nano-.rp",
+    "per": "per-.sp",
+    "pico": "pico-.rp",
+    "re": "re-.spl",
+    "un": "un-.rp1",
+}
+_SUFFIX_FRAGMENTS = {
+    "ed": "-ed.fs1",
+    "er": "-er.ms5",
+    "ing": "-ing.fs1",
+    "s": "-s.ms1",
+    "th": "-th.ms",
+    "uth": "-uth.ms",
+}
+_FRAGMENT_KEYS = set(_PREFIX_FRAGMENTS.values()) | set(_SUFFIX_FRAGMENTS.values())
 
 def _normalize_text(text: str) -> str:
     """Normalize case and whitespace without changing DVSS punctuation.
@@ -177,6 +201,44 @@ def _numeric_words(token: str) -> list:
         words.extend(_DIGIT_WORDS[int(digit)] for digit in fraction_text)
     return sign + words
 
+def _composed_words(word: str) -> list:
+    """Compose an unknown word from literal prefix, root, and suffix parts.
+
+    Args:
+        word (str): The normalized unknown word.
+
+    Returns:
+        list: Canonical fragment/root words in speech order, or an empty list.
+    """
+    prefix_candidates = [("", "")]
+    for spelling, fragment in _PREFIX_FRAGMENTS.items():
+        if word.startswith(spelling) and len(word) > len(spelling):
+            prefix_candidates.append((spelling, fragment))
+
+    suffix_candidates = [("", "")]
+    for spelling, fragment in _SUFFIX_FRAGMENTS.items():
+        if word.endswith(spelling) and len(word) > len(spelling):
+            suffix_candidates.append((spelling, fragment))
+
+    for prefix_spelling, prefix_fragment in prefix_candidates:
+        after_prefix = word[len(prefix_spelling):]
+        for suffix_spelling, suffix_fragment in suffix_candidates:
+            if suffix_spelling and not after_prefix.endswith(suffix_spelling):
+                continue
+            root_end = len(after_prefix) - len(suffix_spelling)
+            root = after_prefix[:root_end]
+            root_entry = SAY_INDEX.get(root)
+            if root_entry is None or root in _FRAGMENT_KEYS:
+                continue
+            parts = []
+            if prefix_fragment:
+                parts.append(prefix_fragment)
+            parts.append(root)
+            if suffix_fragment:
+                parts.append(suffix_fragment)
+            return parts
+    return []
+
 def _resolve(text: str) -> list:
     """Resolve all input words before any speech begins.
 
@@ -205,7 +267,19 @@ def _resolve(text: str) -> list:
             continue
         entry = SAY_INDEX.get(word)
         if entry is None:
-            raise UnknownWordError(word, position)
+            composed = _composed_words(word)
+            if not composed:
+                raise UnknownWordError(word, position)
+            for composed_word in composed:
+                composed_entry = SAY_INDEX.get(composed_word)
+                if composed_entry is None:
+                    raise SayError(
+                        f"composed word is not in DVSS vocabulary: {composed_word}"
+                    )
+                resolved.append(
+                    (composed_entry[0], composed_entry[1], composed_word)
+                )
+            continue
         resolved.append((entry[0], entry[1], word))
     return resolved
 

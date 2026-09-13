@@ -51,8 +51,8 @@ pronunciation variants such as `the.r` remain separate entries.
 The suffixes in canonical entries are archive/audio labels, not automatic
 grammar rules. Ending fragments such as `-ing.fs1` and `-ing.ms3` are distinct
 recorded components, while labels such as `.r`, `.s`, `.m`, and `.p` have no
-fully documented expansion. Aliases therefore use explicit `target`, `reason`,
-and `context` metadata in the JSON file. The runtime never strips suffixes or
+fully documented expansion. Aliases therefore explicitly map friendly input
+to canonical dictionary entries in the JSON file. The runtime never strips suffixes or
 chooses between pronunciation variants automatically.
 
 The five `DVSSROM*.bin` files must be in the same flat MicroPython directory
@@ -64,6 +64,12 @@ spoken structurally through exactly one billion, which is pronounced as
 values are spoken digit by digit. Commas are accepted as separators, leading
 zeroes are preserved digit by digit, signs use `minus` or `plus`, and decimal
 fractions use `point` followed by individual digits.
+
+Unknown words are also checked for literal DVSS affix composition. For example,
+`degrees` is spoken as `degree` plus `-s.ms1`, and `reenter` is spoken as
+`re-.spl` plus `enter`. Composition uses one selected prefix, one exact root,
+and one selected suffix at most. It does not apply spelling transformations;
+the exact dictionary entry or alias is always preferred.
 
 The dictionary was transcribed from `ROMs/DVSS/DVSS_ROMS_INDEX.pdf`.
 The five ROM files and `dvss_dictionary.json` must be deployed together with `free_speak.py`.
