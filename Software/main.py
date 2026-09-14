@@ -40,7 +40,7 @@ def handle_command(command: str, rom: RomEmulator, digitalker: Digitalker, COMMA
         print("  /load_rom <file1> [file2] - Load one ROM image or two 8 KiB bank files.")
         print("  /say <text>              - Speak the specified text using the Digitalker.")
         print("  /say_all                 - Speak all words in the free-speak dictionary.")
-        print("  /say_index <index>       - Speak the word at the specified index (0-255).")
+        print("  /say_index <start> [end] - Speak word(s) at index or index range (0-255).")
     
     # Handle speech commands in a try-finally block to ensure the speaker is disabled 
     # and the LED is turned on if an error occurs
@@ -61,18 +61,24 @@ def handle_command(command: str, rom: RomEmulator, digitalker: Digitalker, COMMA
             if not getattr(rom, "running", False):
                 print("No ROM loaded. Use /load_rom <file1> [file2] first.")
             else:
-                arg = command[10:].strip()
-                if not arg:
-                    print("Usage: /say_index <index>")
+                args = command[10:].strip().split()
+                if len(args) not in (1, 2):
+                    print("Usage: /say_index <start> [end]")
                 else:
                     try:
-                        index = int(arg, 0)
-                        if not (0 <= index <= 255):
-                            print(f"Index out of range: {index} (must be 0-255)")
+                        start = int(args[0], 0)
+                        end = int(args[1], 0) if len(args) == 2 else start
+                        if not (0 <= start <= 255):
+                            print(f"Index out of range: {start} (must be 0-255)")
+                        elif not (0 <= end <= 255):
+                            print(f"Index out of range: {end} (must be 0-255)")
+                        elif start > end:
+                            print(f"Invalid range: start ({start}) cannot be greater than end ({end})")
                         else:
-                            digitalker.speak_word(index)
+                            for idx in range(start, end + 1):
+                                digitalker.speak_word(idx)
                     except ValueError:
-                        print(f"Invalid index: {arg!r} (must be an integer 0-255)")
+                        print(f"Invalid index: {' '.join(args)!r} (must be integer(s) 0-255)")
         elif command == "/say_all":
             say_all(rom, digitalker)
         elif command == "/say" or command.startswith("/say "):

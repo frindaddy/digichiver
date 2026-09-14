@@ -85,13 +85,14 @@ Enter commands such as:
 /say hello this is my speech
 /load_rom SSR1.bin SSR2.bin
 /say_index 42
+/say_index 0 50
 /say_all
 /archive ssr1/ssr2
 ```
 
 Available commands:
 - `/load_rom <file1> [file2]`: Load a single ROM image or two 8 KiB bank files into the ROM emulator.
-- `/say_index <index>`: Speak the word at the specified numeric index (0–255, supports decimal or `0x` hex). Requires a loaded ROM.
+- `/say_index <start> [end]`: Speak word(s) at the specified numeric index or inclusive range (0–255, supports decimal or `0x` hex). Requires a loaded ROM.
 - `/say <text>`: Speak arbitrary text using the free-speak vocabulary dictionary.
 - `/say_all`: Speak all words across the free-speak ROM vocabulary in sequence.
 - `/archive <group>`: Archive an entire ROM group to SD card WAV files according to `archive_config.json`.
