@@ -34,6 +34,16 @@
       "sources": ["SSR5.bin", "SSR6.bin"],
       "dictionary": "SSR5_SSR6_dictionary.json",
       "output": "ssr5_ssr6"
-    }    
+    },
+    "rs-type2": {
+      "sources": ["rs_type2_MM52664SJQR.bin"],
+      "dictionary": "rs_type2_MM52664SJQR_dictionary.json",
+      "output": "rs-type2"
+    },
+    "rs-type4": {
+      "sources": ["rs_type4_MM52664SJQT.bin"],
+      "dictionary": "rs_type4_MM52664SJQT_dictionary.json",
+      "output": "rs-type4"
+    }
   }
 }
