@@ -23,8 +23,6 @@ try:
             jmp,
             label,
             mov,
-            noblock,
-            null,
             osr,
             out,
             pin,
@@ -52,12 +50,10 @@ DMA_CTRL_TRIG = 0x0C
 DMA_AL1_CTRL = 0x10
 DMA_AL3_READ_ADDR_TRIG = 0x3C
 DMA_CH_DBG_CTDREQ_BASE = 0x800
-DMA_CH_DBG_TCR_BASE = 0x804
 DMA_CHAN_ABORT = 0x464
 
 DMA_CTRL_READ_ERROR = 1 << 30
 DMA_CTRL_WRITE_ERROR = 1 << 29
-DMA_CTRL_BUSY = 1 << 26
 DMA_TRANS_COUNT_TRIGGER_SELF = 1 << 28
 
 PIO0_BASE = 0x50200000
@@ -65,8 +61,6 @@ PIO1_BASE = 0x50300000
 PIO_TXF0 = PIO0_BASE + 0x10
 PIO_RXF0 = PIO1_BASE + 0x20
 PIO_FDEBUG = 0x08
-PIO_FLEVEL = 0x0C
-PIO_FSTAT = 0x04
 # RP2350 adds GPIOBASE after the PIO interrupt register block.  It is not
 # adjacent to the FIFO registers as it is tempting to assume from RP2040.
 PIO_GPIOBASE = 0x168
@@ -217,33 +211,6 @@ def _drive_data() -> None:
     out(pins, 8)
     wrap()
 
-@rp2.asm_pio(in_shiftdir=rp2.PIO.SHIFT_LEFT)
-def _trace_request() -> None:
-    """Passively retain the first few distinct ROM addresses for bring-up."""
-    wrap_target()
-    label("trace_idle")
-    wait(0, gpio, 2)            # System GPIO34 with PIO GPIOBASE=16.
-    mov(isr, null)
-    in_(pins, 14)
-    mov(x, isr)
-    push(noblock)
-
-    label("trace_active")
-    jmp(pin, "trace_idle")
-    mov(isr, null)
-    in_(pins, 14)
-    mov(y, isr)
-    jmp(x_not_y, "trace_changed")
-    jmp("trace_active")
-
-    label("trace_changed")
-    mov(x, y)
-    mov(isr, y)
-    push(noblock)
-    jmp("trace_active")
-    wrap()
-
-
 class RomEmulator:
     """Serve a ROM image as the MM54104's 16 KiB parallel ROM."""
 
@@ -253,7 +220,6 @@ class RomEmulator:
         self._rom_address = None
         self._capture_sm = None
         self._output_sm = None
-        self._trace_sm = None
         self.running = False
 
     def _abort_dma_channels(self) -> None:
@@ -345,50 +311,6 @@ class RomEmulator:
             raise RuntimeError("unable to allocate a 16 KiB-aligned ROM image")
         return allocation, rom, rom_address
 
-    def diagnostics(self) -> dict:
-            """Return raw hardware state useful when bringing up the ROM bus.
-
-            Returns:
-                dict: The current DMA, PIO, and ROM state.
-            """
-            control = _dma_channel_base(DMA_CONTROL_CHANNEL)
-            data = _dma_channel_base(DMA_DATA_CHANNEL)
-            data_read_address = mem32[data + DMA_READ_ADDR] & 0xFFFFFFFF
-            last_offset = data_read_address - self._rom_address
-            if 0 <= last_offset < ROM_SIZE:
-                last_byte = self._rom[last_offset] # type: ignore
-            else:
-                last_offset = None
-                last_byte = None
-            return {
-                "implementation": "rp2350-dma-v6-romen-index",
-                "running": self.running,
-                "rom_address": self._rom_address,
-                # The low 28 bits are the remaining transfers in the current
-                # self-triggered one-address control block.
-                "control_dma_count": mem32[control + DMA_TRANS_COUNT] & 0xFFFFFFFF,
-                "control_dma_reload": mem32[
-                    DMA_BASE + DMA_CH_DBG_TCR_BASE + DMA_CONTROL_CHANNEL * DMA_CH_STRIDE
-                ] & 0xFFFFFFFF,
-                "control_dma_dreq_credits": mem32[
-                    DMA_BASE + DMA_CH_DBG_CTDREQ_BASE + DMA_CONTROL_CHANNEL * DMA_CH_STRIDE
-                ] & 0x3F,
-                "control_dma_ctrl": mem32[control + DMA_CTRL_TRIG] & 0xFFFFFFFF,
-                "data_dma_read_address": data_read_address,
-                "last_rom_offset": last_offset,
-                "last_rom_byte": last_byte,
-                "data_dma_count": mem32[data + DMA_TRANS_COUNT] & 0xFFFFFFFF,
-                "data_dma_reload": mem32[
-                    DMA_BASE + DMA_CH_DBG_TCR_BASE + DMA_DATA_CHANNEL * DMA_CH_STRIDE
-                ] & 0xFFFFFFFF,
-                "data_dma_ctrl": mem32[data + DMA_CTRL_TRIG] & 0xFFFFFFFF,
-                "pio0_flevel": mem32[PIO0_BASE + PIO_FLEVEL] & 0xFFFFFFFF,
-                "pio0_fdebug": mem32[PIO0_BASE + PIO_FDEBUG] & 0xFFFFFFFF,
-                "pio1_flevel": mem32[PIO1_BASE + PIO_FLEVEL] & 0xFFFFFFFF,
-                "pio1_fstat": mem32[PIO1_BASE + PIO_FSTAT] & 0xFFFFFFFF,
-                "pio1_fdebug": mem32[PIO1_BASE + PIO_FDEBUG] & 0xFFFFFFFF,
-            }
-
     def load(self, *rom_paths: str) -> None:
         """Load one image or two banks and automatically start the emulator.
 
@@ -436,15 +358,10 @@ class RomEmulator:
             4, _capture_request, freq=150_000_000,
             in_base=Pin(ROM_ADDR_BASE), jmp_pin=Pin(ROMEN_GPIO)
         )
-        self._trace_sm = rp2.StateMachine(
-            5, _trace_request, freq=150_000_000,
-            in_base=Pin(ROM_ADDR_BASE), jmp_pin=Pin(ROMEN_GPIO)
-        )
 
         self._configure_dma()
         self._output_sm.active(1)
         self._capture_sm.put(self._rom_address >> 14) # type: ignore
-        self._trace_sm.active(1)
         self._capture_sm.active(1)
         self.running = True
 
@@ -454,47 +371,11 @@ class RomEmulator:
             self._capture_sm.active(0)
         if self._output_sm is not None:
             self._output_sm.active(0)
-        if self._trace_sm is not None:
-            self._trace_sm.active(0)
         self._abort_dma_channels()
-        for state_machine in (self._capture_sm, self._output_sm, self._trace_sm):
+        for state_machine in (self._capture_sm, self._output_sm):
             deinit = getattr(state_machine, "deinit", None)
             if deinit is not None:
                 deinit()
         self._capture_sm = None
         self._output_sm = None
-        self._trace_sm = None
         self.running = False
-
-    def request_trace(self) -> list:
-        """Drain and return captured ``(ROM offset, ROM byte)`` pairs.
-
-        The passive trace state machine has a four-entry FIFO.  It records the
-        first four requests since the previous call and drops later requests,
-        so reading it immediately before a command starts a fresh trace.
-
-        Returns:
-            list: Captured ``(ROM offset, ROM byte)`` pairs.
-        """
-        if self._trace_sm is None:
-            return []
-
-        # Stop the producer while draining.  Otherwise Python can empty one
-        # slot, the active SM can immediately refill it, and this loop can
-        # grow the result list until the heap is exhausted.
-        was_active = self._trace_sm.active()
-        if was_active:
-            self._trace_sm.active(0)
-
-        result = []
-        for _ in range(min(4, self._trace_sm.rx_fifo())):
-            offset = self._trace_sm.get() & (ROM_SIZE - 1)
-            result.append((offset, self._rom[offset])) # type: ignore
-
-        # Discard anything beyond the documented four-entry trace.
-        while self._trace_sm.rx_fifo():
-            self._trace_sm.get()
-
-        if was_active:
-            self._trace_sm.active(1)
-        return result
