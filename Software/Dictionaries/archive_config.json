@@ -20,6 +20,11 @@
       "dictionary": "Jameco_JE-520_dictionary.json",
       "output": "jameco_je-520"
     },
+    "sensaphone": {
+      "sources": ["sensaphone.bin"],
+      "dictionary": "sensaphone_dictionary.json",
+      "output": "sensaphone"
+    },
     "ssr1/ssr2": {
       "sources": ["SSR1.bin", "SSR2.bin"],
       "dictionary": "SSR1_SSR2_dictionary.json",
