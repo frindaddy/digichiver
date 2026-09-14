@@ -109,15 +109,16 @@ Archive mode is metadata-driven and requires an inserted microSD card:
 
 Each archive group declares its ROM source files and either an index-to-word JSON
 dictionary or a `max_index` in `archive_config.json`. When a dictionary is
-configured, output is written beneath `/sd` as `<index>_<word>.wav`. For ROMs
-without a known word dictionary (such as SSR5/SSR6), `dictionary` is set to
-`null` (or omitted) with `max_index` specified, and output files are named
-`<index>.wav`. WAV output targets 48 kHz, 16-bit, mono PCM. The archive recorder
-uses the PCM1809 I2S input and records around each blocking Digitalker word
-command.
+configured, output is written beneath `/sd` as `<index>_<word>.wav` by default,
+or as `<word>.wav` when `"include_index": false` is configured (such as for the
+DVSS groups `dvss1`–`dvss5`). For ROMs without a known word dictionary (such as
+SSR5/SSR6), `dictionary` is set to `null` (or omitted) with `max_index`
+specified, and output files are named `<index>.wav`. WAV output targets 48 kHz,
+16-bit, mono PCM. The archive recorder uses the PCM1809 I2S input and records
+around each blocking Digitalker word command.
 
-The group metadata includes SSR1/SSR2, SSR5/SSR6, Sensaphone, Genesis, and Jameco JE-520.
-32 KiB sets (Genesis and Jameco JE-520) are split into two 16 KiB bank passes (`genesis-1` / `genesis-2` and `jameco-je-520-1` / `jameco-je-520-2`), each writing into their respective output folder on SD.
+The group metadata includes SSR1/SSR2, SSR5/SSR6, Sensaphone, Genesis, Jameco JE-520, and DVSS 1–5.
+32 KiB sets (Genesis and Jameco JE-520) are split into two 16 KiB bank passes (`genesis-1` / `genesis-2` and `je520-1` / `je520-2`), each writing into their respective output folder on SD.
 For groups with dictionary files, the corresponding word dictionaries must be
 deployed before archiving.
 

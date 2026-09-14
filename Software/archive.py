@@ -206,6 +206,7 @@ def archive_group(group_id: str, rom, digitalker) -> None:
             raise ArchiveError(f"archive group {group_id!r} missing valid max_index")
         items = [(index, None) for index in range(max_index + 1)]
 
+    include_index = group.get("include_index", True)
     card = SDArchive()
     rom.load(*sources)
     recorder = I2SRecorder()
@@ -217,7 +218,11 @@ def archive_group(group_id: str, rom, digitalker) -> None:
     try:
         for index, word in items:
             if word is not None:
-                path = output_dir + "/" + str(index) + "_" + sanitize_filename(word) + ".wav"
+                if include_index:
+                    filename = str(index) + "_" + sanitize_filename(word) + ".wav"
+                else:
+                    filename = sanitize_filename(word) + ".wav"
+                path = output_dir + "/" + filename
                 description = word
             else:
                 path = output_dir + "/" + str(index) + ".wav"

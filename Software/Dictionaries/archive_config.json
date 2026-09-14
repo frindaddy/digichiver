@@ -64,6 +64,36 @@
       "sources": ["rs_type4_MM52664SJQT.bin"],
       "dictionary": "rs_type4_MM52664SJQT_dictionary.json",
       "output": "rs-type4"
+    },
+    "dvss1": {
+      "sources": ["DVSSROM1.bin"],
+      "dictionary": "DVSSROM1_dictionary.json",
+      "include_index": false,
+      "output": "dvss"
+    },
+    "dvss2": {
+      "sources": ["DVSSROM2.bin"],
+      "dictionary": "DVSSROM2_dictionary.json",
+      "include_index": false,
+      "output": "dvss"
+    },
+    "dvss3": {
+      "sources": ["DVSSROM3.bin"],
+      "dictionary": "DVSSROM3_dictionary.json",
+      "include_index": false,
+      "output": "dvss"
+    },
+    "dvss4": {
+      "sources": ["DVSSROM4.bin"],
+      "dictionary": "DVSSROM4_dictionary.json",
+      "include_index": false,
+      "output": "dvss"
+    },
+    "dvss5": {
+      "sources": ["DVSSROM5.bin"],
+      "dictionary": "DVSSROM5_dictionary.json",
+      "include_index": false,
+      "output": "dvss"
     }
   }
 }
