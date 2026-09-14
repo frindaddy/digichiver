@@ -5,12 +5,13 @@ import re
 import time
 
 try:
-    import typing
-    if typing.TYPE_CHECKING:
-        from digitalker import Digitalker
-        from rom_emulator import RomEmulator
+    from typing import TYPE_CHECKING
 except ImportError:
-    pass
+    TYPE_CHECKING = False
+
+if TYPE_CHECKING:
+    from digitalker import Digitalker
+    from rom_emulator import RomEmulator
 
 with open("free_speak_dictionary.json", "r") as _dictionary_file:
     _dictionary_data = json.load(_dictionary_file)
