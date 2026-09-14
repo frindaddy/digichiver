@@ -1,36 +1,78 @@
 # Digichiver Software
 
-This folder houses the software used to run the Digichiver board.
+The software in this directory runs the Digichiver board on MicroPython for
+the RP2354B. It drives the MM54104 control bus, emulates its parallel ROM
+interface, provides dictionary-based speech, and records speech through the
+PCM1809 audio ADC to a microSD card.
 
-## ROM Images
+## Software Layout
 
-Create one emulator and pass one or two ROM file paths to `load()`:
+- `main.py` starts the interactive `digichiver>` command loop.
+- `board.py` assigns the RP2354B GPIO, PWM, SPI, and I2S interfaces used by the
+  board.
+- `digitalker.py` drives the MM54104 word-selection bus and control signals.
+- `rom_emulator.py` serves a selected ROM image using PIO and DMA without
+  requiring Python to handle each ROM access.
+- `free_speak.py` resolves text, aliases, numbers, and literal vocabulary
+  fragments into Digitalker words.
+- `archive.py` captures 48 kHz, 16-bit, mono PCM and writes WAV files to `/sd`.
+- `sdcard.py` provides the SPI microSD-card driver.
+- `Dictionaries/` contains the free-speak vocabulary, archive metadata, and
+  index-to-word dictionaries.
+- `ROMs/` contains the supplied ROM image collections and source indexes.
+- `digichiver_firmware.uf2` is the firmware image for the RP2354B.
+
+## Deployment
+
+Install `digichiver_firmware.uf2` with the RP2354B USB bootloader. After the
+board resets, copy the runtime files to the MicroPython filesystem. The
+working directory matters because the software opens ROMs and JSON files by
+filename, so the following files must be in one flat directory on the board:
+
+```text
+archive.py
+archive_config.json
+board.py
+digitalker.py
+free_speak.py
+free_speak_dictionary.json
+main.py
+rom_emulator.py
+sdcard.py
+```
+
+Copy the ROM files required by the selected operation into that same
+directory. For `/say` and `/say_all`, also copy `DVSSROM1.bin` through
+`DVSSROM5.bin`. For `/archive`, copy the source ROMs and dictionary files
+named by `Dictionaries/archive_config.json`. Reset the board and connect to its
+MicroPython REPL; `main.py` starts the command loop.
+
+## ROM Emulator
+
+`RomEmulator` presents a selected binary image as the MM54104's 16 KiB
+parallel ROM. A single image may contain from 1 to 16 KiB. It is loaded at
+address `0x0000` and zero-filled through `0x3fff`. Two-file images must contain
+exactly 8 KiB per file and are concatenated in argument order.
 
 ```python
+from rom_emulator import RomEmulator
+
 rom = RomEmulator()
 rom.load("DT1052.bin")
 rom.load("SSR1.bin", "SSR2.bin")
 ```
 
-`load()` automatically starts the emulator. Call it again to replace the
-currently loaded ROM; the new files are validated before the active image is
-stopped. A failed reload leaves the previous image running. If restarting the
-new image fails, the new image is retained and the emulator remains stopped.
-
-A single file may contain 1 to 16 KiB. It is loaded from address `0x0000`,
-and any remaining space through `0x3fff` is filled with zeroes. Two-file ROMs
-must contain exactly 8 KiB in each file; the files are loaded consecutively.
-ROM files larger than 16 KiB are rejected.
-
-Paths are resolved from the MicroPython working directory. Copy the selected
-ROM files to the Pico and pass their filenames to `load()`.
+`load()` validates the new files before stopping a currently running image.
+An invalid reload leaves the previous image running. If the new image cannot
+start, it remains selected but stopped. File paths are resolved from the
+MicroPython working directory.
 
 ## Free Speak
 
-The Digichiver software is capable of free speech using the `/say` REPL command.
-
-`free_speak.py` exposes `free_speak()` and uses `free_speak_dictionary.json`
-to resolve vocabulary entries to a ROM filename and Digitalker word index:
+`free_speak.py` maps text to the five DVSS ROMs and their word indexes. Input
+is case-insensitive and runs of whitespace are collapsed. The complete input
+is resolved before any ROM is loaded or word is spoken, so an unknown word
+does not produce partial speech.
 
 ```python
 from digitalker import Digitalker
@@ -42,88 +84,60 @@ digitalker = Digitalker()
 free_speak("emergency enable", rom, digitalker)
 ```
 
-Input is case-insensitive and whitespace is collapsed. The complete input is
-resolved before any speech starts, and unknown entries raise an error with
-their position. Explicit aliases include `thank you` and `wake up`; DVSS
-pronunciation variants such as `the.r` remain separate entries.
+The dictionary supports canonical entries and explicit aliases such as
+`thank you` and `wake up`. Numeric input accepts signs, comma-separated
+integers, leading zeroes, and decimal fractions. Values are converted to
+available vocabulary words; values above one billion are spoken digit by
+digit. Unknown words may also resolve through one literal prefix, exact root,
+and suffix composition. The `composition` and `numbers` sections of
+`Dictionaries/free_speak_dictionary.json` define these mappings.
 
-The suffixes in canonical entries are archive/audio labels, not automatic
-grammar rules. Ending fragments such as `-ing.fs1` and `-ing.ms3` are distinct
-recorded components, while labels such as `.r`, `.s`, `.m`, and `.p` have no
-fully documented expansion. Aliases therefore explicitly map friendly input
-to canonical dictionary entries in the JSON file. The runtime never strips suffixes or
-chooses between pronunciation variants automatically.
+The dictionary was generated from `ROMs/DVSS/DVSS_ROMS_INDEX.pdf`. Its
+pronunciation suffixes are recorded vocabulary labels, not automatic grammar
+rules: the runtime does not strip suffixes or select variants by itself.
 
-The five `DVSSROM*.bin` files must be in the same flat MicroPython directory
-as `free_speak.py`, `rom_emulator.py`, and `free_speak_dictionary.json`.
+## REPL Commands
 
-Numbers in `free_speak()` are expanded into available DVSS words. Integer values are
-spoken structurally through exactly one billion, which is pronounced as
-`one thousand million` because the vocabulary has no `billion` entry. Larger
-values are spoken digit by digit. Commas are accepted as separators, leading
-zeroes are preserved digit by digit, signs use `minus` or `plus`, and decimal
-fractions use `point` followed by individual digits.
-
-Unknown words are also checked for literal DVSS affix composition. The selected
-prefix/suffix mappings and number-word tables live in the `composition` and
-`numbers` sections of `free_speak_dictionary.json`. For example,
-`degrees` is spoken as `degree` plus `-s.ms1`, and `reenter` is spoken as
-`re-.spl` plus `enter`. Composition uses one selected prefix, one exact root,
-and one selected suffix at most. It does not apply spelling transformations;
-the exact dictionary entry or alias is always preferred.
-
-The free-speak dictionary was generated from the DVSS index at
-`ROMs/DVSS/DVSS_ROMS_INDEX.pdf`.
-The five ROM files and `free_speak_dictionary.json` must be deployed together with `free_speak.py`.
-
-### REPL commands
-
-`main.py` starts the command loop after creating the emulator and Digitalker.
-Enter commands such as:
+`main.py` creates the ROM emulator and Digitalker driver, then accepts commands
+at the `digichiver>` prompt:
 
 ```text
-/say hello this is my speech
 /load_rom SSR1.bin SSR2.bin
+/say hello this is my speech
 /say_index 42
 /say_index 0 50
 /say_all
 /archive ssr1/ssr2
 ```
 
-Available commands:
-- `/load_rom <file1> [file2]`: Load a single ROM image or two 8 KiB bank files into the ROM emulator.
-- `/say_index <start> [end]`: Speak word(s) at the specified numeric index or inclusive range (0–255, supports decimal or `0x` hex). Requires a loaded ROM.
-- `/say <text>`: Speak arbitrary text using the free-speak vocabulary dictionary.
-- `/say_all`: Speak all words across the free-speak ROM vocabulary in sequence.
-- `/archive <group>`: Archive an entire ROM group to SD card WAV files according to `archive_config.json`.
-- `/help`: Display the list of available commands.
-- `/exit` or `/quit`: Leave the REPL helper loop and return to normal execution.
+- `/load_rom <file1> [file2]` loads one ROM image or two 8 KiB banks.
+- `/say <text>` speaks text through the DVSS free-speak dictionary.
+- `/say_index <start> [end]` speaks one index or an inclusive range from 0
+  through 255. Decimal and `0x` hexadecimal indexes are accepted.
+- `/say_all` speaks every word in the free-speak vocabulary.
+- `/archive <group>` records a configured ROM group to the microSD card.
+- `/help` prints the command list.
+- `/exit` and `/quit` leave the command loop.
 
-### ROM archiving
+## ROM Archiving
 
-Archive mode is metadata-driven and requires an inserted microSD card:
+Archiving requires an inserted microSD card. The archive groups and their ROM
+sources are defined in `Dictionaries/archive_config.json`:
 
 ```text
 /archive ssr1/ssr2
 ```
 
-Each archive group declares its ROM source files and either an index-to-word JSON
-dictionary or a `max_index` in `archive_config.json`. When a dictionary is
-configured, output is written beneath `/sd` as `<index>_<word>.wav` by default,
-or as `<word>.wav` when `"include_index": false` is configured (such as for the
-DVSS groups `dvss1`–`dvss5`). For ROMs without a known word dictionary (such as
-SSR5/SSR6), `dictionary` is set to `null` (or omitted) with `max_index`
-specified, and output files are named `<index>.wav`. WAV output targets 48 kHz,
-16-bit, mono PCM. The archive recorder uses the PCM1809 I2S input and records
-around each blocking Digitalker word command.
+Groups with an index-to-word dictionary produce `/sd/<group>/<index>_<word>.wav`.
+DVSS groups set `include_index` to false and write word-named files. Groups
+without a known dictionary use `/sd/<group>/<index>.wav`. Files are 48 kHz,
+16-bit, mono PCM recorded from the PCM1809 I2S input around each Digitalker
+word. Genesis and Jameco JE-520 images are represented as separate bank
+passes, such as `genesis-1`, `genesis-2`, `je520-1`, and `je520-2`.
 
-The group metadata includes SSR1/SSR2, SSR5/SSR6, Sensaphone, Genesis, Jameco JE-520, and DVSS 1–5.
-32 KiB sets (Genesis and Jameco JE-520) are split into two 16 KiB bank passes (`genesis-1` / `genesis-2` and `je520-1` / `je520-2`), each writing into their respective output folder on SD.
-For groups with dictionary files, the corresponding word dictionaries must be
-deployed before archiving.
+## ROM Image Sources
 
-### ROM Image Sources
-
-ROM images from the Digitalker Digital Voice Selection Software (DVSS) are provided as a courtesy by [@MarkD833](https://github.com/MarkD833) thanks to his invaluable work archiving the DVSS outputs [(link to DVSS repo)](https://github.com/MarkD833/Digitalker-Digital-Voice-Selection-Software). The DVSS images have been converted from Intel HEX to binary files for compatability with the Digichiver hardware.
-
-All other ROM images are sourced from the [Internet Archive](https://archive.org/details/digitalker).
+The DVSS ROM images were converted from Intel HEX files and are provided as a
+contribution from [@MarkD833](https://github.com/MarkD833), whose source
+archive is the [Digitalker Digital Voice Selection Software repository](https://github.com/MarkD833/Digitalker-Digital-Voice-Selection-Software).
+Other ROM images are sourced from the [Internet Archive](https://archive.org/details/digitalker).
