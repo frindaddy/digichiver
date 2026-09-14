@@ -116,10 +116,10 @@ without a known word dictionary (such as SSR5/SSR6), `dictionary` is set to
 uses the PCM1809 I2S input and records around each blocking Digitalker word
 command.
 
-The group metadata currently includes SSR1/SSR2, SSR5/SSR6, and Jameco JE-520.
+The group metadata includes SSR1/SSR2, SSR5/SSR6, Sensaphone, Genesis, and Jameco JE-520.
+32 KiB sets (Genesis and Jameco JE-520) are split into two 16 KiB bank passes (`genesis-1` / `genesis-2` and `jameco-je-520-1` / `jameco-je-520-2`), each writing into their respective output folder on SD.
 For groups with dictionary files, the corresponding word dictionaries must be
-deployed before archiving. Jameco's four 8 KiB files also require ROM
-bank/window support beyond the current 16 KiB emulator image.
+deployed before archiving.
 
 ### ROM Image Sources
 
