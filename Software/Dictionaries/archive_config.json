@@ -10,6 +10,11 @@
       "dictionary": "elevator_dictionary.json",
       "output": "elevator"
     },
+    "harem": {
+      "sources": ["harem.bin"],
+      "dictionary": "harem_dictionary.json",
+      "output": "harem"
+    },
     "jameco-je-520": {
       "sources": [
         "1-U6.bin",
