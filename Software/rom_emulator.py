@@ -11,7 +11,7 @@ from machine import Pin, mem32
 ROM_BANK_SIZE = 8 * 1024
 ROM_SIZE = 2 * ROM_BANK_SIZE
 
-# add type hinting for rp2.pio functions if available, but don't require it for runtime.
+# Import PIO names only for static type checking; the decorator provides them at runtime.
 try:
     import typing
     if typing.TYPE_CHECKING:
@@ -260,7 +260,7 @@ class RomEmulator:
             # together, as required by RP2350 datasheet section 12.6.8.3.
             self._abort_dma_channels()
     
-            # Clear any stale FIFO error flags from an earlier bring-up attempt.
+            # Clear FIFO error flags left by an earlier configuration.
             mem32[PIO0_BASE + PIO_FDEBUG] = 0xFFFFFFFF
             mem32[PIO1_BASE + PIO_FDEBUG] = 0xFFFFFFFF
     
@@ -312,7 +312,11 @@ class RomEmulator:
         return allocation, rom, rom_address
 
     def load(self, *rom_paths: str) -> None:
-        """Load one image or two banks and automatically start the emulator.
+        """Stage one image or two banks, then start the emulator.
+
+        Files are fully validated before an existing running image is stopped.
+        If starting the staged image fails, the emulator is stopped and the
+        staged image remains selected.
 
         Args:
             *rom_paths (str): One image path or two 8 KiB bank paths.
