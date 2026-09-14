@@ -7,6 +7,8 @@ serve historical speech ROM images through an RP2354B-based ROM emulator, and
 record the resulting audio to a microSD card. Archived audio outputs are
 available in the [Digitalker audio archive repository](https://github.com/frindaddy/digitalker-audio-archive).
 
+<img width="2390" height="2142" alt="image" src="https://github.com/user-attachments/assets/b62aaf7c-4fb9-478e-8463-584d4cdf1a17" />
+
 ## Repository Layout
 
 The repository is organized by the part of the project it describes:
