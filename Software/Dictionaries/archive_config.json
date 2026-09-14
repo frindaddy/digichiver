@@ -10,6 +10,16 @@
       "dictionary": "elevator_dictionary.json",
       "output": "elevator"
     },
+    "genesis-1": {
+      "sources": ["genesis_bank0.bin"],
+      "dictionary": "genesis_bank0_dictionary.json",
+      "output": "genesis-1"
+    },
+    "genesis-2": {
+      "sources": ["genesis_bank1.bin"],
+      "dictionary": "genesis_bank1_dictionary.json",
+      "output": "genesis-2"
+    },
     "harem": {
       "sources": ["harem.bin"],
       "dictionary": "harem_dictionary.json",
