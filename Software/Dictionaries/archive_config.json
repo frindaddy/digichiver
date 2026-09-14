@@ -20,6 +20,11 @@
       "dictionary": "Jameco_JE-520_dictionary.json",
       "output": "jameco_je-520"
     },
+    "scorpion": {
+      "sources": ["scorpion.bin"],
+      "dictionary": "scorpion_dictionary.json",
+      "output": "scorpion"
+    },
     "sensaphone": {
       "sources": ["sensaphone.bin"],
       "dictionary": "sensaphone_dictionary.json",
