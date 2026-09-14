@@ -93,7 +93,10 @@ def _sleep_ms(milliseconds: int) -> None:
         time.sleep(milliseconds / 1000)
 
 def _composed_words(word: str) -> list:
-    """Compose an unknown word from literal prefix, root, and suffix parts.
+    """Compose an unknown word from at most one prefix, root, and suffix.
+
+    Prefixes and suffixes are matched literally; no spelling changes are
+    applied. An exact dictionary entry is checked by the caller first.
 
     Args:
         word (str): The normalized unknown word.
@@ -129,7 +132,12 @@ def _composed_words(word: str) -> list:
     return []
 
 def _integer_number_words(value: int) -> list:
-    """Convert an integer through one billion into vocabulary words.
+    """Convert a non-negative integer into structural vocabulary words.
+
+    Values through one billion use ``thousand`` and ``million`` groups.
+    Because the vocabulary has no ``billion`` entry, exactly one billion is
+    pronounced ``one thousand million``; larger values are spoken digit by
+    digit.
 
     Args:
         value (int): The non-negative integer to convert.
@@ -156,7 +164,7 @@ def _integer_number_words(value: int) -> list:
     return words
 
 def _normalize_text(text: str) -> str:
-    """Normalize case and whitespace without changing DVSS punctuation.
+    """Lowercase text and collapse whitespace without changing punctuation.
 
     Args:
         text (str): The input text.
@@ -165,7 +173,7 @@ def _normalize_text(text: str) -> str:
         str: Lowercase text with runs of whitespace collapsed.
 
     Raises:
-        FreeSpeakError: If the input is empty or contains no words.
+        FreeSpeakError: If the input is empty or contains only whitespace.
     """
     normalized = " ".join(text.lower().split())
     if not normalized:
@@ -173,7 +181,11 @@ def _normalize_text(text: str) -> str:
     return normalized
 
 def _numeric_words(token: str) -> list:
-    """Convert a validated numeric token into vocabulary words.
+    """Convert an integer or decimal token into vocabulary words.
+
+    Accepted tokens may have an optional sign, comma-separated thousands
+    groups, and a decimal fraction. Leading-zero integers and fraction digits
+    are spoken one digit at a time.
 
     Args:
         token (str): A signed decimal token with optional commas.
@@ -184,8 +196,7 @@ def _numeric_words(token: str) -> list:
     Raises:
         FreeSpeakError: If the token uses invalid comma placement or syntax.
     """
-    numeric_match = _NUMERIC_TOKEN.match(token)
-    if numeric_match is None or numeric_match.group(0) != token:
+    if _NUMERIC_TOKEN.match(token) is None:
         raise FreeSpeakError(f"invalid numeric token: {token}")
 
     sign = []
@@ -217,7 +228,11 @@ def _numeric_words(token: str) -> list:
     return sign + words
 
 def _resolve(text: str) -> list:
-    """Resolve all input words before any speech begins.
+    """Resolve all input words before making any hardware calls.
+
+    Whole-input dictionary entries, including multi-word aliases, take
+    precedence over token-by-token resolution. Individual tokens may be
+    canonical entries, aliases, numbers, or literal affix compositions.
 
     Args:
         text (str): The normalized input text.
@@ -227,6 +242,8 @@ def _resolve(text: str) -> list:
 
     Raises:
         UnknownWordError: If a word is absent from the free-speak dictionary.
+        FreeSpeakError: If numeric or generated composition vocabulary is
+            invalid or incomplete.
     """
     whole_entry = FREE_SPEAK_INDEX.get(text)
     if whole_entry is not None:
@@ -284,7 +301,10 @@ def _small_number_words(value: int) -> list:
     return words
 
 def _speak_resolved(resolved: list, rom: "RomEmulator", digitalker: "Digitalker", speech_pause_ms: int=0) -> None:
-    """Speak resolved entries while loading each ROM only when it changes.
+    """Speak resolved entries, loading a ROM only when it changes.
+
+    Resolution must happen before this function is called so a failed lookup
+    cannot occur after speech has started.
 
     Args:
         resolved (list): ROM, address, and word tuples in speech order.
@@ -303,7 +323,11 @@ def _speak_resolved(resolved: list, rom: "RomEmulator", digitalker: "Digitalker"
             _sleep_ms(speech_pause_ms)
 
 def free_speak(text: str, rom: "RomEmulator", digitalker: "Digitalker") -> None:
-    """Speak DVSS words from a string, switching ROMs as required.
+    """Resolve and speak DVSS text, switching ROMs as required.
+
+    Input can contain canonical entries, aliases, numbers, and words made
+    from the configured literal affixes. The complete input is resolved
+    before the first ROM load or spoken word.
 
     Args:
         text (str): Case-insensitive, whitespace-separated DVSS words.
@@ -319,7 +343,10 @@ def free_speak(text: str, rom: "RomEmulator", digitalker: "Digitalker") -> None:
     _speak_resolved(resolved, rom, digitalker)
 
 def say_all(rom: "RomEmulator", digitalker: "Digitalker", speech_pause_ms: int=50) -> None:
-    """Speak every canonical free-speak dictionary entry in ROM order.
+    """Speak every canonical dictionary entry in numeric ROM order.
+
+    Aliases and composed forms are not included. The ROM filenames must use
+    the ``DVSSROM<number>.bin`` naming convention used by the dictionary.
 
     Args:
         rom (RomEmulator): The ROM emulator used to select vocabulary images.
