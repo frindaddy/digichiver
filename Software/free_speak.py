@@ -114,8 +114,6 @@ def _composed_words(word: str) -> list:
     for prefix_spelling, prefix_fragment in prefix_candidates:
         after_prefix = word[len(prefix_spelling):]
         for suffix_spelling, suffix_fragment in suffix_candidates:
-            if suffix_spelling and not after_prefix.endswith(suffix_spelling):
-                continue
             root_end = len(after_prefix) - len(suffix_spelling)
             root = after_prefix[:root_end]
             root_entry = FREE_SPEAK_INDEX.get(root)
@@ -328,13 +326,12 @@ def say_all(rom: "RomEmulator", digitalker: "Digitalker", speech_pause_ms: int=5
         digitalker (Digitalker): The Digitalker driver used to speak addresses.
         speech_pause_ms (int): Optional pause in milliseconds between words.
     """
-    resolved = [
-        (rom_name, address, word)
-        for rom_name in sorted(
-            _dictionary_data["roms"].keys(),
-            key=lambda name: int(name.replace("DVSSROM", "").replace(".bin", "")),
-        )
-        for words in [_dictionary_data["roms"][rom_name]]
-        for address, word in enumerate(words, 1)
-    ]
+    resolved = []
+    rom_names = sorted(
+        _dictionary_data["roms"],
+        key=lambda name: int(name.replace("DVSSROM", "").replace(".bin", "")),
+    )
+    for rom_name in rom_names:
+        for address, word in enumerate(_dictionary_data["roms"][rom_name], 1):
+            resolved.append((rom_name, address, word))
     _speak_resolved(resolved, rom, digitalker, speech_pause_ms)
