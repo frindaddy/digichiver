@@ -15,15 +15,15 @@
       "dictionary": "harem_dictionary.json",
       "output": "harem"
     },
-    "jameco-je-520": {
-      "sources": [
-        "1-U6.bin",
-        "2-U7.bin",
-        "3-U8.bin",
-        "4-U9.bin"
-      ],
-      "dictionary": "Jameco_JE-520_dictionary.json",
-      "output": "jameco_je-520"
+    "je520-1": {
+      "sources": ["1-U6.bin", "2-U7.bin"],
+      "dictionary": "JE520_bank0_dictionary.json",
+      "output": "je520-1"
+    },
+    "je520-2": {
+      "sources": ["3-U8.bin", "4-U9.bin"],
+      "dictionary": "JE520_bank1_dictionary.json",
+      "output": "je520-2"
     },
     "scorpion": {
       "sources": ["scorpion.bin"],
