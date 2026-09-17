@@ -40,7 +40,5 @@ checking word indexes, and archiving ROM groups to an inserted microSD card.
 The complete command reference and file-deployment requirements are documented
 in [`Software/readme.md`](Software/readme.md).
 
-The hardware design can be opened with KiCad. The firmware itself targets
-MicroPython on the RP2354B and uses the board-specific `machine` and `rp2`
-interfaces, so the runtime modules are not intended to be launched as ordinary
-desktop Python applications.
+The hardware design can be opened with KiCad. The firmware `digitalker_firmware.u2f`
+targets MicroPython on the RP2354B.
