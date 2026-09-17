@@ -14,7 +14,7 @@ This sheet shows the RP2354B and microSD card, as well as their supporting circu
 
 ### RP2354B
 
-The RP2354B is the MCU on the Digichiver board and is used to control the MM54104 Digitalker chip, emulate Digitalker ROM modules, and record the Digitalker output audio to the microSD card (plus other basic GPIO functions). It interfaces with the MM54104 Digitalker chip, microSD card, and the PCM1809 audio recorder. The RP2354B has 16MiB of internal flash in chip, so an external flash module is not required for operation.
+The RP2354B is the MCU on the Digichiver board and is used to control the MM54104 Digitalker chip, emulate Digitalker ROM modules, and record the Digitalker output audio to the microSD card (plus other basic GPIO functions). It interfaces with the MM54104 Digitalker chip, microSD card, and the PCM1809 audio recorder. The RP2354B has 2MB of internal flash in chip, so an external flash module is not required for operation.
 
 #### RP2354B Power and Decoupling
 
