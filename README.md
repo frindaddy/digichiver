@@ -1,7 +1,7 @@
 # Digichiver
 
-Digichiver is an open hardware and software platform for operating, emulating,
-and archiving the audio output of the National Semiconductor MM54104 Mozer
+Digichiver is an open hardware and software platform used for operation and 
+archiving the audio output of the National Semiconductor MM54104 Mozer 
 Digitalker speech synthesis system. The board can drive a physical MM54104,
 serve historical speech ROM images through an RP2354B-based ROM emulator, and
 record the resulting audio to a microSD card. Archived audio outputs are
